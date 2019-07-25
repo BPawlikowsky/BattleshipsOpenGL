@@ -1,0 +1,1907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="StatkiGame:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../openglproject/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../openglproject/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/res/textures/but.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/utils/Shader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/utils/Texture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/roboczy.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/Archive/SDAcademy/Statki/.idea/workspace.6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/Archive/SDAcademy/Statki/.idea/workspace.7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/Archive/SDAcademy/Statki/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/Archive/SDAcademy/Statki_alfa0.1/.idea/workspace.10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/Archive/SDAcademy/Statki_alfa0.1/.idea/workspace.9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/Archive/SDAcademy/Statki_alfa0.1/src/pl/sda/statkia01/game/Player.2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/Archive/SDAcademy/Statki_alfa0.1/src/pl/sda/statkia01/game/ship/Fleet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/Archive/SDAcademy/Statki_alfa0.1/src/pl/sda/statkia01/game/ship/Ship.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/Archive/SDAcademy/sda-tor4/.idea/workspace.1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/Archive/SDAcademy/sda-tor4/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/ID" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/IgnoreList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/StreamsList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sync/root_acl_entry" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vscode/c_cpp_properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/res/basic.shader" beforeDir="false" afterPath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/res/basic.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/utils/IndexBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/utils/IndexBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/utils/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/utils/Renderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/utils/VertexArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/utils/VertexArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/utils/VertexBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tutorial/src/pl/sda/opengl/utils/VertexBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/.idea/SDAcademy.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/Abstracts.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/src/pl/sda/abstracts/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/src/pl/sda/abstracts/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/src/pl/sda/abstracts/Truck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/src/pl/sda/abstracts/Vehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/src/pl/sda/abstracts/commons/Engine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/src/pl/sda/abstracts/commons/EngineStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Abstracts/src/pl/sda/abstracts/commons/GearLevel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy/Algorytmy.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy/src/pl/sda/algorytmy/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad01/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad01/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad01/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad01/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad01/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad01/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad01/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad01/Algorytmy_Zad01.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad01/out/production/Algorytmy_Zad01/META-INF/Algorytmy_Zad01.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad01/out/production/Algorytmy_Zad01/pl/sda/algorytmy/zad01/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad01/src/pl/sda/algorytmy/zad01/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad01/src/pl/sda/algorytmy/zad01/Tablice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad02/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad02/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad02/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad02/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad02/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad02/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad02/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad02/Algorytmy_Zad02.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad02/out/production/Algorytmy_Zad02/META-INF/Algorytmy_Zad02.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad02/out/production/Algorytmy_Zad02/pl/sda/algorytmy/zad02/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad02/src/pl/sda/algorytmy/zad02/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad03/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad03/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad03/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad03/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad03/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad03/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad03/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad03/Algorytmy_Zad03.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad03/out/production/Algorytmy_Zad03/pl/sda/algorytmy/zad03/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Algorytmy_Zad03/src/pl/sda/algorytmy/zad03/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/AutoBoxing/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/AutoBoxing/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/AutoBoxing/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/AutoBoxing/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/AutoBoxing/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/AutoBoxing/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/AutoBoxing/AutoBoxing.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/AutoBoxing/out/production/AutoBoxing/pl/sda/autoboxing/Example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/AutoBoxing/out/production/AutoBoxing/pl/sda/autoboxing/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/AutoBoxing/src/pl/sda/autoboxing/Example.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/AutoBoxing/src/pl/sda/autoboxing/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/Computation.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/out/production/Computation/pl/sda/computtion/Addition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/out/production/Computation/pl/sda/computtion/Computation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/out/production/Computation/pl/sda/computtion/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/out/production/Computation/pl/sda/computtion/Multiplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/src/pl/sda/computtion/Addition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/src/pl/sda/computtion/Computation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/src/pl/sda/computtion/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Computation/src/pl/sda/computtion/Multiplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/Employee.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/out/production/Employee/pl/sda/employee/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/out/production/Employee/pl/sda/employee/model/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/out/production/Employee/pl/sda/employee/model/Names.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/out/production/Employee/pl/sda/employee/model/Station.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/src/pl/sda/employee/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/src/pl/sda/employee/model/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/src/pl/sda/employee/model/Names.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Employee/src/pl/sda/employee/model/Station.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Hello_World/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Hello_World/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Hello_World/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Hello_World/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Hello_World/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Hello_World/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Hello_World/Hello_World.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Hello_World/out/production/Hello_World/pl/sda/hello/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Hello_World/src/pl/sda/hello/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie01/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie01/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie01/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie01/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie01/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie01/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie01/IFcz2_Zadanie01.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie01/out/production/Petle_Zadanie01/pl/sda/petle/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie01/out/production/Petle_Zadanie01/pl/sda/petle/Objetosc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie01/out/production/Petle_Zadanie01/pl/sda/petle/Pole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie01/src/pl/sda/ifcz2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie01/src/pl/sda/ifcz2/Objetosc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie01/src/pl/sda/ifcz2/Pole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie02/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie02/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie02/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie02/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie02/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie02/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie02/IFcz2_Zadanie02.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie02/out/production/IFcz2_Zadanie02/pl/sda/petle/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie02/src/pl/sda/ifcz2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie03/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie03/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie03/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie03/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie03/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie03/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie03/IFcz2_Zadanie03.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie03/out/production/IFcz2_Zadanie03/pl/sda/petle/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie03/src/pl/sda/ifcz2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie04/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie04/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie04/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie04/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie04/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie04/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie04/IFcz2_Zadanie04.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie04/out/production/IFcz2_Zadanie04/pl/sda/petle/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie04/src/pl/sda/ifcz2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie05/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie05/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie05/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie05/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie05/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie05/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie05/IFcz2_Zadanie05.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie05/out/production/IFcz2_Zadanie05/pl/sda/ifcz2/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie05/src/pl/sda/ifcz2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie06/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie06/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie06/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie06/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie06/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie06/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie06/IFcz2_Zadanie06.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie06/out/production/IFcz2_Zadanie06/pl/sda/ifcz2/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/IFcz2_Zadanie06/src/pl/sda/ifcz2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/Interfaces.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/out/production/Interfaces/pl/sda/interfaces/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/out/production/Interfaces/pl/sda/interfaces/Engine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/out/production/Interfaces/pl/sda/interfaces/EngineStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/out/production/Interfaces/pl/sda/interfaces/GearLevel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/out/production/Interfaces/pl/sda/interfaces/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/out/production/Interfaces/pl/sda/interfaces/Truck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/out/production/Interfaces/pl/sda/interfaces/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/src/pl/sda/interfaces/Interfaces/Vehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/src/pl/sda/interfaces/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/src/pl/sda/interfaces/commons/Engine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/src/pl/sda/interfaces/commons/EngineStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/src/pl/sda/interfaces/commons/GearLevel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/src/pl/sda/interfaces/impl/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Interfaces/src/pl/sda/interfaces/impl/Truck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.gradle/4.10.3/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.gradle/4.10.3/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/Java._Introduction1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Quiz (1)/Boolean-Quiz_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Quiz (1)/Boolean-Quiz_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Quiz (1)/Boolean-Quiz_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Quiz (2)/Boolean-Quiz_(2).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Quiz (2)/Boolean-Quiz_(2)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Quiz (2)/Boolean-Quiz_(2)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Quiz (3)/Boolean-Quiz_(3).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Quiz (3)/Boolean-Quiz_(3)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Quiz (3)/Boolean-Quiz_(3)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Quiz/Boolean-Quiz.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Quiz/Boolean-Quiz_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Quiz/Boolean-Quiz_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Theory (1)/Boolean-Theory_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Theory (1)/Boolean-Theory_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Theory (1)/Boolean-Theory_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Theory/Boolean-Theory.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Theory/Boolean-Theory_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Boolean/Theory/Boolean-Theory_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Character/Quiz (1)/Character-Quiz_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Character/Quiz (1)/Character-Quiz_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Character/Quiz (1)/Character-Quiz_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Character/Quiz/Character-Quiz.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Character/Quiz/Character-Quiz_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Character/Quiz/Character-Quiz_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Character/Theory/Character-Theory.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Character/Theory/Character-Theory_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Character/Theory/Character-Theory_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Programming (1)/Comments-Programming_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Programming (1)/Comments-Programming_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Programming (1)/Comments-Programming_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Programming (2)/Comments-Programming_(2).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Programming (2)/Comments-Programming_(2)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Programming (2)/Comments-Programming_(2)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Programming (3)/Comments-Programming_(3).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Programming (3)/Comments-Programming_(3)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Programming (3)/Comments-Programming_(3)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Programming/Comments-Programming.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Programming/Comments-Programming_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Programming/Comments-Programming_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Quiz/Comments-Quiz.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Quiz/Comments-Quiz_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Quiz/Comments-Quiz_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Theory/Comments-Theory.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Theory/Comments-Theory_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Comments/Theory/Comments-Theory_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Programming (1)/Floating-point-Programming_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Programming (1)/Floating-point-Programming_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Programming (1)/Floating-point-Programming_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Programming (2)/Floating-point-Programming_(2).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Programming (2)/Floating-point-Programming_(2)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Programming (2)/Floating-point-Programming_(2)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Programming (3)/Floating-point-Programming_(3).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Programming (3)/Floating-point-Programming_(3)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Programming (3)/Floating-point-Programming_(3)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Programming/Floating-point-Programming.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Programming/Floating-point-Programming_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Programming/Floating-point-Programming_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Quiz/Floating-point-Quiz.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Quiz/Floating-point-Quiz_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Quiz/Floating-point-Quiz_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Theory/Floating-point-Theory.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Theory/Floating-point-Theory_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Floating-point/Theory/Floating-point-Theory_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (1)/Integer-Programming_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (1)/Integer-Programming_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (1)/Integer-Programming_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (10)/Integer-Programming_(10).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (10)/Integer-Programming_(10)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (10)/Integer-Programming_(10)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (2)/Integer-Programming_(2).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (2)/Integer-Programming_(2)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (2)/Integer-Programming_(2)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (3)/Integer-Programming_(3).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (3)/Integer-Programming_(3)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (3)/Integer-Programming_(3)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (4)/Integer-Programming_(4).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (4)/Integer-Programming_(4)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (4)/Integer-Programming_(4)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (5)/Integer-Programming_(5).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (5)/Integer-Programming_(5)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (5)/Integer-Programming_(5)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (6)/Integer-Programming_(6).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (6)/Integer-Programming_(6)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (6)/Integer-Programming_(6)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (7)/Integer-Programming_(7).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (7)/Integer-Programming_(7)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (7)/Integer-Programming_(7)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (8)/Integer-Programming_(8).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (8)/Integer-Programming_(8)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (8)/Integer-Programming_(8)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (9)/Integer-Programming_(9).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (9)/Integer-Programming_(9)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming (9)/Integer-Programming_(9)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming/Integer-Programming.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming/Integer-Programming_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Programming/Integer-Programming_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Theory/Integer-Theory.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Theory/Integer-Theory_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Integer/Theory/Integer-Theory_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (1)/Intro-Quiz_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (1)/Intro-Quiz_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (1)/Intro-Quiz_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (2)/Intro-Quiz_(2).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (2)/Intro-Quiz_(2)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (2)/Intro-Quiz_(2)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (3)/Intro-Quiz_(3).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (3)/Intro-Quiz_(3)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (3)/Intro-Quiz_(3)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (4)/Intro-Quiz_(4).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (4)/Intro-Quiz_(4)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (4)/Intro-Quiz_(4)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (5)/Intro-Quiz_(5).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (5)/Intro-Quiz_(5)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz (5)/Intro-Quiz_(5)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz/Intro-Quiz.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz/Intro-Quiz_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Quiz/Intro-Quiz_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Theory (1)/Intro-Theory_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Theory (1)/Intro-Theory_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Theory (1)/Intro-Theory_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Theory/Intro-Theory.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Theory/Intro-Theory_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Intro/Theory/Intro-Theory_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Programming (1)/Main_method-Programming_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Programming (1)/Main_method-Programming_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Programming (1)/Main_method-Programming_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Programming (2)/Main_method-Programming_(2).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Programming (2)/Main_method-Programming_(2)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Programming (2)/Main_method-Programming_(2)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Programming (3)/Main_method-Programming_(3).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Programming (3)/Main_method-Programming_(3)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Programming (3)/Main_method-Programming_(3)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Programming/Main_method-Programming.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Programming/Main_method-Programming_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Programming/Main_method-Programming_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Quiz (1)/Main_method-Quiz_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Quiz (1)/Main_method-Quiz_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Quiz (1)/Main_method-Quiz_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Quiz (2)/Main_method-Quiz_(2).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Quiz (2)/Main_method-Quiz_(2)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Quiz (2)/Main_method-Quiz_(2)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Quiz/Main_method-Quiz.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Quiz/Main_method-Quiz_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Quiz/Main_method-Quiz_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Theory (1)/Main_method-Theory_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Theory (1)/Main_method-Theory_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Theory (1)/Main_method-Theory_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Theory/Main_method-Theory.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Theory/Main_method-Theory_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Main method/Theory/Main_method-Theory_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming (1)/Math-Programming_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming (1)/Math-Programming_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming (1)/Math-Programming_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming (2)/Math-Programming_(2).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming (2)/Math-Programming_(2)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming (2)/Math-Programming_(2)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming (3)/Math-Programming_(3).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming (3)/Math-Programming_(3)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming (3)/Math-Programming_(3)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming (4)/Math-Programming_(4).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming (4)/Math-Programming_(4)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming (4)/Math-Programming_(4)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming/Math-Programming.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming/Math-Programming_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Programming/Math-Programming_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Theory (1)/Math-Theory_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Theory (1)/Math-Theory_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Theory (1)/Math-Theory_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Theory/Math-Theory.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Theory/Math-Theory_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Math/Theory/Math-Theory_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Type Casting/Quiz/Type_Casting-Quiz.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Type Casting/Quiz/Type_Casting-Quiz_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Type Casting/Quiz/Type_Casting-Quiz_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Type Casting/Theory/Type_Casting-Theory.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Type Casting/Theory/Type_Casting-Theory_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Type Casting/Theory/Type_Casting-Theory_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Programming/Variables_and_Types-Programming.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Programming/Variables_and_Types-Programming_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Programming/Variables_and_Types-Programming_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Quiz (1)/Variables_and_Types-Quiz_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Quiz (1)/Variables_and_Types-Quiz_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Quiz (1)/Variables_and_Types-Quiz_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Quiz/Variables_and_Types-Quiz.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Quiz/Variables_and_Types-Quiz_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Quiz/Variables_and_Types-Quiz_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Theory (1)/Variables_and_Types-Theory_(1).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Theory (1)/Variables_and_Types-Theory_(1)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Theory (1)/Variables_and_Types-Theory_(1)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Theory (2)/Variables_and_Types-Theory_(2).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Theory (2)/Variables_and_Types-Theory_(2)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Theory (2)/Variables_and_Types-Theory_(2)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Theory (3)/Variables_and_Types-Theory_(3).iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Theory (3)/Variables_and_Types-Theory_(3)_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Theory (3)/Variables_and_Types-Theory_(3)_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Theory/Variables_and_Types-Theory.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Theory/Variables_and_Types-Theory_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/Variables and Types/Theory/Variables_and_Types-Theory_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/util/util.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/util/util_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/modules/util/util_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/study_project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Boolean/Quiz (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Boolean/Quiz (2)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Boolean/Quiz (3)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Boolean/Quiz/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Boolean/Theory (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Boolean/Theory/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Character/Quiz (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Character/Quiz/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Character/Theory/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Comments/Programming (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Comments/Programming (2)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Comments/Programming (3)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Comments/Programming/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Comments/Quiz/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Comments/Theory/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Floating-point/Programming (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Floating-point/Programming (2)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Floating-point/Programming (3)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Floating-point/Programming/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Floating-point/Quiz/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Floating-point/Theory/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Integer/Programming (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Integer/Programming (10)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Integer/Programming (2)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Integer/Programming (3)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Integer/Programming (4)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Integer/Programming (5)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Integer/Programming (6)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Integer/Programming (7)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Integer/Programming (8)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Integer/Programming (9)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Integer/Programming/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Integer/Theory/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Intro/Quiz (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Intro/Quiz (2)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Intro/Quiz (3)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Intro/Quiz (4)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Intro/Quiz (5)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Intro/Quiz/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Intro/Theory (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Intro/Theory/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Main method/Programming (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Main method/Programming (2)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Main method/Programming (3)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Main method/Programming/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Main method/Quiz (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Main method/Quiz (2)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Main method/Quiz/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Main method/Theory (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Main method/Theory/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Math/Programming (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Math/Programming (2)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Math/Programming (3)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Math/Programming (4)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Math/Programming/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Math/Theory (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Math/Theory/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Type Casting/Quiz/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Type Casting/Theory/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Variables and Types/Programming/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Variables and Types/Quiz (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Variables and Types/Quiz/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Variables and Types/Theory (1)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Variables and Types/Theory (2)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Variables and Types/Theory (3)/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/Variables and Types/Theory/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Java. Introduction1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Klasy/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Klasy/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Klasy/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Klasy/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Klasy/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Klasy/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Klasy/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Klasy/Klasy.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Klasy/out/production/Klasy/pl/sda/klasy/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Klasy/out/production/Klasy/pl/sda/klasy/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Klasy/src/pl/sda/klasy/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Klasy/src/pl/sda/klasy/Model/Adres.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Klasy/src/pl/sda/klasy/Model/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Lekarstwa/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Lekarstwa/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Lekarstwa/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Lekarstwa/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Lekarstwa/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Lekarstwa/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Lekarstwa/Lekarstwa.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Lekarstwa/out/production/Lekarstwa/pl/sda/lekarstwa/Lekarstwa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Lekarstwa/out/production/Lekarstwa/pl/sda/lekarstwa/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Lekarstwa/src/pl/sda/lekarstwa/Lekarstwa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Lekarstwa/src/pl/sda/lekarstwa/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Locale/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Locale/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Locale/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Locale/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Locale/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Locale/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Locale/Locale.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Locale/out/production/Locale/pl/sda/locale/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Locale/out/production/Locale/pl/sda/locale/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Locale/src/pl/sda/locale/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/OOP_Projekt.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/PosortowanaListaPracownikow.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/baza.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/htmlTemplate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/import.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/Eksport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/Import$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/Import.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/Pracownik.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/menu/DodatkoweMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/menu/DodatkoweMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/menu/DodatkoweMenu$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/menu/DodatkoweMenu$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/menu/DodatkoweMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/menu/InfoDzial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/menu/PlikMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/out/production/OOP_Projekt/pl/sda/oop/menu/PodstawoweMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/src/pl/sda/oop/Eksport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/src/pl/sda/oop/Import.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/src/pl/sda/oop/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/src/pl/sda/oop/Pracownik.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/src/pl/sda/oop/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/src/pl/sda/oop/menu/DodatkoweMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/src/pl/sda/oop/menu/InfoDzial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/src/pl/sda/oop/menu/PlikMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/src/pl/sda/oop/menu/PodstawoweMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OOP_Projekt/tabela.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OPP/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OPP/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OPP/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OPP/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OPP/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OPP/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OPP/OPP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/OPP/src/pl/sda/opp/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle/Petle.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle/out/production/Petle/pl/sda/petle/Main$Fib.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle/out/production/Petle/pl/sda/petle/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle/src/pl/sda/petle/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/Petle_Zadania09-17.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/out/production/Petle_Zadania09-17/pl/sda/petle/El.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/out/production/Petle_Zadania09-17/pl/sda/petle/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/out/production/Petle_Zadania09-17/pl/sda/petle/Parzyste.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/out/production/Petle_Zadania09-17/pl/sda/petle/Pierwsze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/out/production/Petle_Zadania09-17/pl/sda/petle/Piramida_Liczb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/out/production/Petle_Zadania09-17/pl/sda/petle/ProstokatX.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/out/production/Petle_Zadania09-17/pl/sda/petle/Suma_Parz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/out/production/Petle_Zadania09-17/pl/sda/petle/Tab_Mnozenia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/out/production/Petle_Zadania09-17/pl/sda/petle/Trojkat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/out/production/Petle_Zadania09-17/pl/sda/petle/X_3Y.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/src/pl/sda/petle/El.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/src/pl/sda/petle/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/src/pl/sda/petle/Parzyste.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/src/pl/sda/petle/Pierwsze.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/src/pl/sda/petle/Piramida_Liczb.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/src/pl/sda/petle/ProstokatX.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/src/pl/sda/petle/Suma_Parz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/src/pl/sda/petle/Tab_Mnozenia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/src/pl/sda/petle/Trojkat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadania09-17/src/pl/sda/petle/X_3Y.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/Petle_Zadanie01-08.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/out/production/Petle_Zadanie01-08/META-INF/Petle_Zadanie01-08.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/out/production/Petle_Zadanie01-08/pl/sda/petle/Gwiazdki.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/out/production/Petle_Zadanie01-08/pl/sda/petle/Iloczyn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/out/production/Petle_Zadanie01-08/pl/sda/petle/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/out/production/Petle_Zadanie01-08/pl/sda/petle/O_Piramidka.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/out/production/Petle_Zadanie01-08/pl/sda/petle/Odliczanie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/out/production/Petle_Zadanie01-08/pl/sda/petle/Potega.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/out/production/Petle_Zadanie01-08/pl/sda/petle/Prostokat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/out/production/Petle_Zadanie01-08/pl/sda/petle/Przedzial_Liczb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/out/production/Petle_Zadanie01-08/pl/sda/petle/Suma.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/src/pl/sda/petle/Gwiazdki.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/src/pl/sda/petle/Iloczyn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/src/pl/sda/petle/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/src/pl/sda/petle/O_Piramidka.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/src/pl/sda/petle/Odliczanie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/src/pl/sda/petle/Potega.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/src/pl/sda/petle/Prostokat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/src/pl/sda/petle/Przedzial_Liczb.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01-08/src/pl/sda/petle/Suma.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Petle_Zadanie01/Petle_Zadanie01-08.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/PixelWriter/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/PixelWriter/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/PixelWriter/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/PixelWriter/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/PixelWriter/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/PixelWriter/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/PixelWriter/PixelWriter.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/PixelWriter/out/production/PixelWriter/ImageOperationApp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/PixelWriter/out/production/PixelWriter/ImageOperationApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/PixelWriter/out/production/PixelWriter/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/PixelWriter/out/production/PixelWriter/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/PixelWriter/src/ImageOperationApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/PixelWriter/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Point/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Point/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Point/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Point/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Point/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Point/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Point/Point.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Point/out/production/Point/pl/sda/point/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Point/out/production/Point/pl/sda/point/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Point/src/pl/sda/point/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Point/src/pl/sda/point/Point.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Powtorka/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Powtorka/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Powtorka/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Powtorka/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Powtorka/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Powtorka/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Powtorka/Powtorka.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Powtorka/out/production/Powtorka/pl/sda/powtorka/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Powtorka/out/production/Powtorka/pl/sda/powtorka/Powtorka.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Powtorka/src/pl/sda/powtorka/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Powtorka/src/pl/sda/powtorka/Powtorka.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/.idea/dictionaries/bartsky.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/Programowanie1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/META-INF/Programowanie1.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/ZadaniaDomowe/ArrayGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/ZadaniaDomowe/ArrayMedian.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/ZadaniaDomowe/ArraySort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/ZadaniaDomowe/ArraySum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/ZadaniaDomowe/ArraySumPlus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/algorytmy/BinarySearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/algorytmy/Djikstra/Djikstra.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/algorytmy/Djikstra/Vertex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/algorytmy/Djikstra/VertexComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/algorytmy/LiczbyPierwsze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/algorytmy/NWD.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/algorytmy/NWW.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/algorytmy/ONP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/algorytmy/Silnia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/algorytmy/bst/BinarneDrzewoPrzeszukiwan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/algorytmy/bst/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/struktury_danych/kolejka/ElemKolejka.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/struktury_danych/kolejka/KolejkaLista.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/struktury_danych/lista/ElemLista.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/struktury_danych/lista/Lista.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/struktury_danych/stos_lista/Element.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/struktury_danych/stos_lista/StosLista.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/struktury_danych/stos_lista/StosOutOfSizeExeption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/struktury_danych/tablice/StosTablica.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/out/production/Programowanie1/pl/sda/algorytmy/programowanie1/struktury_danych/tablice/Tablice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/ZadaniaDomowe/ArrayGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/ZadaniaDomowe/ArrayMedian.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/ZadaniaDomowe/ArraySort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/ZadaniaDomowe/ArraySum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/ZadaniaDomowe/ArraySumPlus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/algorytmy/BinarySearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/algorytmy/Djikstra/Djikstra.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/algorytmy/Djikstra/Vertex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/algorytmy/Djikstra/VertexComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/algorytmy/LiczbyPierwsze.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/algorytmy/NWD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/algorytmy/NWW.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/algorytmy/ONP.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/algorytmy/Silnia.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/algorytmy/bst/BinarneDrzewoPrzeszukiwan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/algorytmy/bst/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/struktury_danych/kolejka/ElemKolejka.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/struktury_danych/kolejka/KolejkaLista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/struktury_danych/lista/ElemLista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/struktury_danych/lista/Lista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/struktury_danych/stos_lista/Element.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/struktury_danych/stos_lista/StosLista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/struktury_danych/stos_lista/StosOutOfSizeExeption.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/struktury_danych/tablice/StosTablica.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Programowanie1/src/pl/sda/algorytmy/programowanie1/struktury_danych/tablice/Tablice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Pusty_Projekt/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Pusty_Projekt/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Pusty_Projekt/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Pusty_Projekt/Pusty_Projekt.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Pusty_Projekt/src/pl/sda/instruncje/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Pusty_Projekt/src/pl/sda/instruncje/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/Species.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/out/production/Species/pl/sda/species/Goldfish.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/out/production/Species/pl/sda/species/Human.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/out/production/Species/pl/sda/species/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/out/production/Species/pl/sda/species/abstracts/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/out/production/Species/pl/sda/species/abstracts/Fish.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/out/production/Species/pl/sda/species/abstracts/Mammal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/src/pl/sda/species/Goldfish.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/src/pl/sda/species/Human.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/src/pl/sda/species/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/src/pl/sda/species/abstracts/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/src/pl/sda/species/abstracts/Fish.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Species/src/pl/sda/species/abstracts/Mammal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/Statki.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/out/production/Statki/META-INF/Statki.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/out/production/Statki/pl/sda/statki/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/out/production/Statki/pl/sda/statki/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/out/production/Statki/pl/sda/statki/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/out/production/Statki/pl/sda/statki/Ship.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/out/production/Statki/pl/sda/statki/ShipPart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/src/pl/sda/statki/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/src/pl/sda/statki/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/src/pl/sda/statki/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/src/pl/sda/statki/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/src/pl/sda/statki/Ship.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki/src/pl/sda/statki/ShipPart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Statki_alfa0.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice/Tablice.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice/out/production/Tablice/pl/sda/tablice/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice/src/pl/sda/tablice/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice2Wymiarowe/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice2Wymiarowe/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice2Wymiarowe/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice2Wymiarowe/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice2Wymiarowe/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice2Wymiarowe/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice2Wymiarowe/Metody.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice2Wymiarowe/out/production/Metody/pl/sda/obiekty/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice2Wymiarowe/out/production/Metody/pl/sda/obiekty/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice2Wymiarowe/out/production/Metody/pl/sda/obiekty/Zadanie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice2Wymiarowe/src/pl/sda/obiekty/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice2Wymiarowe/src/pl/sda/obiekty/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice2Wymiarowe/src/pl/sda/obiekty/Zadanie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/Tablice_I_Petle_Zadania_1-14.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Zadanie01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Zadanie02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Zadanie03.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Zadanie04.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Zadanie05.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Zadanie06.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Zadanie07.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Zadanie08.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Zadanie09.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Zadanie10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Zadanie11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Zadanie12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/out/production/Tablice_I_Petle_Zadania_1-14/pl/sda/tablice/Zadanie13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Zadanie01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Zadanie02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Zadanie03.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Zadanie04.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Zadanie05.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Zadanie06.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Zadanie07.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Zadanie08.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Zadanie09.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Zadanie10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Zadanie11.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Zadanie12.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Tablice_I_Petle_Zadania_1-14/src/pl/sda/tablice/Zadanie13.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Test_String01/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Test_String01/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Test_String01/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Test_String01/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Test_String01/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Test_String01/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Test_String01/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Test_String01/Test_String01.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Test_String01/out/production/Test_String01/pl/codewars/test/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Test_String01/out/production/Test_String01/pl/codewars/test/middle/MiddleCharacter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Test_String01/src/pl/codewars/test/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Test_String01/src/pl/codewars/test/middle/MiddleCharacter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/User.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/out/production/User/pl/sda/user/BankAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/out/production/User/pl/sda/user/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/out/production/User/pl/sda/user/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/src/pl/sda/user/BankAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/src/pl/sda/user/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/User/src/pl/sda/user/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadania_IF/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadania_IF/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadania_IF/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadania_IF/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadania_IF/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadania_IF/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadania_IF/Zadania_IF.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadania_IF/out/production/Zadania_IF/pl/sda/hello/Main$1TesterTypow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadania_IF/out/production/Zadania_IF/pl/sda/hello/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadania_IF/src/pl/sda/hello/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie01/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie01/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie01/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie01/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie01/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie01/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie01/Zadanie01.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie01/out/production/Zadanie01/pl/sda/hello/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie01/src/pl/sda/hello/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie02/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie02/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie02/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie02/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie02/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie02/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie02/Zadanie02.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie02/out/production/Zadanie02/pl/sda/hello/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie02/src/pl/sda/hello/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie03/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie03/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie03/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie03/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie03/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie03/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie03/Zadanie" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie03/Zadanie03.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie03/out/production/Zadanie03/pl/sda/hello/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie03/src/pl/sda/hello/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie04/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie04/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie04/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie04/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie04/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie04/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie04/Zadanie04.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie04/out/production/Zadanie04/pl/sda/hello/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie04/src/pl/sda/hello/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie05/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie05/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie05/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie05/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie05/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie05/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie05/Zadanie05.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie05/out/production/Zadanie05/pl/sda/hello/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie05/src/pl/sda/hello/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie06/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie06/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie06/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie06/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie06/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie06/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie06/Zadanie06.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie06/out/production/Zadanie06/pl/sda/hello/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie06/src/pl/sda/hello/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie07/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie07/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie07/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie07/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie07/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie07/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie07/Zadanie" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie07/Zadanie07.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie07/out/production/Zadanie07/pl/sda/hello/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie07/src/pl/sda/hello/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie08/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie08/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie08/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie08/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie08/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie08/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie08/Zadanie08.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie08/out/production/Zadanie08/pl/sda/petle/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie08/src/pl/sda/petle/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie09/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie09/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie09/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie09/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie09/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie09/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie09/Zadanie" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie09/Zadanie09.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie09/out/production/Zadanie09/pl/sda/petle/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie09/src/pl/sda/petle/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie10/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie10/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie10/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie10/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie10/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie10/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie10/Zadanie10.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie10/src/pl/sda/zad10/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie11/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie11/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie11/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie11/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie11/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie11/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie11/Zadanie11.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie11/out/production/Zadanie11/pl/sda/zad10/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie11/src/pl/sda/zad10/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie12/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie12/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie12/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie12/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie12/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie12/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie12/Zadanie12.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie12/out/production/Zadanie12/pl/sda/tablice/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie12/src/pl/sda/tablice/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie13/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie13/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie13/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie13/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie13/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie13/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie13/Zadanie13.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie13/out/production/Zadanie13/pl/sda/tablice/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie13/src/pl/sda/tablice/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie14/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie14/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie14/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie14/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie14/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie14/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie14/Zadanie14.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie14/out/production/Zadanie14/pl/sda/tablice/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie14/src/pl/sda/tablice/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie15/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie15/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie15/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie15/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie15/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie15/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie15/Zadanie15.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie15/out/production/Zadanie15/pl/sda/tablice/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zadanie15/src/pl/sda/tablice/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/Zamowienie.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/obiekt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/out/production/Zamowienie/pl/sda/zamowienie/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/out/production/Zamowienie/pl/sda/zamowienie/Pozycja.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/out/production/Zamowienie/pl/sda/zamowienie/Zamowienie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/src/pl/sda/zamowienie/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/src/pl/sda/zamowienie/Pozycja.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/Zamowienie/src/pl/sda/zamowienie/Zamowienie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/ZapisDoPliku.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/obiekt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/out/production/ZapisDoPliku/pl/sda/zapisdopliku/FileWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/out/production/ZapisDoPliku/pl/sda/zapisdopliku/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/out/production/ZapisDoPliku/pl/sda/zapisdopliku/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/out/production/ZapisDoPliku/pl/sda/zapisdopliku/exceptions/CustomException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/out/production/ZapisDoPliku/pl/sda/zapisdopliku/exceptions/CustomRuntimeException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/plik.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/src/pl/sda/zapisdopliku/FileWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/src/pl/sda/zapisdopliku/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/src/pl/sda/zapisdopliku/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/src/pl/sda/zapisdopliku/exceptions/CustomException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/ZapisDoPliku/src/pl/sda/zapisdopliku/exceptions/CustomRuntimeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/binary/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/binary/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/binary/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/binary/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/binary/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/binary/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/binary/binary.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/binary/out/production/binary/pl/my/binary/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/binary/src/pl/my/binary/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/gitHelloWorld/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/gitHelloWorld/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/gitHelloWorld/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/gitHelloWorld/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/gitHelloWorld/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/gitHelloWorld/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/gitHelloWorld/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/gitHelloWorld/gitHelloWorld.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/gitHelloWorld/out/production/gitHelloWorld/pl/sda/gitHello/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/gitHelloWorld/src/pl/sda/gitHello/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SDAcademy/sda-tor4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Templates/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Zad.SortowaniePorownanie/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Zad.SortowaniePorownanie/main.cpp" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Level.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1040">
+              <caret line="165" column="7" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#Level#0;class#Level#0" expanded="true" />
+                <element signature="method#update#0;class#Level#0" expanded="true" />
+                <element signature="method#renderPipes#0;class#Level#0" expanded="true" />
+                <element signature="method#render#0;class#Level#0" expanded="true" />
+                <element signature="method#collision#0;class#Level#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3588">
+              <caret line="138" column="30" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#start#0;class#Main#0" expanded="true" />
+                <element signature="method#init#0;class#Main#0" expanded="true" />
+                <element signature="method#initGameObjects#0;class#Main#0" expanded="true" />
+                <element signature="method#update#0;class#Main#0" expanded="true" />
+                <element signature="method#terminate#0;class#Main#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Bird.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="650">
+              <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#Bird#0;class#Bird#0" expanded="true" />
+                <element signature="e#1259#1260#0" expanded="true" />
+                <element signature="e#1296#1297#0" expanded="true" />
+                <element signature="e#1328#1329#0" expanded="true" />
+                <element signature="e#1361#1362#0" expanded="true" />
+                <element signature="method#render#0;class#Bird#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+        <option value="GLSL Shader" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/Input/Input.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/math/Vector3f.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/level/bg.vert" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/level/bg.frag" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/utils/BufferUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/shaders/bird.vert" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/utils/FileUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/utils/ShaderUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/graphics/Texture.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/input/Input.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/shaders/bird.frag" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/math/Matrix4f.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/shaders/pipes.vert" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/shaders/pipes.frag" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/level/Pipe.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/level/Bird.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/shaders/fade.vert" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/shaders/fade.frag" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/graphics/VertexArray.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/graphics/Shader.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/shaders/bg.vert" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/shaders/bg.frag" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/shaders/pipe.vert" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/shaders/pipe.frag" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/level/Level.java" />
+        <option value="$PROJECT_DIR$/src/com/bartskys/statki/Main.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="StatkiGame" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="StatkiGame" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="StatkiGame" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="StatkiGame" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="jar" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="StatkiGame" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="resources" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="StatkiGame" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
+        <option value="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+        <option value="$PROJECT_DIR$/.idea/dictionaries/bartsky.xml" />
+        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_3_2_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_assimp_3_2_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_assimp_natives_windows_3_2_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_glfw_3_2_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_glfw_natives_windows_3_2_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_natives_windows_3_2_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_openal_3_2_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_openal_natives_windows_3_2_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_opengl_3_2_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_opengl_natives_windows_3_2_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_stb_3_2_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_stb_natives_windows_3_2_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/encodings.xml" />
+        <option value="$PROJECT_DIR$/.idea/artifacts/StatkiGame_jar.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1273" />
+    <option name="y" value="-736" />
+    <option name="width" value="1094" />
+    <option name="height" value="1887" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages Scope="false" />
+      <showMembers Scope="true" />
+      <compactDirectories Scope="false" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="StatkiGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StatkiGame" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StatkiGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StatkiGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StatkiGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StatkiGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StatkiGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StatkiGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StatkiGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StatkiGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="statki" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="CatdeaLogs" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path" value="C:\dev" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/bartskys/statki" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.20584795" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\META-INF" />
+      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\res" />
+      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bartskys.statki.utils" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bartskys.statki.Main" />
+      <module name="StatkiGame" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/java/com/bartskys/statki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bartskys.statki.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="StatkiGame:jar" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="" />
+      <created>1562946363877</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562946363877</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1273" y="-736" width="1094" height="1887" extended-state="0" />
+    <layout>
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49903288" visible="true" weight="0.12905093" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39988425" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50193423" side_tool="true" visible="true" weight="0.3148148" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3298611" />
+      <window_info active="true" anchor="bottom" content_ui="combo" id="Project" order="11" sideWeight="0.49806577" visible="true" weight="0.3148148" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.32978722" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3298611" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39988425" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3298611" />
+      <window_info anchor="bottom" content_ui="combo" id="Project" order="11" weight="0.3148148" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.32978722" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout-to-restore>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$USER_HOME$/Downloads/lwjgl-stable-2019-07-12-custom/lwjgl-glfw-sources.jar!/org/lwjgl/glfw/GLFW.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="1940" column="26" selection-start-line="1940" selection-start-column="26" selection-end-line="1940" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/package-info.java" />
+    <entry file="file://$PROJECT_DIR$/hs_err_pid1104.log">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StatkiGame.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/lwjgl-stable-2019-07-12-custom/lwjgl-glfw-sources.jar!/org/lwjgl/glfw/GLFWVidMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/lwjgl-stable-2019-07-12-custom/lwjgl-opengl-sources.jar!/org/lwjgl/opengl/GL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="320" column="33" selection-start-line="320" selection-start-column="33" selection-end-line="320" selection-end-column="33" />
+          <folding>
+            <element signature="e#12294#12295#0" expanded="true" />
+            <element signature="e#12342#12343#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/lwjgl-stable-2019-07-12-custom/lwjgl-opengl-sources.jar!/org/lwjgl/opengl/GL13.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="581" column="56" selection-start-line="581" selection-start-column="56" selection-end-line="581" selection-end-column="56" />
+          <folding>
+            <element signature="e#59868#59869#0" expanded="true" />
+            <element signature="e#59914#59915#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/lwjgl-stable-2019-07-12-custom/lwjgl-sources.jar!/org/lwjgl/system/JNI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-579">
+          <caret line="538" column="30" selection-start-line="538" selection-start-column="30" selection-end-line="538" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/lwjgl-stable-2019-07-12-custom/lwjgl-opengl-sources.jar!/org/lwjgl/opengl/GL20.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="508" column="23" selection-start-line="508" selection-start-column="23" selection-end-line="508" selection-end-column="23" />
+          <folding>
+            <element signature="e#21715#21716#0" expanded="true" />
+            <element signature="e#21758#21759#0" expanded="true" />
+            <element signature="e#24682#25144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/lwjgl-stable-2019-07-12-custom/lwjgl-opengl-sources.jar!/org/lwjgl/opengl/GL11.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4543">
+          <caret line="406" column="8" selection-start-line="406" selection-start-column="8" selection-end-line="406" selection-end-column="8" />
+          <folding>
+            <element signature="e#34396#34397#0" expanded="true" />
+            <element signature="e#34434#34435#0" expanded="true" />
+            <element signature="e#95166#97041#0" expanded="true" />
+            <element signature="e#417591#426977#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/math/Vector3f.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/BufferUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createByteBuffer#0;class#BufferUtils#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/ShaderUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding>
+            <element signature="method#load#0;class#ShaderUtils#0" expanded="true" />
+            <element signature="method#create#0;class#ShaderUtils#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/math/Matrix4f.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#identity#0;class#Matrix4f#0" expanded="true" />
+            <element signature="method#orthographic#0;class#Matrix4f#0" expanded="true" />
+            <element signature="method#translate#0;class#Matrix4f#0" expanded="true" />
+            <element signature="method#multiply#0;class#Matrix4f#0" expanded="true" />
+            <element signature="method#rotate#0;class#Matrix4f#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#invoke#0;class#Input#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Pipe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#create#0;class#Pipe#0" expanded="true" />
+            <element signature="method#Pipe#0;class#Pipe#0" expanded="true" />
+            <element signature="e#1273#1274#0" expanded="true" />
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1347#1348#0" expanded="true" />
+            <element signature="e#1383#1384#0" expanded="true" />
+            <element signature="e#1282#1283#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1363#1364#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+            <element signature="e#1572#1573#0" expanded="true" />
+            <element signature="e#1610#1611#0" expanded="true" />
+            <element signature="e#1572#1573#0" expanded="true" />
+            <element signature="e#1606#1607#0" expanded="true" />
+            <element signature="e#1647#1648#0" expanded="true" />
+            <element signature="e#1682#1683#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Texture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1655#1656#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Shader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getUniform#0;class#Shader#0" expanded="true" />
+            <element signature="method#setUniform1i#0;class#Shader#0" expanded="true" />
+            <element signature="method#setUniform1f#0;class#Shader#0" expanded="true" />
+            <element signature="method#setUniform2f#0;class#Shader#0" expanded="true" />
+            <element signature="method#setUniform3f#0;class#Shader#0" expanded="true" />
+            <element signature="method#setUniformMat4f#0;class#Shader#0" expanded="true" />
+            <element signature="method#enable#0;class#Shader#0" expanded="true" />
+            <element signature="method#disable#0;class#Shader#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/VertexArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1203">
+          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#VertexArray#0;class#VertexArray#0" expanded="true" />
+            <element signature="method#VertexArray#0;class#VertexArray#0" expanded="true" />
+            <element signature="method#bind#0;class#VertexArray#0" expanded="true" />
+            <element signature="method#unbind#0;class#VertexArray#0" expanded="true" />
+            <element signature="method#draw#0;class#VertexArray#0" expanded="true" />
+            <element signature="method#render#0;class#VertexArray#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/fade.vert">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="66" lean-forward="true" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bg.frag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" selection-start-line="9" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bird.vert">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/fade.frag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bird.frag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bg.vert">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/pipe.vert">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/pipe.frag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/StatkiGame_jar.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1040">
+          <caret line="165" column="7" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Level#0;class#Level#0" expanded="true" />
+            <element signature="method#update#0;class#Level#0" expanded="true" />
+            <element signature="method#renderPipes#0;class#Level#0" expanded="true" />
+            <element signature="method#render#0;class#Level#0" expanded="true" />
+            <element signature="method#collision#0;class#Level#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Bird.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Bird#0;class#Bird#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1296#1297#0" expanded="true" />
+            <element signature="e#1328#1329#0" expanded="true" />
+            <element signature="e#1361#1362#0" expanded="true" />
+            <element signature="method#render#0;class#Bird#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3588">
+          <caret line="138" column="30" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="true" />
+            <element signature="method#init#0;class#Main#0" expanded="true" />
+            <element signature="method#initGameObjects#0;class#Main#0" expanded="true" />
+            <element signature="method#update#0;class#Main#0" expanded="true" />
+            <element signature="method#terminate#0;class#Main#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor>
+            <show-content>
+              <type id="library" />
+              <type id="artifact" />
+            </show-content>
+          </artifact-editor>
+          <last-edited>StatkiGame:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.11074197" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20584795" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>org.lwjgl:lwjgl:3.1.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>StatkiGame</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20584795" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: org.lwjgl:lwjgl-assimp:3.2.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20584795" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
