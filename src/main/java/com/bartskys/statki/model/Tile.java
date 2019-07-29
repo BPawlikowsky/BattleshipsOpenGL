@@ -12,7 +12,10 @@ public class Tile {
       private boolean owned;
       private String ownedByShip;
       private float SIZE = 0.5f;
-      private Texture texture;
+
+      private Texture emptyTile;
+      private Texture shipTile;
+      private Texture shotAtTile;
       private VertexArray mesh;
 
       public Tile(String name, Vector3f coords) {
@@ -43,7 +46,9 @@ public class Tile {
             };
 
             mesh = new VertexArray(vertices, indices, tcs);
-            texture = new Texture("res/tile.png");
+            emptyTile = new Texture("res/tile.png");
+            shipTile = new Texture("res/ship.png");
+            shotAtTile = new Texture("res/shot.png");
       }
 
       public Vector3f getCoords() {
@@ -74,8 +79,16 @@ public class Tile {
             this.ownedByShip = ownedByShip;
       }
 
-      public Texture getTexture() {
-            return texture;
+      public Texture getEmptyTile() {
+            return emptyTile;
+      }
+
+      public Texture getShipTile() {
+            return shipTile;
+      }
+
+      public Texture getShotAtTile() {
+            return shotAtTile;
       }
 
       public VertexArray getMesh() {

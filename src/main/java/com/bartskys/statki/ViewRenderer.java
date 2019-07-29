@@ -3,7 +3,6 @@ package com.bartskys.statki;
 import com.bartskys.statki.graphics.Shader;
 import com.bartskys.statki.input.Input;
 import com.bartskys.statki.math.Matrix4f;
-import com.bartskys.statki.math.Vector3f;
 import com.bartskys.statki.model.Tile;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
@@ -137,11 +136,33 @@ public class ViewRenderer {
       public static void renderTile(Tile tile) {
 
             TILE.enable();
-            tile.getTexture().bind();
+            tile.getEmptyTile().bind();
             TILE.setUniformMat4f("ml_matrix", Matrix4f.translate(tile.getCoords()));
             tile.getMesh().render();
             tile.getMesh().unbind();
-            tile.getTexture().unbind();
+            tile.getEmptyTile().unbind();
+            TILE.disable();
+      }
+
+      public static void renderShot(Tile tile) {
+
+            TILE.enable();
+            tile.getShotAtTile().bind();
+            TILE.setUniformMat4f("ml_matrix", Matrix4f.translate(tile.getCoords()));
+            tile.getMesh().render();
+            tile.getMesh().unbind();
+            tile.getShotAtTile().unbind();
+            TILE.disable();
+      }
+
+      public static void renderShip(Tile tile) {
+
+            TILE.enable();
+            tile.getShipTile().bind();
+            TILE.setUniformMat4f("ml_matrix", Matrix4f.translate(tile.getCoords()));
+            tile.getMesh().render();
+            tile.getMesh().unbind();
+            tile.getShipTile().unbind();
             TILE.disable();
       }
 
