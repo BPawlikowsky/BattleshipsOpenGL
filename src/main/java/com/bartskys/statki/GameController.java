@@ -7,7 +7,17 @@ import java.util.ArrayList;
 
 public class GameController {
 
-      private ArrayList<Tile> p1Tiles, p2Tiles;
+
 
       private Player player1, player2;
+
+      public GameController() {
+
+            ViewRenderer.init();
+      }
+
+      public void mainLoop() {
+
+            ViewRenderer.run();
+      }
 }

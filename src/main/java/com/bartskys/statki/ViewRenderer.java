@@ -2,8 +2,9 @@ package com.bartskys.statki;
 
 import com.bartskys.statki.graphics.Shader;
 import com.bartskys.statki.input.Input;
-import com.bartskys.statki.level.Level;
 import com.bartskys.statki.math.Matrix4f;
+import com.bartskys.statki.math.Vector3f;
+import com.bartskys.statki.model.Tile;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.system.MemoryStack;
@@ -24,6 +25,8 @@ public class ViewRenderer {
       private static final int height = 720;
 
       private static long window;
+
+      private static Shader TILE;
 
 
       public static void init() {
@@ -85,30 +88,30 @@ public class ViewRenderer {
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
             initGameObjects();
+
+            running = true;
       }
 
       private static void initGameObjects() {
-            Shader.loadAll();
+            TILE = new Shader("shaders/bird.vert","shaders/bird.frag");
             Matrix4f pr_matrix = Matrix4f.orthographic(
                     -10.0f, 10.0f,
                     -10.0f * 9.0f / 16.0f, 10.0f * 9.0f / 16.0f,
                     -1.0f, 1.0f
             );
-            Shader.BG.setUniformMat4f("pr_matrix", pr_matrix);
-            Shader.BG.setUniform1i("tex", 1);
+//            Shader.BG.setUniformMat4f("pr_matrix", pr_matrix);
+//            Shader.BG.setUniform1i("tex", 1);
 
-            Shader.BIRD.setUniformMat4f("pr_matrix", pr_matrix);
-            Shader.BIRD.setUniform1i("tex", 1);
+            TILE.setUniformMat4f("pr_matrix", pr_matrix);
+            TILE.setUniform1i("tex", 1);
 
-            Shader.PIPE.setUniformMat4f("pr_matrix", pr_matrix);
-            Shader.PIPE.setUniform1i("tex", 1);
+//            Shader.PIPE.setUniformMat4f("pr_matrix", pr_matrix);
+//            Shader.PIPE.setUniform1i("tex", 1);
 
 
       }
 
       public static void run() {
-
-            init();
 
             long lastTime = System.currentTimeMillis();
             long timer = System.currentTimeMillis();
@@ -155,8 +158,9 @@ public class ViewRenderer {
       private static void render() {
 
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-
+            glClearColor(0f, 1f,0f, 1f);
+            Tile tile = new Tile("tile01", new Vector3f(0.5f, 0.5f, 0.0f));
+            renderTile(tile);
             checkForErrors();
             glfwSwapBuffers(window);
       }
@@ -171,5 +175,16 @@ public class ViewRenderer {
       private static void terminate() {
             glfwDestroyWindow(window);
             glfwTerminate();
+      }
+
+      private static void renderTile(Tile tile) {
+
+            TILE.enable();
+            tile.getTexture().bind();
+            TILE.setUniformMat4f("ml_matrix", Matrix4f.translate(tile.getCoords()));
+            tile.getMesh().render();
+            tile.getMesh().unbind();
+            tile.getTexture().unbind();
+            TILE.disable();
       }
 }
