@@ -2,8 +2,12 @@ package com.bartskys.statki;
 
 import com.bartskys.statki.graphics.Shader;
 import com.bartskys.statki.input.Input;
+import com.bartskys.statki.input.MouseInput;
 import com.bartskys.statki.math.Matrix4f;
+import com.bartskys.statki.math.Vector3f;
 import com.bartskys.statki.model.Tile;
+import org.lwjgl.glfw.GLFWCursorPosCallback;
+import org.lwjgl.glfw.GLFWCursorPosCallbackI;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.system.MemoryStack;
@@ -27,8 +31,11 @@ public class ViewRenderer {
 
       private static Shader TILE;
 
+      static long getWindow() {
+            return window;
+      }
 
-      public static void init() {
+      static void init() {
 
             if (!glfwInit()) {
                   //TODO Handle it!
@@ -70,6 +77,7 @@ public class ViewRenderer {
             }// the stack frame is popped automatically
 
             glfwSetKeyCallback(window, new Input());
+            glfwSetCursorPosCallback(window, new MouseInput());
 
             glfwMakeContextCurrent(window);
 
@@ -87,27 +95,26 @@ public class ViewRenderer {
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
             initGameObjects();
+      }
 
+      public static Vector3f mousePosition(long window, GLFWCursorPosCallback callback) {
 
+            glfwSetCursorPosCallback(window, callback);
+            double[] xPos = new double[1], yPos = new double[1];
+            glfwGetCursorPos(window, xPos, yPos);
+            return new Vector3f((float) xPos[0],(float) yPos[0], 0.0f);
       }
 
       private static void initGameObjects() {
             TILE = new Shader("shaders/bird.vert","shaders/bird.frag");
             Matrix4f pr_matrix = Matrix4f.orthographic(
-                    -10.0f, 10.0f,
-                    -10.0f * 9.0f / 16.0f, 10.0f * 9.0f / 16.0f,
+                    0.0f, 20f,
+                    0.0f, 20f * 9.0f / 16.0f,
                     -1.0f, 1.0f
             );
-//            Shader.BG.setUniformMat4f("pr_matrix", pr_matrix);
-//            Shader.BG.setUniform1i("tex", 1);
 
             TILE.setUniformMat4f("pr_matrix", pr_matrix);
             TILE.setUniform1i("tex", 1);
-
-//            Shader.PIPE.setUniformMat4f("pr_matrix", pr_matrix);
-//            Shader.PIPE.setUniform1i("tex", 1);
-
-
       }
 
       static void renderStart() {
@@ -133,7 +140,7 @@ public class ViewRenderer {
             glfwTerminate();
       }
 
-      public static void renderTile(Tile tile) {
+      static void renderEmptyTile(Tile tile) {
 
             TILE.enable();
             tile.getEmptyTile().bind();
@@ -144,7 +151,7 @@ public class ViewRenderer {
             TILE.disable();
       }
 
-      public static void renderShot(Tile tile) {
+      static void renderShot(Tile tile) {
 
             TILE.enable();
             tile.getShotAtTile().bind();
@@ -166,7 +173,4 @@ public class ViewRenderer {
             TILE.disable();
       }
 
-      public static long getWindow() {
-            return window;
-      }
 }

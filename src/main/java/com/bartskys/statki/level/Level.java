@@ -96,44 +96,44 @@ public class Level {
             time += 0.01f;
       }
 
-      private void renderPipes() {
-            Shader.PIPE.enable();
-            Shader.PIPE.setUniform2f("bird", 0, bird.getPosition().y);
-            Shader.PIPE.setUniformMat4f("vw_matrix", Matrix4f.translate(new Vector3f(xScroll * 0.05f, 0.0f, 0.0f)));
-            Pipe.getTexture().bind();
-            Pipe.getMesh().bind();
-
-            for (int i = 0; i < 5 * 2; i++) {
-                  Shader.PIPE.setUniformMat4f("ml_matrix", pipes[i].getModelMatrix());
-                  Shader.PIPE.setUniform1i("top", i % 2 == 0 ? 1 : 0);
-                  Pipe.getMesh().draw();
-            }
-            Pipe.getMesh().unbind();
-            Pipe.getTexture().unbind();
-      }
-
-      public void render() {
-
-            Shader.BG.enable();
-            Shader.BG.setUniform2f("bird", 0, bird.getPosition().y);
-            bgTexture.bind();
-            mesh.bind();
-            for (int i = map; i < map + 4; i++) {
-                  Shader.BG.setUniformMat4f("vw_matrix", Matrix4f.translate(new Vector3f(i * 10 + xScroll * 0.03f, 0.0f, 0.0f)));
-                  mesh.draw();
-            }
-            mesh.unbind();
-            Shader.BG.disable();
-            bgTexture.unbind();
-
-            renderPipes();
-            bird.render();
-
-            Shader.FADE.enable();
-            Shader.FADE.setUniform1f("time", time);
-            fade.render();
-            Shader.FADE.disable();
-      }
+//      private void renderPipes() {
+//            Shader.PIPE.enable();
+//            Shader.PIPE.setUniform2f("bird", 0, bird.getPosition().y);
+//            Shader.PIPE.setUniformMat4f("vw_matrix", Matrix4f.translate(new Vector3f(xScroll * 0.05f, 0.0f, 0.0f)));
+//            Pipe.getTexture().bind();
+//            Pipe.getMesh().bind();
+//
+//            for (int i = 0; i < 5 * 2; i++) {
+//                  Shader.PIPE.setUniformMat4f("ml_matrix", pipes[i].getModelMatrix());
+//                  Shader.PIPE.setUniform1i("top", i % 2 == 0 ? 1 : 0);
+//                  Pipe.getMesh().draw();
+//            }
+//            Pipe.getMesh().unbind();
+//            Pipe.getTexture().unbind();
+//      }
+//
+//      public void render() {
+//
+//            Shader.BG.enable();
+//            Shader.BG.setUniform2f("bird", 0, bird.getPosition().y);
+//            bgTexture.bind();
+//            mesh.bind();
+//            for (int i = map; i < map + 4; i++) {
+//                  Shader.BG.setUniformMat4f("vw_matrix", Matrix4f.translate(new Vector3f(i * 10 + xScroll * 0.03f, 0.0f, 0.0f)));
+//                  mesh.draw();
+//            }
+//            mesh.unbind();
+//            Shader.BG.disable();
+//            bgTexture.unbind();
+//
+//            renderPipes();
+//            bird.render();
+//
+//            Shader.FADE.enable();
+//            Shader.FADE.setUniform1f("time", time);
+//            fade.render();
+//            Shader.FADE.disable();
+//      }
 
       private boolean collision() {
             for (int i = 0; i < 5 * 2; i++) {

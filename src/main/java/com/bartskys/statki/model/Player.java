@@ -15,4 +15,8 @@ public class Player {
       public ArrayList<Tile> getBoard() {
             return board;
       }
+
+      public void setBoard(ArrayList<Tile> tiles) {
+            this.board = board;
+      }
 }

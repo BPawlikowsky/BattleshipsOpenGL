@@ -66,15 +66,15 @@ public class Bird {
             delta = -0.15f;
       }
 
-      void render() {
-
-            Shader.BIRD.enable();
-            texture.bind();
-            Shader.BIRD.setUniformMat4f("ml_matrix", Matrix4f.translate(position).multiply(Matrix4f.rotate(rot)));
-            mesh.render();
-            mesh.unbind();
-            texture.unbind();
-            Shader.BIRD.disable();
-      }
+//      void render() {
+//
+//            Shader.BIRD.enable();
+//            texture.bind();
+//            Shader.BIRD.setUniformMat4f("ml_matrix", Matrix4f.translate(position).multiply(Matrix4f.rotate(rot)));
+//            mesh.render();
+//            mesh.unbind();
+//            texture.unbind();
+//            Shader.BIRD.disable();
+//      }
 
 }

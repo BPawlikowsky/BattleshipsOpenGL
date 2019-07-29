@@ -11,7 +11,7 @@ public class Tile {
       private boolean shotAt;
       private boolean owned;
       private String ownedByShip;
-      private float SIZE = 0.5f;
+      private float SIZE = 1f;
 
       private Texture emptyTile;
       private Texture shipTile;
@@ -27,10 +27,10 @@ public class Tile {
             ownedByShip = "";
 
             float[] vertices = {
-                    -SIZE / 2.0f, -SIZE / 2.0f, 0.1f,
-                    -SIZE / 2.0f,  SIZE / 2.0f, 0.1f,
+                    0.0f, 0.0f, 0.1f,
+                    0.0f,  SIZE / 2.0f, 0.1f,
                     SIZE / 2.0f,  SIZE / 2.0f, 0.1f,
-                    SIZE / 2.0f, -SIZE / 2.0f, 0.1f
+                    SIZE / 2.0f, 0.0f, 0.1f
             };
 
             byte[] indices = {
@@ -53,6 +53,10 @@ public class Tile {
 
       public Vector3f getCoords() {
             return coords;
+      }
+
+      public void setCoords(Vector3f coords) {
+            this.coords = coords;
       }
 
       public boolean isShotAt() {
@@ -93,5 +97,9 @@ public class Tile {
 
       public VertexArray getMesh() {
             return mesh;
+      }
+
+      public String getName() {
+            return name;
       }
 }

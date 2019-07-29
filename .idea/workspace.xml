@@ -7,13 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/ship.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/bartsky.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/bartsky.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/StatkiGame_jar/StatkiGame.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StatkiGame_jar/StatkiGame.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Shader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Shader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Bird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/tile.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/tile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/ViewRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/ViewRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Shader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Shader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/Input.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Bird.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Bird.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Level.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Tile.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,12 +59,6 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1273" />
-    <option name="y" value="-736" />
-    <option name="width" value="1094" />
-    <option name="height" value="1887" />
-  </component>
   <component name="ProjectId" id="1OWbu3C6YcOsEEPcMp866dteZpW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -72,8 +80,8 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.bartskys.statki.utils" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\dev\IdeaProjects\StatkiGame\src\main\java\com\bartskys\statki\res" />
@@ -81,8 +89,8 @@
       <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\res" />
       <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bartskys.statki.utils" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -146,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564412800395</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="render specific state tales">
+      <created>1564416635746</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1564416635746</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,18 +183,10 @@
     </ignored-roots>
     <MESSAGE value="init grafpics done, render &quot;tile&quot; done" />
     <MESSAGE value="render tiles done" />
-    <option name="LAST_COMMIT_MESSAGE" value="render tiles done" />
+    <MESSAGE value="render specific state tales" />
+    <option name="LAST_COMMIT_MESSAGE" value="render specific state tales" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="player1.board[12]" />

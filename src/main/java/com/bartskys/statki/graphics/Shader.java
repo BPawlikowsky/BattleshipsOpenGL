@@ -13,7 +13,7 @@ public class Shader {
       static final int VERTEX_ATTRIB = 0;
       static final int TCOORD_ATTRIB = 1;
 
-      public static Shader BG, BIRD, PIPE, FADE;
+
 
       private final int ID;
       private Map<String, Integer> locationCache = new HashMap<>();
@@ -22,13 +22,6 @@ public class Shader {
 
       public Shader(String vertex, String fragment) {
             ID = ShaderUtils.load(vertex, fragment);
-      }
-
-      public static void loadAll() {
-            BG = new Shader("shaders/bg.vert","shaders/bg.frag");
-            BIRD = new Shader("shaders/bird.vert","shaders/bird.frag");
-            PIPE = new Shader("shaders/pipe.vert","shaders/pipe.frag");
-            FADE = new Shader("shaders/fade.vert","shaders/fade.frag");
       }
 
       public int getUniform(String name) {

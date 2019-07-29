@@ -1,9 +1,10 @@
 package com.bartskys.statki.input;
 
 import org.lwjgl.glfw.GLFW;
+import org.lwjgl.glfw.GLFWCursorPosCallback;
 import org.lwjgl.glfw.GLFWKeyCallback;
 
-public class Input extends GLFWKeyCallback {
+public class Input extends GLFWKeyCallback  {
 
       public static boolean[] keys = new boolean[65536];
       @Override
@@ -14,4 +15,5 @@ public class Input extends GLFWKeyCallback {
       public static boolean isKeyDown(int keycode) {
             return keys[keycode];
       }
+
 }
