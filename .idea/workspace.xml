@@ -7,12 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/shot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/tile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StatkiGame_jar/StatkiGame.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StatkiGame_jar/StatkiGame.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/ViewRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/ViewRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Tile.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +67,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20584795" />
@@ -69,16 +75,17 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bartskys.statki.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\IdeaProjects\StatkiGame\src\main\java\com\bartskys\statki\res" />
       <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\META-INF" />
       <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\res" />
       <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.bartskys.statki.utils" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -128,6 +135,14 @@
       <option name="presentableId" value="Default" />
       <updated>1562946363877</updated>
     </task>
+    <task id="LOCAL-00001" summary="init grafpics done, render &quot;tile&quot; done">
+      <created>1564408817783</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564408817783</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +162,15 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
+    <MESSAGE value="init grafpics done, render &quot;tile&quot; done" />
+    <option name="LAST_COMMIT_MESSAGE" value="init grafpics done, render &quot;tile&quot; done" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="player1.board[12]" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="masterDetails">
     <states>

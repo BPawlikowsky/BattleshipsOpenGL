@@ -19,7 +19,7 @@ import static org.lwjgl.system.MemoryUtil.NULL;
 
 public class ViewRenderer {
 
-      private static boolean running;
+
 
       private static final int width = 1280;
       private static final int height = 720;
@@ -89,7 +89,7 @@ public class ViewRenderer {
 
             initGameObjects();
 
-            running = true;
+
       }
 
       private static void initGameObjects() {
@@ -111,56 +111,13 @@ public class ViewRenderer {
 
       }
 
-      public static void run() {
-
-            long lastTime = System.currentTimeMillis();
-            long timer = System.currentTimeMillis();
-            double delta = 0.0;
-            double ns = 1000000000.0 / 60.0;
-            int updates = 0;
-            int frames = 0;
-
-            while (running) {
-
-                  long now = System.nanoTime();
-                  delta += (now - lastTime) / ns;
-                  lastTime = now;
-                  if ( delta >= 1.0 ) {
-                        update();
-                        updates++;
-                        delta--;
-                  }
-
-                  render();
-
-                  frames++;
-                  if ( System.currentTimeMillis() - timer > 1000 ) {
-                        timer += 1000;
-                        System.out.println(updates + " ups, " + frames + " fps" );
-                        updates = 0;
-                        frames = 0;
-
-                  }
-
-                  if(glfwWindowShouldClose(window))
-
-                        running = false;
-            }
-
-            terminate();
-      }
-
-      private static void update() {
-
-            glfwPollEvents();
-      }
-
-      private static void render() {
+      static void renderStart() {
 
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-            glClearColor(0f, 1f,0f, 1f);
-            Tile tile = new Tile("tile01", new Vector3f(0.5f, 0.5f, 0.0f));
-            renderTile(tile);
+            glClearColor(0.4f, 0.7f, 0.9f, 1f);
+      }
+
+      static void renderFinish() {
             checkForErrors();
             glfwSwapBuffers(window);
       }
@@ -172,12 +129,12 @@ public class ViewRenderer {
             }
       }
 
-      private static void terminate() {
+      static void terminate() {
             glfwDestroyWindow(window);
             glfwTerminate();
       }
 
-      private static void renderTile(Tile tile) {
+      public static void renderTile(Tile tile) {
 
             TILE.enable();
             tile.getTexture().bind();
@@ -186,5 +143,9 @@ public class ViewRenderer {
             tile.getMesh().unbind();
             tile.getTexture().unbind();
             TILE.disable();
+      }
+
+      public static long getWindow() {
+            return window;
       }
 }

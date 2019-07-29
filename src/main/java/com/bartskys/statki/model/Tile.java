@@ -11,7 +11,7 @@ public class Tile {
       private boolean shotAt;
       private boolean owned;
       private String ownedByShip;
-      private float SIZE = 1.0f;
+      private float SIZE = 0.5f;
       private Texture texture;
       private VertexArray mesh;
 
@@ -43,7 +43,7 @@ public class Tile {
             };
 
             mesh = new VertexArray(vertices, indices, tcs);
-            texture = new Texture("res/bird.png");
+            texture = new Texture("res/tile.png");
       }
 
       public Vector3f getCoords() {
