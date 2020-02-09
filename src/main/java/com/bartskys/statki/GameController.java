@@ -4,6 +4,8 @@ import com.bartskys.statki.input.MouseInput;
 import com.bartskys.statki.math.Vector3f;
 import com.bartskys.statki.model.Player;
 import com.bartskys.statki.model.Tile;
+import org.joml.Matrix4f;
+import org.joml.Vector4f;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -16,8 +18,15 @@ class GameController {
       private static boolean running;
       private Player player1, player2;
       float position = 2.0f;
+      boolean init = true;
 
-      final ArrayList<Tile> tiles;
+      long lastTime = System.currentTimeMillis();
+      long timer = System.currentTimeMillis();
+      double delta = 0.0;
+      double ns = 1000000000.0 / 60.0;
+      int updates = 0;
+      int frames = 0;
+
 
       GameController() {
 
@@ -25,41 +34,19 @@ class GameController {
             running = true;
             player1 = new Player(generateTiles(), "player01");
             player2 = new Player(generateTiles(), "player02");
-            tiles = new ArrayList<>(player1.getBoard());
       }
 
       void mainLoop() {
 
-            long lastTime = System.currentTimeMillis();
-            long timer = System.currentTimeMillis();
-            double delta = 0.0;
-            double ns = 1000000000.0 / 60.0;
-            int updates = 0;
-            int frames = 0;
 
 
+            //Main Loop
             while (running) {
+                  // Counts frames and updates
+                  frameCounter();
 
-                  long now = System.nanoTime();
-                  delta += (now - lastTime) / ns;
-                  lastTime = now;
-                  if (delta >= 1.0) {
-                        update();
-                        updates++;
-                        delta--;
-                  }
-
+                  //Render
                   render();
-
-                  frames++;
-                  if (System.currentTimeMillis() - timer > 1000) {
-                        player1.setBoard(tiles);
-                        timer += 1000;
-                        System.out.println(updates + " ups, " + frames + " fps");
-                        updates = 0;
-                        frames = 0;
-
-                  }
 
                   if (glfwWindowShouldClose(ViewRenderer.getWindow()))
 
@@ -74,32 +61,71 @@ class GameController {
             ViewRenderer.renderStart();
 
 
+
             for (Tile t : player1.getBoard()) {
 
-                  if (
-                          MouseInput.xPos + 10f > Math.abs((t.getCoords().x) * 128f * 0.5f) &&
-                                  720f - MouseInput.yPos + 10f > Math.abs((t.getCoords().y) * 72f * 0.95f) &&
-                                  MouseInput.xPos - 10f < Math.abs((t.getCoords().x) * 128f * 0.5f) + 32f &&
-                                  720f - MouseInput.yPos - 10f < Math.abs((t.getCoords().y) * 72f * 0.95f) + 18f
-                  ) {
+                  if(isMouseOnTile(t)){
                         ViewRenderer.renderShot(t);
-                        System.out.println(
-                                "Tile name: " + t.getName() +
-                                        " x: " + t.getCoords().x + " y: " + t.getCoords().y +
-                                        "\nMouse x: " + MouseInput.xPos + " y: " + MouseInput.yPos);
-                  } else
-                        ViewRenderer.renderEmptyTile(t);
+
+                  }
+                  else ViewRenderer.renderEmptyTile(t);
+
             }
 
+
+
             ViewRenderer.renderFinish();
+      }
+
+      private void update() {
+
+            glfwPollEvents();
+      }
+
+      private void frameCounter() {
+            //Timed updates
+            long now = System.nanoTime();
+            delta += (now - lastTime) / ns;
+            lastTime = now;
+            if (delta >= 1.0) {
+                  update();
+                  updates++;
+                  delta--;
+            }
+
+            frames++;
+
+            if (System.currentTimeMillis() - timer > 1000) {
+
+                  timer += 1000;
+                  System.out.println(updates + " ups, " + frames + " fps");
+                  updates = 0;
+                  frames = 0;
+            }
+      }
+
+      private boolean isMouseOnTile(Tile t) {
+            float mouseX = ((float) MouseInput.xPos / 1280f - 1.0f) * 10.0f;
+            float mouseY = ((float) MouseInput.yPos / 720f - 1.0f) * (-10.0f * 9.0f / 16.0f);
+            float diameter = 0.5f;
+            if(
+                    mouseX > t.getCoords().x - diameter &&
+                            mouseX < (t.getCoords().x + diameter) &&
+                            mouseY > (t.getCoords().y - diameter) &&
+                            mouseY < (t.getCoords().y + diameter)
+            ){
+                  System.out.println("Tile name: " + t.getName() + " x: " + t.getCoords().x + " y: " + t.getCoords().y + "\nMouse x: " + mouseX + " y: " + mouseY);
+                  return true;
+            }
+            else return false;
       }
 
       private ArrayList<Tile> generateTiles() {
 
             ArrayList<Tile> tiles = new ArrayList<>();
 
-            float scale = 0.5f;
-            position = 0.0f;
+            float scale = 1f;
+            position = -5.0f;
 
             for (int y = 9; y >= 0; y--) {
                   for (int x = 0; x < 10; x++) {
@@ -108,7 +134,7 @@ class GameController {
                                 new Vector3f(
                                         (x * scale) + position,
                                         (y * scale) + position,
-                                        0.0f))
+                                        0.1f))
                         );
                   }
             }
@@ -117,8 +143,8 @@ class GameController {
             for (Tile t : tiles) {
                   System.out.printf(
                           "Tile name: %s | x: %f, y: %f\n", t.getName(),
-                          Math.abs(t.getCoords().x * 128.0f / 2.0f),
-                          Math.abs(t.getCoords().y * 72.0f / 2f));
+                          t.getCoords().x,
+                          t.getCoords().y);
             }
 
             return tiles;
@@ -139,9 +165,7 @@ class GameController {
             return tiles;
       }
 
-      private void update() {
+      private void playerSetup(Player player) {
 
-
-            glfwPollEvents();
       }
 }

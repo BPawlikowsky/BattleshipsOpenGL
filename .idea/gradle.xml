@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$USER_HOME$/Downloads/imgui-master/imgui-master" />
+        <option name="modules">
+          <set>
+            <option value="$USER_HOME$/Downloads/imgui-master/imgui-master" />
+            <option value="$USER_HOME$/Downloads/imgui-master/imgui-master/imgui-bgfx" />
+            <option value="$USER_HOME$/Downloads/imgui-master/imgui-master/imgui-core" />
+            <option value="$USER_HOME$/Downloads/imgui-master/imgui-master/imgui-gl" />
+            <option value="$USER_HOME$/Downloads/imgui-master/imgui-master/imgui-glfw" />
+            <option value="$USER_HOME$/Downloads/imgui-master/imgui-master/imgui-jogl" />
+            <option value="$USER_HOME$/Downloads/imgui-master/imgui-master/imgui-openjfx" />
+            <option value="$USER_HOME$/Downloads/imgui-master/imgui-master/imgui-vk" />
+          </set>
+        </option>
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

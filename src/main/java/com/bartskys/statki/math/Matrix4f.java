@@ -1,6 +1,6 @@
 package com.bartskys.statki.math;
 
-import com.bartskys.statki.utils.BufferUtils;
+import org.lwjgl.BufferUtils;
 
 import java.nio.FloatBuffer;
 
@@ -83,6 +83,6 @@ public class Matrix4f {
       }
 
       public FloatBuffer toFloatBuffer() {
-            return BufferUtils.createFloatBuffer(elements);
+            return BufferUtils.createFloatBuffer(elements.length);
       }
 }

@@ -1,8 +1,11 @@
 package com.bartskys.statki.graphics;
 
-import com.bartskys.statki.math.Matrix4f;
+import org.joml.Matrix4f;
 import com.bartskys.statki.math.Vector3f;
 import com.bartskys.statki.utils.ShaderUtils;
+import org.lwjgl.BufferUtils;
+
+import java.nio.FloatBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,6 +15,8 @@ public class Shader {
 
       static final int VERTEX_ATTRIB = 0;
       static final int TCOORD_ATTRIB = 1;
+
+      private FloatBuffer matrixBuffer = BufferUtils.createFloatBuffer(16);
 
 
 
@@ -60,7 +65,7 @@ public class Shader {
 
       public void setUniformMat4f(String name, Matrix4f matrix) {
             if (!enabled) enable();
-            glUniformMatrix4fv(getUniform(name), false, matrix.toFloatBuffer());
+            glUniformMatrix4fv(getUniform(name), false, matrix.get(matrixBuffer));
       }
 
       public void enable() {
