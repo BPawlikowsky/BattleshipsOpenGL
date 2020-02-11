@@ -16,8 +16,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <lwjgl.version>3.2.4-SNAPSHOT</lwjgl.version>
         <joml.version>1.9.20</joml.version>
-        <lwjgl.natives>natives-windows</lwjgl.natives>
-        <kotlin.version>1.3.61</kotlin.version>
+        <lwjgl.natives>natives-macos</lwjgl.natives>
     </properties>
 
     <repositories>
@@ -146,17 +145,6 @@
             <artifactId>lombok</artifactId>
             <version>1.18.10</version>
             <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib</artifactId>
-            <version>${kotlin.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.kotlin-graphics</groupId>
-            <artifactId>imgui</artifactId>
-            <version>v1.70</version>
         </dependency>
 
     </dependencies>

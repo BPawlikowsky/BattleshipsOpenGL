@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="imgui">
-    <CLASSES>
-      <root url="jar://$USER_HOME$/Downloads/imgui-master/imgui-master/build/libs/imgui.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

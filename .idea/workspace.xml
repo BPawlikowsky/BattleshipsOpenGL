@@ -7,64 +7,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/imgui.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Ship.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/demo/FiraSans.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/IOUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/Nuklear.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Statki_OpenGL.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hs_err_pid1961.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hs_err_pid2211.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/hs_err_pid2505.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/hs_err_pid2608.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/FiraSans.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/bartsky.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/bartsky.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_assimp_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_assimp_natives_windows_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_glfw_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_glfw_natives_windows_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_natives_windows_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_openal_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_openal_natives_windows_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_opengl_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_opengl_natives_windows_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_stb_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_stb_natives_windows_3_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/imgui.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StatkiGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StatkiGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/StatkiGame_jar/StatkiGame.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StatkiGame_jar/StatkiGame.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Shader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Shader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/hs_err_pid14896.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/math/Matrix4f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/math/Matrix4f.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bird.vert" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bird.vert" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/ViewRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Shader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Texture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/VertexArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/Input.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/MouseInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Bird.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Level.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Pipe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/math/Matrix4f.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/math/Vector3f.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Tile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/BufferUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/FileUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/ShaderUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/demo/FiraSans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/Nuklear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/NuklearGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,12 +52,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="imgui" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -128,10 +85,12 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="Downloaded.Files.Path" value="C:\dev" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
@@ -139,8 +98,10 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/imgui-master/imgui-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20584795" />
@@ -148,19 +109,19 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.bartskys.statki.utils" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\dev\IdeaProjects\StatkiGame\src\main\java\com\bartskys\statki\res\demo" />
-      <recent name="C:\dev\IdeaProjects\StatkiGame\src\main\java\com\bartskys\statki\res" />
-      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\META-INF" />
-      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\res" />
-      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\dev\IdeaProjects\StatkiGame\src\main\java\com\bartskys\statki\utils" />
       <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils" />
+      <recent name="C:\dev\IdeaProjects\StatkiGame\src\main\java\com\bartskys\statki\res\demo" />
+      <recent name="C:\dev\IdeaProjects\StatkiGame\src\main\java\com\bartskys\statki\res" />
+      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\META-INF" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bartskys.statki.utils" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -168,7 +129,29 @@
       <command value="gradle assemble" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.imgui-master [check]">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bartskys.statki.Main" />
+      <module name="Statki_OpenGL" />
+      <option name="VM_PARAMETERS" value="-XstartOnFirstThread" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/java/com/bartskys/statki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bartskys.statki.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="recording" autostart="false">
+        <include_pattern>
+          <option name="PATTERN" value="com.bartskys.statki.*" />
+          <option name="ENABLED" value="true" />
+          <option name="INCLUDE" value="true" />
+        </include_pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="imgui-master [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -185,6 +168,13 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <extension name="recording" autostart="false">
+        <include_pattern>
+          <option name="PATTERN" value="com.bartskys.statki.*" />
+          <option name="ENABLED" value="true" />
+          <option name="INCLUDE" value="true" />
+        </include_pattern>
+      </extension>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
@@ -204,25 +194,13 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="imgui-master [classes]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$USER_HOME$/Downloads/imgui-master/imgui-master" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="classes" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
+      <extension name="recording" autostart="false">
+        <include_pattern>
+          <option name="PATTERN" value="com.bartskys.statki.*" />
+          <option name="ENABLED" value="true" />
+          <option name="INCLUDE" value="true" />
+        </include_pattern>
+      </extension>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
@@ -242,6 +220,7 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <extension name="recording" autostart="false" />
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
@@ -261,18 +240,38 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <extension name="recording" autostart="false" />
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.imgui-master [build]" />
+      <item itemvalue="Gradle.imgui-master [check]" />
+      <item itemvalue="Gradle.imgui-master [compileJava]" />
+      <item itemvalue="Gradle.imgui-master [javadoc]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.imgui-master [check]" />
         <item itemvalue="Gradle.imgui-master [compileJava]" />
         <item itemvalue="Gradle.imgui-master [javadoc]" />
         <item itemvalue="Gradle.imgui-master [build]" />
-        <item itemvalue="Gradle.imgui-master [classes]" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -284,6 +283,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562946363877</updated>
+      <workItem from="1581279019859" duration="1489000" />
+      <workItem from="1581280568580" duration="13303000" />
     </task>
     <task id="LOCAL-00001" summary="init grafpics done, render &quot;tile&quot; done">
       <created>1564408817783</created>
@@ -316,6 +317,9 @@
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
       <list>
@@ -340,6 +344,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
@@ -354,14 +359,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="691" y="200" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1581271382975" />
-    <state x="553" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581271290024">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="369" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581281203665">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="553" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581271290024" />
-    <state x="904" y="258" key="#com.intellij.ide.util.MemberChooser" timestamp="1581260843688">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="369" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.804@0.23.1440.804" timestamp="1581281203665" />
+    <state x="678" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1581291493146">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="904" y="258" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581260843688" />
+    <state x="678" y="222" key="#com.intellij.ide.util.MemberChooser/0.23.1440.804@0.23.1440.804" timestamp="1581291493146" />
+    <state x="642" y="280" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581279227445">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="642" y="280" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.804@0.23.1440.804" timestamp="1581279227445" />
     <state x="896" y="270" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581019587477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -382,22 +393,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="996" y="297" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581273920275" />
-    <state width="1573" height="178" key="GridCell.Tab.0.bottom" timestamp="1581274032010">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1398" height="181" key="GridCell.Tab.0.bottom" timestamp="1581379311795">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1573" height="178" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1573" height="178" key="GridCell.Tab.0.center" timestamp="1581274032010">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1398" height="181" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1581379311795" />
+    <state width="1398" height="181" key="GridCell.Tab.0.center" timestamp="1581379311794">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1573" height="178" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1573" height="178" key="GridCell.Tab.0.left" timestamp="1581274032010">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1398" height="181" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1581379311794" />
+    <state width="1398" height="181" key="GridCell.Tab.0.left" timestamp="1581379311794">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1573" height="178" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1573" height="178" key="GridCell.Tab.0.right" timestamp="1581274032010">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1398" height="181" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1581379311794" />
+    <state width="1398" height="181" key="GridCell.Tab.0.right" timestamp="1581379311795">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1573" height="178" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
+    <state width="1398" height="181" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1581379311795" />
     <state x="629" y="197" key="Maven.ArtifactSearchDialog" timestamp="1581273525164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -406,18 +421,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="761" y="160" width="681" height="761" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1581273921730" />
-    <state x="579" y="116" key="SettingsEditor" timestamp="1581273962734">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="521" y="350" key="ReplaceDuplicatesPrompt" timestamp="1581290110618">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="521" y="350" key="ReplaceDuplicatesPrompt/0.23.1440.804@0.23.1440.804" timestamp="1581290110618" />
+    <state x="416" y="23" key="SettingsEditor" timestamp="1581280931819">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="579" y="116" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581273962734" />
-    <state x="886" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1581271735394">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="416" y="23" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1581280931819" />
+    <state x="665" y="311" key="com.intellij.ide.util.TipDialog" timestamp="1581280568502">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="886" y="372" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581271735394" />
-    <state x="829" y="302" key="extract.method.dialog" timestamp="1581265540502">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="665" y="311" key="com.intellij.ide.util.TipDialog/0.23.1440.804@0.23.1440.804" timestamp="1581280568502" />
+    <state x="622" y="256" width="542" height="491" key="extract.method.dialog" timestamp="1581378092338">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="829" y="302" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581265540502" />
+    <state x="622" y="256" width="542" height="491" key="extract.method.dialog/0.23.1440.804@0.23.1440.804" timestamp="1581378092338" />
     <state x="807" y="166" key="refactoring.ChangeSignatureDialog" timestamp="1581262998347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

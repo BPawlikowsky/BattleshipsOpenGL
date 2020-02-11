@@ -1,26 +1,16 @@
 package com.bartskys.statki;
 
 
-public class Main implements Runnable {
+public class Main  {
 
     private boolean running = false;
 
-    private GameController gameController;
+    private static final GameController gameController = new GameController();
 
-    private void start() {
 
-        running = true;
-        Thread thread = new Thread(this, "Game");
-        thread.start();
-    }
-
-    @Override
-    public void run() {
-        gameController = new GameController();
-        gameController.mainLoop();
-    }
 
     public static void main(String[] args) {
-        new Main().start();
+
+        gameController.mainLoop();
     }
 }

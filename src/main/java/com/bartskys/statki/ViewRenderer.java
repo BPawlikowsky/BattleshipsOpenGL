@@ -4,43 +4,51 @@ import com.bartskys.statki.graphics.Shader;
 import com.bartskys.statki.input.Input;
 import com.bartskys.statki.input.MouseInput;
 import com.bartskys.statki.model.Tile;
-import glm_.vec2.Vec2;
-import glm_.vec4.Vec4;
+
+import com.bartskys.statki.utils.NuklearGUI;
 import lombok.Getter;
 import org.joml.Matrix4f;
+import org.lwjgl.BufferUtils;
 import org.lwjgl.glfw.GLFWVidMode;
+import org.lwjgl.nuklear.NkAllocator;
+import org.lwjgl.nuklear.*;
+import org.lwjgl.nuklear.NkDrawVertexLayoutElement;
 import org.lwjgl.opengl.GL;
+import org.lwjgl.stb.STBTTAlignedQuad;
+import org.lwjgl.stb.STBTTFontinfo;
+import org.lwjgl.stb.STBTTPackContext;
+import org.lwjgl.stb.STBTTPackedchar;
 import org.lwjgl.system.MemoryStack;
-import uno.glfw.GlfwWindow;
+import org.lwjgl.system.Platform;
 
+
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
+import java.util.Objects;
 
+import static com.bartskys.statki.utils.IOUtil.ioResourceToByteBuffer;
 import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.nuklear.Nuklear.*;
 import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.opengl.GL33.GL_TEXTURE1;
-import static org.lwjgl.opengl.GL33.glActiveTexture;
-import static org.lwjgl.system.MemoryUtil.NULL;
+import static org.lwjgl.opengl.GL15.*;
+import static org.lwjgl.opengl.GL33.*;
+
+import static org.lwjgl.stb.STBTruetype.*;
+import static org.lwjgl.system.MemoryStack.stackPush;
+import static org.lwjgl.system.MemoryUtil.*;
 
 public class ViewRenderer {
 
-      private static float[] f = {0f};
-      private static Vec4 clearColor = new Vec4(0.45f, 0.55f, 0.6f, 1f);
-      // Java users can use both a MutableProperty0 or a Boolean Array
-      private static MutableProperty0<Boolean> showAnotherWindow = new MutableProperty0<>(false);
-      private static boolean[] showDemo = {true};
-      private static int[] counter = {0};
+      @Getter
+      private static NuklearGUI nuklear;
+
 
       private static final int width = 1280;
       private static final int height = 720;
 
       private static long window;;
-
-      private static ImGui imgui = ImGui.INSTANCE;
-      private static IO io;
-      private static Context ctx;
-      private static ImplGlfw implGlfw;
-      private static ImplGL3 implGl3;
-      static GlfwWindow glfwWindow;
 
       private static Shader TILE;
       @Getter
@@ -75,7 +83,7 @@ public class ViewRenderer {
                   throw new RuntimeException("Failed to create the GLFW" + window);
             }
 
-            try ( MemoryStack stack = MemoryStack.stackPush() ) {
+            try ( MemoryStack stack = stackPush() ) {
                   IntBuffer pWidth = stack.mallocInt(1); // int*
                   IntBuffer pHeight = stack.mallocInt(1); // int*
 
@@ -96,8 +104,7 @@ public class ViewRenderer {
                   throw new NullPointerException("One or both window sizes returned null");
             }// the stack frame is popped automatically
 
-            glfwSetKeyCallback(window, new Input());
-            glfwSetCursorPosCallback(window, new MouseInput());
+            setCallbacks();
 
             glfwMakeContextCurrent(window);
 
@@ -109,32 +116,23 @@ public class ViewRenderer {
 
             glClearColor(0f, 0f,0f, 1f);
 
-            glEnable(GL_DEPTH_TEST);
-            glEnable(GL_BLEND);
-            glActiveTexture(GL_TEXTURE1);
-            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+            nuklear = new NuklearGUI(window, width, height);
 
-            // Setup Dear ImGui context
-            ctx = new Context();
-            //io.configFlags = io.configFlags or ConfigFlag.NavEnableKeyboard  // Enable Keyboard Controls
-            //io.configFlags = io.configFlags or ConfigFlag.NavEnableGamepad   // Enable Gamepad Controls
+            nuklear.init();
 
-            // Setup Dear ImGui style
-            imgui.styleColorsDark(null);
-//        imgui.styleColorsClassic(null)
-
-            // Setup Platform/Renderer bindings
-            glfwWindow = GlfwWindow.from(window);
-            implGlfw = new ImplGlfw( glfwWindow, true, null);
-            implGl3 = new ImplGL3();
-
-            io = imgui.getIo();
+            TILE = new Shader("shaders/bird.vert","shaders/bird.frag");
 
             initGameObjects();
       }
 
-      private static void initGameObjects() {
-            TILE = new Shader("shaders/bird.vert","shaders/bird.frag");
+      public static void setCallbacks() {
+            glfwSetKeyCallback(window, new Input());
+            glfwSetCursorPosCallback(window, new MouseInput());
+      }
+
+
+      public static void initGameObjects() {
+            setCallbacks();
 
             TILE.setUniformMat4f("pr_matrix", pro_matrix);
             TILE.setUniform1i("tex", 1);
@@ -142,57 +140,16 @@ public class ViewRenderer {
 
       static void renderStart() {
 
-            implGl3.newFrame();
-            implGlfw.newFrame();
-
-            imgui.newFrame();
-
-            imgui.text("Hello, world!");                                // Display some text (you can use a format string too)
-            imgui.sliderFloat("float", f, 0, 0f, 1f, "%.3f", 1f);       // Edit 1 float using a slider from 0.0f to 1.0f
-            imgui.colorEdit3("clear color", clearColor, 0);               // Edit 3 floats representing a color
-
-            imgui.checkbox("Demo Window", showDemo);                 // Edit bools storing our windows open/close state
-            imgui.checkbox("Another Window", showAnotherWindow);
-
-            if (imgui.button("Button", new Vec2())) // Buttons return true when clicked (NB: most widgets return true when edited/activated)
-                  counter[0]++;
-
-            imgui.sameLine(0f, -1f);
-            imgui.text("counter = " + counter[0]);
-
-            imgui.text("Application average %.3f ms/frame (%.1f FPS)", 1_000f / io.getFramerate(), io.getFramerate());
-
-            // 2. Show another simple window. In most cases you will use an explicit begin/end pair to name the window.
-            if (showAnotherWindow.get()) {
-                  imgui.begin("Another Window", showAnotherWindow, 0);
-                  imgui.text("Hello from another window!");
-                  if (imgui.button("Close Me", new Vec2()))
-                        showAnotherWindow.set(false);
-                  imgui.end();
-            }
-
-        /*  3. Show the ImGui demo window. Most of the sample code is in imgui.showDemoWindow().
-                Read its code to learn more about Dear ImGui!  */
-            if (showDemo[0]) {
-            /*  Normally user code doesn't need/want to call this because positions are saved in .ini file anyway.
-                    Here we just want to make the demo initial state a bit more friendly!                 */
-                  imgui.setNextWindowPos(new Vec2(650, 20), Cond.FirstUseEver, new Vec2());
-                  imgui.showDemoWindow(showDemo);
-            }
-
-            // Rendering
-            imgui.render();
-            glViewport(
-                    glfwWindow.getFramebufferSize().getX(),
-                    glfwWindow.getFramebufferSize().getY(),
-                    1280, 720
-            );
-            glClearColor(clearColor.getX(), clearColor.getY(), clearColor.getZ(), clearColor.getW());
-            glClear(GL_COLOR_BUFFER_BIT);
-            implGl3.renderDrawData(imgui.getDrawData());
-
+            flagSetup();
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             glClearColor(0.4f, 0.7f, 0.9f, 1f);
+      }
+
+      public static void flagSetup() {
+            glEnable(GL_DEPTH_TEST);
+            glEnable(GL_BLEND);
+            glActiveTexture(GL_TEXTURE1);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
       }
 
       static void renderFinish() {
@@ -209,6 +166,7 @@ public class ViewRenderer {
 
       static void terminate() {
             glfwDestroyWindow(window);
+            nuklear.shutdown();
             glfwTerminate();
       }
 
