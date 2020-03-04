@@ -12,7 +12,6 @@ public class MouseInput extends GLFWCursorPosCallback {
 
       @Override
       public void invoke(long window, double xpos, double ypos) {
-            //org.joml.Vector2f pos = new Vector2f((float) xpos,(float) ypos);
 
             xPos = (xpos / 0.5) + 2.0;
             yPos = (ypos / 0.5) + 2.0;

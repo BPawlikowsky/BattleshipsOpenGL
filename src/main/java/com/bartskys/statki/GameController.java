@@ -1,12 +1,14 @@
 package com.bartskys.statki;
 
+import com.bartskys.statki.input.Input;
 import com.bartskys.statki.input.MouseInput;
 import com.bartskys.statki.math.Vector3f;
 import com.bartskys.statki.model.Player;
 import com.bartskys.statki.model.Tile;
-import org.joml.Matrix4f;
-import org.joml.Vector4f;
+import org.lwjgl.nuklear.*;
+import static org.lwjgl.nuklear.Nuklear.*;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Comparator;
 
@@ -26,6 +28,7 @@ class GameController {
       double ns = 1000000000.0 / 60.0;
       int updates = 0;
       int frames = 0;
+      private boolean onTiles = false;
 
 
       GameController() {
@@ -45,6 +48,7 @@ class GameController {
                   // Counts frames and updates
                   frameCounter();
 
+                  update();
                   //Render
                   render();
 
@@ -58,27 +62,30 @@ class GameController {
 
       private void render() {
 
+            if(!onTiles)ViewRenderer.setCallbacks();
+            else ViewRenderer.getNuklear().setupCallbacks(ViewRenderer.getWindow());
+
             ViewRenderer.renderStart();
 
+            ViewRenderer.getNuklear().update(ViewRenderer.getNuklear().getCtx(), "Dupka");
 
+            ViewRenderer.flagSetup();
 
             for (Tile t : player1.getBoard()) {
 
                   if(isMouseOnTile(t)){
                         ViewRenderer.renderShot(t);
-
                   }
                   else ViewRenderer.renderEmptyTile(t);
 
             }
 
-
-
             ViewRenderer.renderFinish();
       }
 
       private void update() {
-
+            if(Input.isKeyDown(GLFW_KEY_E))
+                  onTiles = !onTiles;
             glfwPollEvents();
       }
 
