@@ -5,50 +5,30 @@ import com.bartskys.statki.input.Input;
 import com.bartskys.statki.input.MouseInput;
 import com.bartskys.statki.model.Tile;
 
-import com.bartskys.statki.utils.NuklearGUI;
 import lombok.Getter;
 import org.joml.Matrix4f;
-import org.lwjgl.BufferUtils;
 import org.lwjgl.glfw.GLFWVidMode;
-import org.lwjgl.nuklear.NkAllocator;
-import org.lwjgl.nuklear.*;
-import org.lwjgl.nuklear.NkDrawVertexLayoutElement;
 import org.lwjgl.opengl.GL;
-import org.lwjgl.stb.STBTTAlignedQuad;
-import org.lwjgl.stb.STBTTFontinfo;
-import org.lwjgl.stb.STBTTPackContext;
-import org.lwjgl.stb.STBTTPackedchar;
 import org.lwjgl.system.MemoryStack;
-import org.lwjgl.system.Platform;
 
 
-import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
-import java.util.Objects;
 
-import static com.bartskys.statki.utils.IOUtil.ioResourceToByteBuffer;
 import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.nuklear.Nuklear.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL15.*;
-import static org.lwjgl.opengl.GL33.*;
 
-import static org.lwjgl.stb.STBTruetype.*;
 import static org.lwjgl.system.MemoryStack.stackPush;
 import static org.lwjgl.system.MemoryUtil.*;
 
 public class ViewRenderer {
 
-      @Getter
-      private static NuklearGUI nuklear;
-
-
       private static final int width = 1280;
       private static final int height = 720;
 
-      private static long window;;
+      private static long window;
+
+      private static Input input = new Input();
 
       private static Shader TILE;
       @Getter
@@ -116,17 +96,13 @@ public class ViewRenderer {
 
             glClearColor(0f, 0f,0f, 1f);
 
-            nuklear = new NuklearGUI(window, width, height);
-
-            nuklear.init();
-
             TILE = new Shader("shaders/shader.vert","shaders/shader.frag");
 
             initGameObjects();
       }
 
       public static void setCallbacks() {
-            glfwSetKeyCallback(window, new Input());
+            glfwSetKeyCallback(window, input);
             glfwSetCursorPosCallback(window, new MouseInput());
       }
 
@@ -165,7 +141,6 @@ public class ViewRenderer {
 
       static void terminate() {
             glfwDestroyWindow(window);
-            nuklear.shutdown();
             glfwTerminate();
       }
 

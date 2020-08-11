@@ -15,12 +15,9 @@ import java.util.Comparator;
 import static org.lwjgl.glfw.GLFW.*;
 
 class GameController {
-
-
       private static boolean running;
       private Player player1, player2;
       float position = 2.0f;
-      boolean init = true;
 
       long lastTime = System.currentTimeMillis();
       long timer = System.currentTimeMillis();
@@ -32,7 +29,6 @@ class GameController {
 
 
       GameController() {
-
             ViewRenderer.init();
             running = true;
             player1 = new Player(generateTiles(), "player01");
@@ -40,9 +36,6 @@ class GameController {
       }
 
       void mainLoop() {
-
-
-
             //Main Loop
             while (running) {
                   // Counts frames and updates
@@ -61,31 +54,24 @@ class GameController {
       }
 
       private void render() {
-
-            if(!onTiles)ViewRenderer.setCallbacks();
-            else ViewRenderer.getNuklear().setupCallbacks(ViewRenderer.getWindow());
+            ViewRenderer.setCallbacks();
 
             ViewRenderer.renderStart();
-
-            ViewRenderer.getNuklear().update(ViewRenderer.getNuklear().getCtx(), "Dupka");
 
             ViewRenderer.flagSetup();
 
             for (Tile t : player1.getBoard()) {
 
                   if(isMouseOnTile(t)){
-                        ViewRenderer.renderShot(t);
+                        ViewRenderer.renderShip(t);
                   }
                   else ViewRenderer.renderEmptyTile(t);
-
             }
 
             ViewRenderer.renderFinish();
       }
 
       private void update() {
-            if(Input.isKeyDown(GLFW_KEY_E))
-                  onTiles = !onTiles;
             glfwPollEvents();
       }
 
@@ -112,23 +98,29 @@ class GameController {
       }
 
       private boolean isMouseOnTile(Tile t) {
+            // Aligning mouse position to the board so that the mouse coords corespond to the board coords
             float mouseX = ((float) MouseInput.xPos / 1280f - 1.0f) * 10.0f;
             float mouseY = ((float) MouseInput.yPos / 720f - 1.0f) * (-10.0f * 9.0f / 16.0f);
-            float diameter = 0.5f;
+            float diameter = 0.5f; //Board tile dimeter
             if(
                     mouseX > t.getCoords().x - diameter &&
                             mouseX < (t.getCoords().x + diameter) &&
                             mouseY > (t.getCoords().y - diameter) &&
                             mouseY < (t.getCoords().y + diameter)
             ){
-                  System.out.println("Tile name: " + t.getName() + " x: " + t.getCoords().x + " y: " + t.getCoords().y + "\nMouse x: " + mouseX + " y: " + mouseY);
+                  System.out.printf(
+                          "Tile name: %s x: %.1f y: %.1f\nMouse x: %.2f y: %.2f\n",
+                          t.getName(),
+                          t.getCoords().x,
+                          t.getCoords().y,
+                          mouseX, mouseY
+                  );
                   return true;
             }
             else return false;
       }
 
       private ArrayList<Tile> generateTiles() {
-
             ArrayList<Tile> tiles = new ArrayList<>();
 
             float scale = 1f;
