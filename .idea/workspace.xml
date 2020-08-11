@@ -7,26 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Statki_OpenGL.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid1961.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid2211.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/hs_err_pid2505.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/hs_err_pid2608.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/FiraSans.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/imgui.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/demo/FiraSans.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/Nuklear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/NuklearGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Statki_OpenGL.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/libassimp.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/libglfw.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/liblwjgl.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/liblwjgl_opengl.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/liblwjgl_stb.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/libopenal.dylib" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,20 +64,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1OWbu3C6YcOsEEPcMp866dteZpW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
@@ -97,16 +81,18 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20584795" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -261,18 +247,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -284,7 +258,8 @@
       <option name="presentableId" value="Default" />
       <updated>1562946363877</updated>
       <workItem from="1581279019859" duration="1489000" />
-      <workItem from="1581280568580" duration="13303000" />
+      <workItem from="1581280568580" duration="13637000" />
+      <workItem from="1581899753411" duration="20000" />
     </task>
     <task id="LOCAL-00001" summary="init grafpics done, render &quot;tile&quot; done">
       <created>1564408817783</created>
@@ -335,13 +310,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -373,14 +347,6 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="642" y="280" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.804@0.23.1440.804" timestamp="1581279227445" />
-    <state x="896" y="270" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581019587477">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="896" y="270" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581019587477" />
-    <state x="995" y="353" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1580340567653">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="995" y="353" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580340567653" />
     <state x="829" y="289" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581263259520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -393,26 +359,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="996" y="297" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581273920275" />
-    <state width="1398" height="181" key="GridCell.Tab.0.bottom" timestamp="1581379311795">
+    <state width="1398" height="213" key="GridCell.Tab.0.bottom" timestamp="1588705348362">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1573" height="178" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1398" height="181" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1581379311795" />
-    <state width="1398" height="181" key="GridCell.Tab.0.center" timestamp="1581379311794">
+    <state width="1398" height="213" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1588705348362" />
+    <state width="1398" height="213" key="GridCell.Tab.0.center" timestamp="1588705348361">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1573" height="178" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1398" height="181" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1581379311794" />
-    <state width="1398" height="181" key="GridCell.Tab.0.left" timestamp="1581379311794">
+    <state width="1398" height="213" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1588705348361" />
+    <state width="1398" height="213" key="GridCell.Tab.0.left" timestamp="1588705348361">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1573" height="178" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1398" height="181" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1581379311794" />
-    <state width="1398" height="181" key="GridCell.Tab.0.right" timestamp="1581379311795">
+    <state width="1398" height="213" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1588705348361" />
+    <state width="1398" height="213" key="GridCell.Tab.0.right" timestamp="1588705348361">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1573" height="178" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1398" height="181" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1581379311795" />
+    <state width="1398" height="213" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1588705348361" />
     <state x="629" y="197" key="Maven.ArtifactSearchDialog" timestamp="1581273525164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -425,16 +391,16 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="521" y="350" key="ReplaceDuplicatesPrompt/0.23.1440.804@0.23.1440.804" timestamp="1581290110618" />
-    <state x="416" y="23" key="SettingsEditor" timestamp="1581280931819">
+    <state x="416" y="23" key="SettingsEditor" timestamp="1589757286404">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="579" y="116" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581273962734" />
-    <state x="416" y="23" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1581280931819" />
-    <state x="665" y="311" key="com.intellij.ide.util.TipDialog" timestamp="1581280568502">
+    <state x="416" y="23" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1589757286404" />
+    <state x="665" y="311" key="com.intellij.ide.util.TipDialog" timestamp="1581899760839">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="886" y="372" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581271735394" />
-    <state x="665" y="311" key="com.intellij.ide.util.TipDialog/0.23.1440.804@0.23.1440.804" timestamp="1581280568502" />
+    <state x="665" y="311" key="com.intellij.ide.util.TipDialog/0.23.1440.804@0.23.1440.804" timestamp="1581899760839" />
     <state x="622" y="256" width="542" height="491" key="extract.method.dialog" timestamp="1581378092338">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -454,6 +420,15 @@
     <state x="762" y="260" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581256231402" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="player1.board[12]" />

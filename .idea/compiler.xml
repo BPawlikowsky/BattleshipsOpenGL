@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="StatkiGame" />
         <module name="Statki_OpenGL" />
+        <module name="statki" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
