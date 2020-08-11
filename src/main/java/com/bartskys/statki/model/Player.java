@@ -17,4 +17,8 @@ public class Player {
             this.board = board;
             this.name = name;
       }
+
+      public void addShip(Ship ship) {
+            ships.add(ship);
+      }
 }

@@ -4,6 +4,8 @@ import com.bartskys.statki.input.Input;
 import com.bartskys.statki.input.MouseInput;
 import com.bartskys.statki.math.Vector3f;
 import com.bartskys.statki.model.Player;
+import com.bartskys.statki.model.Ship;
+import com.bartskys.statki.model.ShipEnum;
 import com.bartskys.statki.model.Tile;
 import org.lwjgl.nuklear.*;
 import static org.lwjgl.nuklear.Nuklear.*;
@@ -11,12 +13,14 @@ import static org.lwjgl.nuklear.Nuklear.*;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 
 import static org.lwjgl.glfw.GLFW.*;
 
 class GameController {
       private static boolean running;
       private Player player1, player2;
+      private float mouseX, mouseY;
       float position = 2.0f;
 
       long lastTime = System.currentTimeMillis();
@@ -33,6 +37,7 @@ class GameController {
             running = true;
             player1 = new Player(generateTiles(), "player01");
             player2 = new Player(generateTiles(), "player02");
+
       }
 
       void mainLoop() {
@@ -40,9 +45,9 @@ class GameController {
             while (running) {
                   // Counts frames and updates
                   frameCounter();
-
+                  // Update game events
                   update();
-                  //Render
+                  // Render after update
                   render();
 
                   if (glfwWindowShouldClose(ViewRenderer.getWindow()))
@@ -72,6 +77,9 @@ class GameController {
       }
 
       private void update() {
+            // Aligning mouse position to the board so that the mouse coords corespond to the board coords
+            mouseX = ((float) MouseInput.xPos / 1280f - 1.0f) * 10.0f;
+            mouseY = ((float) MouseInput.yPos / 720f - 1.0f) * (-10.0f * 9.0f / 16.0f);
             glfwPollEvents();
       }
 
@@ -98,9 +106,7 @@ class GameController {
       }
 
       private boolean isMouseOnTile(Tile t) {
-            // Aligning mouse position to the board so that the mouse coords corespond to the board coords
-            float mouseX = ((float) MouseInput.xPos / 1280f - 1.0f) * 10.0f;
-            float mouseY = ((float) MouseInput.yPos / 720f - 1.0f) * (-10.0f * 9.0f / 16.0f);
+
             float diameter = 0.5f; //Board tile dimeter
             if(
                     mouseX > t.getCoords().x - diameter &&
@@ -162,9 +168,5 @@ class GameController {
             };
             tiles.sort(comparator);
             return tiles;
-      }
-
-      private void playerSetup(Player player) {
-
       }
 }
