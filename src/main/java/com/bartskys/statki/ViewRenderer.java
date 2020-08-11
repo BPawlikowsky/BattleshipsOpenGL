@@ -120,7 +120,7 @@ public class ViewRenderer {
 
             nuklear.init();
 
-            TILE = new Shader("shaders/bird.vert","shaders/bird.frag");
+            TILE = new Shader("shaders/shader.vert","shaders/shader.frag");
 
             initGameObjects();
       }
@@ -129,7 +129,6 @@ public class ViewRenderer {
             glfwSetKeyCallback(window, new Input());
             glfwSetCursorPosCallback(window, new MouseInput());
       }
-
 
       public static void initGameObjects() {
             setCallbacks();

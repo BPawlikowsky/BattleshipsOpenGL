@@ -7,18 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Statki_OpenGL.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/libassimp.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/libglfw.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/liblwjgl.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/liblwjgl_opengl.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/liblwjgl_stb.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/libopenal.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Bird.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Level.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Pipe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/bg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/bird.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/pipe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bg.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bg.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/fade.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/fade.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/pipe.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/pipe.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Bird.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Level.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Pipe.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +66,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -289,7 +299,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564441868048</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Koords working, tiles a detected!">
+      <created>1597160527240</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597160527241</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Koords working, tiles a detected!">
+      <created>1597160686567</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597160686567</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,109 +350,52 @@
     <MESSAGE value="render tiles done" />
     <MESSAGE value="render specific state tales" />
     <MESSAGE value="coordination system skeetch" />
-    <option name="LAST_COMMIT_MESSAGE" value="coordination system skeetch" />
+    <MESSAGE value="Koords working, tiles a detected!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Koords working, tiles a detected!" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="691" y="200" key="#Notifications" timestamp="1581271382975">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="691" y="200" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1581271382975" />
-    <state x="369" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581281203665">
+    <state x="227" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597160794376">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="553" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581271290024" />
-    <state x="369" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.804@0.23.1440.804" timestamp="1581281203665" />
-    <state x="678" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1581291493146">
+    <state x="227" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.804@0.23.1440.804" timestamp="1597160794376" />
+    <state x="297" y="23" width="846" height="804" key="CommitChangelistDialog2" timestamp="1597160686398">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="904" y="258" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581260843688" />
-    <state x="678" y="222" key="#com.intellij.ide.util.MemberChooser/0.23.1440.804@0.23.1440.804" timestamp="1581291493146" />
-    <state x="642" y="280" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581279227445">
+    <state x="297" y="23" width="846" height="804" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1597160686398" />
+    <state width="1398" height="213" key="GridCell.Tab.0.bottom" timestamp="1597161459974">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="642" y="280" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.804@0.23.1440.804" timestamp="1581279227445" />
-    <state x="829" y="289" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581263259520">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="829" y="289" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581263259520" />
-    <state x="829" y="296" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1581272171755">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="829" y="296" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581272171755" />
-    <state x="996" y="297" key="FileChooserDialogImpl" timestamp="1581273920275">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="996" y="297" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581273920275" />
-    <state width="1398" height="213" key="GridCell.Tab.0.bottom" timestamp="1588705348362">
+    <state width="1398" height="213" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597161459974" />
+    <state width="1398" height="213" key="GridCell.Tab.0.center" timestamp="1597161459973">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1573" height="178" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1398" height="213" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1588705348362" />
-    <state width="1398" height="213" key="GridCell.Tab.0.center" timestamp="1588705348361">
+    <state width="1398" height="213" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1597161459973" />
+    <state width="1398" height="213" key="GridCell.Tab.0.left" timestamp="1597161459973">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1573" height="178" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1398" height="213" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1588705348361" />
-    <state width="1398" height="213" key="GridCell.Tab.0.left" timestamp="1588705348361">
+    <state width="1398" height="213" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1597161459973" />
+    <state width="1398" height="213" key="GridCell.Tab.0.right" timestamp="1597161459973">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1573" height="178" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1398" height="213" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1588705348361" />
-    <state width="1398" height="213" key="GridCell.Tab.0.right" timestamp="1588705348361">
-      <screen x="0" y="23" width="1440" height="804" />
-    </state>
-    <state width="1573" height="178" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1398" height="213" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1588705348361" />
-    <state x="629" y="197" key="Maven.ArtifactSearchDialog" timestamp="1581273525164">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="629" y="197" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581273525164" />
-    <state x="761" y="160" width="681" height="761" key="NewModule_or_Project.wizard" timestamp="1581273921730">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="761" y="160" width="681" height="761" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1581273921730" />
-    <state x="521" y="350" key="ReplaceDuplicatesPrompt" timestamp="1581290110618">
-      <screen x="0" y="23" width="1440" height="804" />
-    </state>
-    <state x="521" y="350" key="ReplaceDuplicatesPrompt/0.23.1440.804@0.23.1440.804" timestamp="1581290110618" />
+    <state width="1398" height="213" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1597161459973" />
     <state x="416" y="23" key="SettingsEditor" timestamp="1589757286404">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="579" y="116" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581273962734" />
     <state x="416" y="23" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1589757286404" />
-    <state x="665" y="311" key="com.intellij.ide.util.TipDialog" timestamp="1581899760839">
+    <state x="320" y="165" key="Vcs.Push.Dialog.v2" timestamp="1597160696396">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="886" y="372" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581271735394" />
-    <state x="665" y="311" key="com.intellij.ide.util.TipDialog/0.23.1440.804@0.23.1440.804" timestamp="1581899760839" />
-    <state x="622" y="256" width="542" height="491" key="extract.method.dialog" timestamp="1581378092338">
+    <state x="320" y="165" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1597160696396" />
+    <state x="513" y="292" key="git4idea.rebase.GitRebaseDialog" timestamp="1597160591523">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="829" y="302" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581265540502" />
-    <state x="622" y="256" width="542" height="491" key="extract.method.dialog/0.23.1440.804@0.23.1440.804" timestamp="1581378092338" />
-    <state x="807" y="166" key="refactoring.ChangeSignatureDialog" timestamp="1581262998347">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="513" y="292" key="git4idea.rebase.GitRebaseDialog/0.23.1440.804@0.23.1440.804" timestamp="1597160591523" />
+    <state x="520" y="291" key="scopes" timestamp="1597161647240">
+      <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="807" y="166" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581262998347" />
-    <state x="755" y="253" width="672" height="677" key="run.anything.popup" timestamp="1581271685600">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="755" y="253" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581271685600" />
-    <state x="762" y="260" width="672" height="678" key="search.everywhere.popup" timestamp="1581256231402">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="762" y="260" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581256231402" />
+    <state x="520" y="291" key="scopes/0.23.1440.804@0.23.1440.804" timestamp="1597161647240" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="player1.board[12]" />
