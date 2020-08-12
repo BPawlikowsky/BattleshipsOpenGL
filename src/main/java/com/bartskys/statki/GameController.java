@@ -264,12 +264,12 @@ class GameController {
         float xHi = board.get(9).getCoords().x;
         float yHi = board.get(99).getCoords().y;
         System.out.printf("Check Corner | xLo: %.2f | xHi: %.2f | yLo: %.2f | yHi: %.2f\n", xLo, xHi, yLo, yHi);
-        for (int j = 0; j < board.size(); j++) {
-            if (tile.equals(board.get(j))) {
-                if (board.get(j).getCoords().x == xHi) {
+        for (Tile value : board) {
+            if (tile.equals(value)) {
+                if (value.getCoords().x == xHi) {
                     return 0;
-                } else if (board.get(j).getCoords().y == yHi) {
-                     return 1;
+                } else if (value.getCoords().y == yHi) {
+                    return 1;
                 }
             }
         }
