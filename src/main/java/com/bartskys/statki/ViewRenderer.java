@@ -28,11 +28,11 @@ public class ViewRenderer {
 
       private static long window;
 
-      private static Input input = new Input();
+      private static final Input input = new Input();
 
       private static Shader TILE;
       @Getter
-      private static Matrix4f pro_matrix = new Matrix4f().ortho2D(
+      private static final Matrix4f pro_matrix = new Matrix4f().ortho2D(
               -10.0f,
               10.0f,
               -10.0f * 9.0f / 16.0f,
@@ -114,7 +114,6 @@ public class ViewRenderer {
       }
 
       static void renderStart() {
-
             flagSetup();
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             glClearColor(0.4f, 0.7f, 0.9f, 1f);
@@ -145,7 +144,6 @@ public class ViewRenderer {
       }
 
       static void renderEmptyTile(Tile tile) {
-
             TILE.enable();
             tile.getEmptyTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
@@ -157,7 +155,6 @@ public class ViewRenderer {
       }
 
       static void renderShot(Tile tile) {
-
             TILE.enable();
             tile.getShotAtTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
@@ -169,7 +166,6 @@ public class ViewRenderer {
       }
 
       public static void renderShip(Tile tile) {
-
             TILE.enable();
             tile.getShipTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
@@ -180,5 +176,4 @@ public class ViewRenderer {
             tile.getShipTile().unbind();
             TILE.disable();
       }
-
 }

@@ -1,27 +1,25 @@
 package com.bartskys.statki;
 
-import com.bartskys.statki.input.Input;
 import com.bartskys.statki.input.MouseInput;
 import com.bartskys.statki.math.Vector3f;
 import com.bartskys.statki.model.Player;
-import com.bartskys.statki.model.Ship;
-import com.bartskys.statki.model.ShipEnum;
 import com.bartskys.statki.model.Tile;
-import org.lwjgl.nuklear.*;
-import static org.lwjgl.nuklear.Nuklear.*;
 
-import java.nio.ByteBuffer;
+
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.List;
 
 import static org.lwjgl.glfw.GLFW.*;
 
 class GameController {
+      private static final String PLAYER1 = "Player01";
+      private static final String PLAYER2 = "Player02";
       private static boolean running;
-      private Player player1, player2;
+      private final Player player1;
+      private final Player player2;
       private float mouseX, mouseY;
-      float position = 2.0f;
+      float boardPosX = -2.2f;
+      float boardPosY = 2.0f;
 
       long lastTime = System.currentTimeMillis();
       long timer = System.currentTimeMillis();
@@ -29,14 +27,13 @@ class GameController {
       double ns = 1000000000.0 / 60.0;
       int updates = 0;
       int frames = 0;
-      private boolean onTiles = false;
 
 
       GameController() {
             ViewRenderer.init();
             running = true;
-            player1 = new Player(generateTiles(), "player01");
-            player2 = new Player(generateTiles(), "player02");
+            player1 = new Player(generateTiles(boardPosX, boardPosY, PLAYER1), PLAYER1);
+            player2 = new Player(generateTiles(boardPosX, boardPosY - 10.0f, PLAYER2), PLAYER2);
 
       }
 
@@ -59,13 +56,17 @@ class GameController {
       }
 
       private void render() {
-            ViewRenderer.setCallbacks();
-
             ViewRenderer.renderStart();
 
-            ViewRenderer.flagSetup();
-
             for (Tile t : player1.getBoard()) {
+
+                  if(isMouseOnTile(t)){
+                        ViewRenderer.renderShip(t);
+                  }
+                  else ViewRenderer.renderEmptyTile(t);
+            }
+
+            for (Tile t : player2.getBoard()) {
 
                   if(isMouseOnTile(t)){
                         ViewRenderer.renderShip(t);
@@ -107,7 +108,7 @@ class GameController {
 
       private boolean isMouseOnTile(Tile t) {
 
-            float diameter = 0.5f; //Board tile dimeter
+            float diameter = 0.25f; //Board tile dimeter
             if(
                     mouseX > t.getCoords().x - diameter &&
                             mouseX < (t.getCoords().x + diameter) &&
@@ -115,35 +116,33 @@ class GameController {
                             mouseY < (t.getCoords().y + diameter)
             ){
                   System.out.printf(
-                          "Tile name: %s x: %.1f y: %.1f\nMouse x: %.2f y: %.2f\n",
+                          "Tile name: %s x: %.1f y: %.1f\nMouse x: %.2f y: %.2f | %s\n",
                           t.getName(),
                           t.getCoords().x,
                           t.getCoords().y,
-                          mouseX, mouseY
+                          mouseX, mouseY, t.getPlayer()
                   );
                   return true;
             }
             else return false;
       }
 
-      private ArrayList<Tile> generateTiles() {
+      private ArrayList<Tile> generateTiles(float posX, float posY, String player) {
             ArrayList<Tile> tiles = new ArrayList<>();
 
-            float scale = 1f;
-            position = -5.0f;
+            float scale = 0.5f;
 
             for (int y = 9; y >= 0; y--) {
                   for (int x = 0; x < 10; x++) {
                         tiles.add(new Tile(
                                 String.valueOf(x) + (9 - y),
                                 new Vector3f(
-                                        (x * scale) + position,
-                                        (y * scale) + position,
-                                        0.1f))
+                                        (x * scale) + posY,
+                                        (y * scale) + posX,
+                                        0.1f), player)
                         );
                   }
             }
-            tiles = sortTilesByY(tiles);
 
             for (Tile t : tiles) {
                   System.out.printf(
@@ -156,16 +155,10 @@ class GameController {
       }
 
       private ArrayList<Tile> sortTilesByY(ArrayList<Tile> tiles) {
-            Comparator<? super Tile> comparator = new Comparator<Tile>() {
-                  @Override
-                  public int compare(Tile o1, Tile o2) {
-                        if (Integer.parseInt(o1.getName()) > Integer.parseInt(o2.getName())) {
-                              return 1;
-                        } else if (Integer.parseInt(o1.getName()) == Integer.parseInt(o2.getName()))
-                              return 0;
-                        else return -1;
-                  }
-            };
+            Comparator<? super Tile> comparator =
+                    (Comparator<Tile>) (o1, o2) ->
+                            Integer.compare(Integer.parseInt(o1.getName()),
+                                    Integer.parseInt(o2.getName()));
             tiles.sort(comparator);
             return tiles;
       }

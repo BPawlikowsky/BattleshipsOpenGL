@@ -1,8 +1,5 @@
 package com.bartskys.statki.input;
 
-import com.bartskys.statki.math.Matrix4f;
-import org.joml.Vector2f;
-import org.joml.Vector4f;
 import org.lwjgl.glfw.*;
 
 public class MouseInput extends GLFWCursorPosCallback {
