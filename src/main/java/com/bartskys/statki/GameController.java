@@ -1,5 +1,6 @@
 package com.bartskys.statki;
 
+import com.bartskys.statki.input.Input;
 import com.bartskys.statki.input.MouseInputClick;
 import com.bartskys.statki.input.MouseInputPos;
 import com.bartskys.statki.math.Vector3f;
@@ -56,10 +57,11 @@ class GameController {
         while (running) {
             // Click register
             if (!clicked) clicked = (MouseInputClick.mbutton == GLFW_MOUSE_BUTTON_1
-                    && MouseInputClick.maction == GLFW_PRESS);
+                    && MouseInputClick.maction == GLFW_PRESS && (isMouseOnTile(player1.getBoard()) || isMouseOnTile(player2.getBoard())));
             // Click reset
             if (frames % 60 == 0 && clicked)
                 clicked = false;
+            if(Input.isKeyDown(GLFW_KEY_D)) direction = !direction;
             // Update game events and Counts frames and updates
             frameUpdate();
 
@@ -280,7 +282,7 @@ class GameController {
         if(!checkAdjacent(t, player.getBoard())) return false;
         if(number > 1 && !t.getName().equals("Null") && Integer.parseInt(t.getName()) >= 90 &&  !dir) return false;
         if(number > 1 && t.getName().charAt(1) == '9'  &&  dir) return false;
-        ArrayList<Tile> tiles = tilesFromTile(player.getBoard(), t, number);
+        ArrayList<Tile> tiles = tilesFromTile(player.getBoard(), t, number, dir);
         if(tiles.size() == 0) return false;
         for (int i = 0; i < tiles.size(); i++) {
             if(i+1 < tiles.size())
@@ -377,13 +379,16 @@ class GameController {
         return new Tile("Null", new Vector3f(0.0f, 0.0f, 0.0f), "null");
     }
 
-    private ArrayList<Tile> tilesFromTile(ArrayList<Tile> tiles, Tile tile, int number) {
+    private ArrayList<Tile> tilesFromTile(ArrayList<Tile> tiles, Tile tile, int number, boolean dir) {
         ArrayList<Tile> ts = new ArrayList<>();
         for (int i = 0; i < tiles.size(); i++) {
             if (tiles.get(i).equals(tile))
                 for (int j = 0; j < number; j++)
                     if(i + (j * 10) < tiles.size())
-                        ts.add(tiles.get(i + (j * 10)));
+                        if(dir)
+                            ts.add(tiles.get(i + (j * 10)));
+                        else
+                            ts.add(tiles.get(i + j));
                     else return new ArrayList<>();
         }
         return ts;

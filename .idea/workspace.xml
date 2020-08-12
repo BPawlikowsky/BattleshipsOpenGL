@@ -8,6 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -391,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597260147307</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Player setup 95% done TODO: Right side collumn and bottom row are not accesible to put DOUBLE, TRIPLE and QUAD on.(Dumb corner checking)">
+      <created>1597261444936</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1597261444936</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +447,8 @@
     <MESSAGE value="Basic player setup done, no direction control or tile availability checks" />
     <MESSAGE value="Basic ownership checking" />
     <MESSAGE value="Checking mania!!! Checked almost all out of bounds expections, there may be more lurking..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Checking mania!!! Checked almost all out of bounds expections, there may be more lurking..." />
+    <MESSAGE value="Player setup 95% done TODO: Right side collumn and bottom row are not accesible to put DOUBLE, TRIPLE and QUAD on.(Dumb corner checking)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Player setup 95% done TODO: Right side collumn and bottom row are not accesible to put DOUBLE, TRIPLE and QUAD on.(Dumb corner checking)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="520" y="290" width="506" height="377" key="#Scopes" timestamp="1597161917488">
@@ -457,30 +467,30 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="227" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.804@0.23.1440.804" timestamp="1597160794376" />
-    <state x="297" y="23" width="846" height="804" key="CommitChangelistDialog2" timestamp="1597260147125">
+    <state x="297" y="23" width="846" height="804" key="CommitChangelistDialog2" timestamp="1597261444730">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="297" y="23" width="846" height="804" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1597260147125" />
-    <state width="1398" height="136" key="GridCell.Tab.0.bottom" timestamp="1597260048511">
+    <state x="297" y="23" width="846" height="804" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1597261444730" />
+    <state width="1398" height="136" key="GridCell.Tab.0.bottom" timestamp="1597261847157">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597163105835" />
-    <state width="1398" height="136" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597260048511" />
-    <state width="1398" height="136" key="GridCell.Tab.0.center" timestamp="1597260048510">
+    <state width="1398" height="136" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597261847157" />
+    <state width="1398" height="136" key="GridCell.Tab.0.center" timestamp="1597261847156">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597163105834" />
-    <state width="1398" height="136" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1597260048510" />
-    <state width="1398" height="136" key="GridCell.Tab.0.left" timestamp="1597260048509">
+    <state width="1398" height="136" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1597261847156" />
+    <state width="1398" height="136" key="GridCell.Tab.0.left" timestamp="1597261847155">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597163105833" />
-    <state width="1398" height="136" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1597260048509" />
-    <state width="1398" height="136" key="GridCell.Tab.0.right" timestamp="1597260048510">
+    <state width="1398" height="136" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1597261847155" />
+    <state width="1398" height="136" key="GridCell.Tab.0.right" timestamp="1597261847156">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597163105835" />
-    <state width="1398" height="136" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1597260048510" />
+    <state width="1398" height="136" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1597261847156" />
     <state width="1398" height="265" key="GridCell.Tab.1.bottom" timestamp="1597259689432">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -517,10 +527,10 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="416" y="23" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1589757286404" />
-    <state x="320" y="165" key="Vcs.Push.Dialog.v2" timestamp="1597260222542">
+    <state x="320" y="165" key="Vcs.Push.Dialog.v2" timestamp="1597261457820">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="320" y="165" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1597260222542" />
+    <state x="320" y="165" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1597261457820" />
     <state x="513" y="292" key="git4idea.rebase.GitRebaseDialog" timestamp="1597160591523">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
