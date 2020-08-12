@@ -6,9 +6,9 @@ import static org.lwjgl.opengl.GL33.*;
 
 public class VertexArray {
 
-      private int vao;
+      private final int vao;
       private int ibo;
-      private int count;
+      private final int count;
 
       public VertexArray(int count) {
             this.count = count;

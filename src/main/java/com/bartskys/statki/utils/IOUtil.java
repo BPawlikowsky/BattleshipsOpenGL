@@ -4,8 +4,6 @@
  */
 package com.bartskys.statki.utils;
 
-import org.lwjgl.*;
-
 import java.io.*;
 import java.nio.*;
 import java.nio.channels.*;
