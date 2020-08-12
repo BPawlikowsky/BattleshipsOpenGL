@@ -77,7 +77,6 @@ class GameController {
 
       void playerSetup(boolean clicked) {
             if(p1setup || p2setup) {
-
                   if(p1setup) {
                         switch (p1Ships) {
                               case 0:
@@ -87,14 +86,7 @@ class GameController {
                               case 4: {
                                     shipType = ShipEnum.SINGLE;
                                     if(clicked && frames%60 == 0) {
-                                          Tile t = tileFromMouse(player1.getBoard());
-                                          ArrayList<Tile> tiles = new ArrayList<>();
-                                          tiles.add(t);
-                                          addShip(player1 , shipType, p1Ships, tiles, true);
-                                          System.out.println("Ship " + shipType + " added to " + PLAYER1 + " | " + p1Ships);
-
-                                          t.setOwned(true);
-                                          t.setOwnedByShip(shipType+String.valueOf(p1Ships));
+                                          assembleShip(player1, 1, p1Ships);
                                           p1Ships++;
                                     }
                               } break;
@@ -103,80 +95,86 @@ class GameController {
                               case 7: {
                                     shipType = ShipEnum.DOUBLE;
                                     if(clicked && frames%60 == 0) {
-                                          Tile t = tileFromMouse(player1.getBoard());
-                                          ArrayList<Tile> tiles = tilesFromTile(player1.getBoard(), t, 2);
-                                          System.out.println(tiles.size());
-
-                                          addShip(player1 , shipType, p1Ships, tiles, true);
-                                          System.out.println("Ship " + shipType + " added to " + PLAYER1 + " | " + p1Ships);
-                                          for (Tile ptiles : player1.getBoard()) {
-                                                for (Tile tile: tiles) {
-                                                      if(tile.equals(ptiles)) {
-                                                            ptiles.setOwned(true);
-                                                            ptiles.setOwnedByShip(shipType+String.valueOf(p1Ships));
-                                                            System.out.println("WW");
-                                                      }
-                                                }
-                                          }
+                                          assembleShip(player1, 2, p1Ships);
                                           p1Ships++;
                                     }
-
                               } break;
                               case 8:
                               case 9: {
                                     shipType = ShipEnum.TRIPLE;
                                     if(clicked && frames%60 == 0) {
-                                          building = true;
-                                          Tile t = tileFromMouse(player1.getBoard());
-                                          if(building && c <= 2) {
-                                                temp.add(t);
-                                                c++;
-                                          }
-                                          if(c == 3) {
-                                                addShip(player1 , shipType, p1Ships, temp, true);
-                                                System.out.println("Ship " + shipType + " added to " + PLAYER1 + " | " + p1Ships);
-
-                                                t.setOwned(true);
-                                                t.setOwnedByShip(shipType+String.valueOf(p1Ships));
-                                                p1Ships++;
-                                                c = 0;
-                                                building = false;
-                                          }
+                                          assembleShip(player1, 3, p1Ships);
+                                          p1Ships++;
                                     }
-
                               } break;
                               case 10: {
                                     shipType = ShipEnum.QUAD;
                                     if(clicked && frames%60 == 0) {
-                                          building = true;
-                                          Tile t = tileFromMouse(player1.getBoard());
-                                          if(building && c <= 3) {
-                                                temp.add(t);
-                                                c++;
-                                          }
-                                          if(c == 4) {
-                                                addShip(player1 , shipType, p1Ships, temp, true);
-                                                System.out.println("Ship " + shipType + " added to " + PLAYER1 + " | " + p1Ships);
-
-                                                t.setOwned(true);
-                                                t.setOwnedByShip(shipType+String.valueOf(p1Ships));
-                                                p1Ships++;
-                                                c = 0;
-                                                building = false;
-                                                p1setup = false;
-                                                System.out.println("P1 SETUP DONE");
-                                          }
+                                          assembleShip(player1, 4, p1Ships);
+                                          p1setup = false;
                                     }
 
                               } break;
                         }
-            }
-            else if(p2setup) {
-                  if(p2Ships <= 10) {
+                  }
+                  else if(p2setup) {
+                        switch (p2Ships) {
+                              case 0:
+                              case 1:
+                              case 2:
+                              case 3:
+                              case 4: {
+                                    shipType = ShipEnum.SINGLE;
+                                    if(clicked && frames%60 == 0) {
+                                          assembleShip(player2, 1, p2Ships);
+                                          p2Ships++;
+                                    }
+                              } break;
+                              case 5:
+                              case 6:
+                              case 7: {
+                                    shipType = ShipEnum.DOUBLE;
+                                    if(clicked && frames%60 == 0) {
+                                          assembleShip(player2, 2, p2Ships);
+                                          p2Ships++;
+                                    }
+                              } break;
+                              case 8:
+                              case 9: {
+                                    shipType = ShipEnum.TRIPLE;
+                                    if(clicked && frames%60 == 0) {
+                                          assembleShip(player2, 3, p2Ships);
+                                          p2Ships++;
+                                    }
+                              } break;
+                              case 10: {
+                                    shipType = ShipEnum.QUAD;
+                                    if(clicked && frames%60 == 0) {
+                                          assembleShip(player2, 4, p2Ships);
+                                          p2setup = false;
+                                    }
 
-                  } else p2setup = false;
+                              } break;
+                        }
+                  }
             }
       }
+
+      void assembleShip(Player player, int number, int shipnum) {
+                  Tile t = tileFromMouse(player.getBoard());
+                  ArrayList<Tile> tiles = tilesFromTile(player.getBoard(), t, number);
+                  addShip(player, shipType, shipnum, tiles, true);
+
+                  System.out.println("Ship " + shipType + " added to " + player.getName() + " | " + p1Ships);
+
+                  for (Tile ptiles : player.getBoard()) {
+                        for (Tile tile: tiles) {
+                              if(tile.equals(ptiles)) {
+                                    ptiles.setOwned(true);
+                                    ptiles.setOwnedByShip(shipType+String.valueOf(shipnum));
+                              }
+                        }
+                  }
       }
 
       void addShip(Player player, ShipEnum shipType, int shipNumber, ArrayList<Tile> t, boolean dir) {
@@ -185,8 +183,10 @@ class GameController {
 
       private void render() {
             ViewRenderer.renderStart();
-            ViewRenderer.renderBox(PLAYER1SETUP);
-            ViewRenderer.renderBox(PLAYER2SETUP);
+            if(p1setup)
+                  ViewRenderer.renderBox(PLAYER1SETUP);
+            if(p2setup)
+                  ViewRenderer.renderBox(PLAYER2SETUP);
             renderBoard(player1);
             renderBoard(player2);
             if(isMouseOnTile(player1.getBoard()))
@@ -253,7 +253,6 @@ class GameController {
 
       private ArrayList<Tile> tilesFromTile(ArrayList<Tile> tiles, Tile tile, int number) {
             ArrayList<Tile> ts = new ArrayList<>();
-            Tile found;
             for(int i = 0; i < tiles.size(); i++) {
                   if(tiles.get(i).equals(tile))
                         for (int j = 0; j < number; j++)
@@ -299,11 +298,8 @@ class GameController {
                   updates++;
                   delta--;
             }
-
             frames++;
-
             if (System.currentTimeMillis() - timer > 1000) {
-
                   timer += 1000;
                   System.out.println(updates + " ups, " + frames + " fps");
                   updates = 0;
