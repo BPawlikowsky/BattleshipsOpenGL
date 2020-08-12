@@ -86,8 +86,11 @@ class GameController {
                               case 4: {
                                     shipType = ShipEnum.SINGLE;
                                     if(clicked && frames%60 == 0) {
-                                          assembleShip(player1, 1, p1Ships);
-                                          p1Ships++;
+                                          Tile t = tileFromMouse(player1.getBoard());
+                                          if(!t.isOwned()) {
+                                                assembleShip(t, player1, 1, p1Ships);
+                                                p1Ships++;
+                                          }
                                     }
                               } break;
                               case 5:
@@ -95,23 +98,32 @@ class GameController {
                               case 7: {
                                     shipType = ShipEnum.DOUBLE;
                                     if(clicked && frames%60 == 0) {
-                                          assembleShip(player1, 2, p1Ships);
-                                          p1Ships++;
+                                          Tile t = tileFromMouse(player1.getBoard());
+                                          if(!t.isOwned()){
+                                                assembleShip(t, player1, 2, p1Ships);
+                                                p1Ships++;
+                                          }
                                     }
                               } break;
                               case 8:
                               case 9: {
                                     shipType = ShipEnum.TRIPLE;
                                     if(clicked && frames%60 == 0) {
-                                          assembleShip(player1, 3, p1Ships);
-                                          p1Ships++;
+                                          Tile t = tileFromMouse(player1.getBoard());
+                                          if(!t.isOwned()){
+                                                assembleShip(t, player1, 3, p1Ships);
+                                                p1Ships++;
+                                          }
                                     }
                               } break;
                               case 10: {
                                     shipType = ShipEnum.QUAD;
                                     if(clicked && frames%60 == 0) {
-                                          assembleShip(player1, 4, p1Ships);
-                                          p1setup = false;
+                                          Tile t = tileFromMouse(player1.getBoard());
+                                          if(!t.isOwned()){
+                                                assembleShip(t, player1, 4, p1Ships);
+                                                p1setup = false;
+                                          }
                                     }
 
                               } break;
@@ -126,8 +138,11 @@ class GameController {
                               case 4: {
                                     shipType = ShipEnum.SINGLE;
                                     if(clicked && frames%60 == 0) {
-                                          assembleShip(player2, 1, p2Ships);
-                                          p2Ships++;
+                                          Tile t = tileFromMouse(player2.getBoard());
+                                          if(!t.isOwned()){
+                                                assembleShip(t, player2, 1, p2Ships);
+                                                p2Ships++;
+                                          }
                                     }
                               } break;
                               case 5:
@@ -135,23 +150,32 @@ class GameController {
                               case 7: {
                                     shipType = ShipEnum.DOUBLE;
                                     if(clicked && frames%60 == 0) {
-                                          assembleShip(player2, 2, p2Ships);
-                                          p2Ships++;
+                                          Tile t = tileFromMouse(player2.getBoard());
+                                          if(!t.isOwned()){
+                                                assembleShip(t, player2, 2, p2Ships);
+                                                p2Ships++;
+                                          }
                                     }
                               } break;
                               case 8:
                               case 9: {
                                     shipType = ShipEnum.TRIPLE;
                                     if(clicked && frames%60 == 0) {
-                                          assembleShip(player2, 3, p2Ships);
-                                          p2Ships++;
+                                          Tile t = tileFromMouse(player2.getBoard());
+                                          if(!t.isOwned()){
+                                                assembleShip(t, player2, 3, p2Ships);
+                                                p2Ships++;
+                                          }
                                     }
                               } break;
                               case 10: {
                                     shipType = ShipEnum.QUAD;
                                     if(clicked && frames%60 == 0) {
-                                          assembleShip(player2, 4, p2Ships);
-                                          p2setup = false;
+                                          Tile t = tileFromMouse(player2.getBoard());
+                                          if(!t.isOwned()){
+                                                assembleShip(t, player2, 4, p2Ships);
+                                                p2setup = false;
+                                          }
                                     }
 
                               } break;
@@ -160,12 +184,12 @@ class GameController {
             }
       }
 
-      void assembleShip(Player player, int number, int shipnum) {
-                  Tile t = tileFromMouse(player.getBoard());
+      void assembleShip(Tile t, Player player, int number, int shipnum) {
+
                   ArrayList<Tile> tiles = tilesFromTile(player.getBoard(), t, number);
                   addShip(player, shipType, shipnum, tiles, true);
 
-                  System.out.println("Ship " + shipType + " added to " + player.getName() + " | " + p1Ships);
+                  System.out.println("Ship " + shipType + " added to " + player.getName() + " | " + shipnum);
 
                   for (Tile ptiles : player.getBoard()) {
                         for (Tile tile: tiles) {
