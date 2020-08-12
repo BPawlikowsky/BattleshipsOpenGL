@@ -2,7 +2,9 @@ package com.bartskys.statki;
 
 import com.bartskys.statki.graphics.Shader;
 import com.bartskys.statki.input.Input;
-import com.bartskys.statki.input.MouseInput;
+import com.bartskys.statki.input.MouseInputClick;
+import com.bartskys.statki.input.MouseInputPos;
+import com.bartskys.statki.model.RenderBox;
 import com.bartskys.statki.model.Tile;
 
 import lombok.Getter;
@@ -103,7 +105,8 @@ public class ViewRenderer {
 
       public static void setCallbacks() {
             glfwSetKeyCallback(window, input);
-            glfwSetCursorPosCallback(window, new MouseInput());
+            glfwSetCursorPosCallback(window, new MouseInputPos());
+            glfwSetMouseButtonCallback(window, new MouseInputClick());
       }
 
       public static void initGameObjects() {
@@ -174,6 +177,18 @@ public class ViewRenderer {
             tile.getMesh().render();
             tile.getMesh().unbind();
             tile.getShipTile().unbind();
+            TILE.disable();
+      }
+
+      public static void renderBox(RenderBox box) {
+            TILE.enable();
+            box.getTexture().bind();
+            Matrix4f ml_matrix = new Matrix4f().identity();
+
+            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(box.getCoords().x, box.getCoords().y, box.getCoords().z));
+            box.getMesh().render();
+            box.getMesh().unbind();
+            box.getTexture().unbind();
             TILE.disable();
       }
 }

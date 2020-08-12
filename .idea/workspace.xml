@@ -6,20 +6,19 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="">
+    <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="Basic ship adding added, click control( one click every second is registered)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInputClick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/RenderBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/playersetup.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/bartsky.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/bartsky.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/IOUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/ShaderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/ShaderUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInputPos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/FiraSans.ttf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Shader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Shader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Texture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Texture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/VertexArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/VertexArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/Input.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/MouseInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/MouseInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/IOUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/ShaderUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/ShaderUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/ViewRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/ViewRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/MouseInput.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +113,7 @@
       <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\META-INF" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res" />
       <recent name="C:\dev\IdeaProjects\StatkiGame\src\main\java\com\bartskys\statki\utils" />
       <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
     </key>
@@ -346,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597217275120</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Shifted the isMouseOnTile method and separated it from rendering a tile, added a new method to get a tile to render after it has been &quot;selected&quot;">
+      <created>1597225375808</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1597225375808</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,13 +394,19 @@
     <MESSAGE value="Cleanup" />
     <MESSAGE value="Cleanup more" />
     <MESSAGE value="Starting player setup, have to clean up code to get it to render additional info and modify the main loop to account for player setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting player setup, have to clean up code to get it to render additional info and modify the main loop to account for player setup" />
+    <MESSAGE value="Shifted the isMouseOnTile method and separated it from rendering a tile, added a new method to get a tile to render after it has been &quot;selected&quot;" />
+    <MESSAGE value="Basic ship adding added, click control( one click every second is registered)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic ship adding added, click control( one click every second is registered)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="520" y="290" width="506" height="377" key="#Scopes" timestamp="1597161917488">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="520" y="290" width="506" height="377" key="#Scopes/0.23.1440.804@0.23.1440.804" timestamp="1597161917488" />
+    <state x="533" y="135" key="#com.intellij.ide.util.MemberChooser" timestamp="1597230618470">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="533" y="135" key="#com.intellij.ide.util.MemberChooser/0.23.1440.804@0.23.1440.804" timestamp="1597230618470" />
     <state x="458" y="208" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1597164863472">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -402,38 +415,38 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="227" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.804@0.23.1440.804" timestamp="1597160794376" />
-    <state x="297" y="23" width="846" height="804" key="CommitChangelistDialog2" timestamp="1597217274910">
+    <state x="297" y="23" width="846" height="804" key="CommitChangelistDialog2" timestamp="1597233244533">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="297" y="23" width="846" height="804" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1597217274910" />
-    <state width="1398" height="132" key="GridCell.Tab.0.bottom" timestamp="1597225267743">
+    <state x="297" y="23" width="846" height="804" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1597233244533" />
+    <state width="1398" height="132" key="GridCell.Tab.0.bottom" timestamp="1597233244582">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597163105835" />
-    <state width="1398" height="132" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597225267743" />
-    <state width="1398" height="132" key="GridCell.Tab.0.center" timestamp="1597225267742">
+    <state width="1398" height="132" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597233244582" />
+    <state width="1398" height="132" key="GridCell.Tab.0.center" timestamp="1597233244581">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597163105834" />
-    <state width="1398" height="132" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1597225267742" />
-    <state width="1398" height="132" key="GridCell.Tab.0.left" timestamp="1597225267741">
+    <state width="1398" height="132" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1597233244581" />
+    <state width="1398" height="132" key="GridCell.Tab.0.left" timestamp="1597233244580">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597163105833" />
-    <state width="1398" height="132" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1597225267741" />
-    <state width="1398" height="132" key="GridCell.Tab.0.right" timestamp="1597225267742">
+    <state width="1398" height="132" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1597233244580" />
+    <state width="1398" height="132" key="GridCell.Tab.0.right" timestamp="1597233244581">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597163105835" />
-    <state width="1398" height="132" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1597225267742" />
+    <state width="1398" height="132" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1597233244581" />
     <state x="416" y="23" key="SettingsEditor" timestamp="1589757286404">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="416" y="23" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1589757286404" />
-    <state x="320" y="165" key="Vcs.Push.Dialog.v2" timestamp="1597217280397">
+    <state x="320" y="165" key="Vcs.Push.Dialog.v2" timestamp="1597225391609">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="320" y="165" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1597217280397" />
+    <state x="320" y="165" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1597225391609" />
     <state x="513" y="292" key="git4idea.rebase.GitRebaseDialog" timestamp="1597160591523">
       <screen x="0" y="23" width="1440" height="804" />
     </state>

@@ -2,7 +2,7 @@ package com.bartskys.statki.input;
 
 import org.lwjgl.glfw.*;
 
-public class MouseInput extends GLFWCursorPosCallback {
+public class MouseInputPos extends GLFWCursorPosCallback {
 
       public static double xPos;
       public static double yPos;
