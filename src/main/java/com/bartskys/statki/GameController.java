@@ -87,10 +87,9 @@ class GameController {
                         if (clicked && frames % 60 == 0) {
                             Tile t = tileFromMouse(player1.getBoard());
                             if (!t.isOwned())
-                                if (checkAdjacent(t, player1.getBoard())) {
+                                if (checkAdjacent(t, player1.getBoard()))
                                     if(assembleShip(t, player1, 1, p1Ships, direction))
                                         p1Ships++;
-                                }
                         }
                     }
                     break;
@@ -100,12 +99,10 @@ class GameController {
                         shipType = ShipEnum.DOUBLE;
                         if (clicked && frames % 60 == 0) {
                             Tile t = tileFromMouse(player1.getBoard());
-                            if (!t.isOwned()) {
-                                if (checkAdjacent(t, player1.getBoard())) {
+                            if (!t.isOwned())
+                                if (checkAdjacent(t, player1.getBoard()))
                                     if(assembleShip(t, player1, 2, p1Ships, direction))
                                         p1Ships++;
-                                }
-                            }
                         }
                     }
                     break;
@@ -114,12 +111,10 @@ class GameController {
                         shipType = ShipEnum.TRIPLE;
                         if (clicked && frames % 60 == 0) {
                             Tile t = tileFromMouse(player1.getBoard());
-                            if (!t.isOwned()) {
-                                if (checkAdjacent(t, player1.getBoard())) {
+                            if (!t.isOwned())
+                                if (checkAdjacent(t, player1.getBoard()))
                                     if(assembleShip(t, player1, 3, p1Ships, direction))
                                         p1Ships++;
-                                }
-                            }
                         }
                     }
                     break;
@@ -127,12 +122,10 @@ class GameController {
                         shipType = ShipEnum.QUAD;
                         if (clicked && frames % 60 == 0) {
                             Tile t = tileFromMouse(player1.getBoard());
-                            if (!t.isOwned()) {
-                                if (checkAdjacent(t, player1.getBoard())) {
+                            if (!t.isOwned())
+                                if (checkAdjacent(t, player1.getBoard()))
                                         if(assembleShip(t, player1, 4, p1Ships, direction)){
                                         p1setup = false;
-                                    }
-                                }
                             }
                         }
 
@@ -149,12 +142,10 @@ class GameController {
                         shipType = ShipEnum.SINGLE;
                         if (clicked && frames % 60 == 0) {
                             Tile t = tileFromMouse(player2.getBoard());
-                            if (!t.isOwned()) {
-                                if (checkAdjacent(t, player2.getBoard())) {
+                            if (!t.isOwned())
+                                if (checkAdjacent(t, player2.getBoard()))
                                     assembleShip(t, player2, 1, p2Ships, direction);
                                     p2Ships++;
-                                }
-                            }
                         }
                     }
                     break;
@@ -164,12 +155,10 @@ class GameController {
                         shipType = ShipEnum.DOUBLE;
                         if (clicked && frames % 60 == 0) {
                             Tile t = tileFromMouse(player2.getBoard());
-                            if (!t.isOwned()) {
-                                if (checkAdjacent(t, player2.getBoard())) {
-                                    assembleShip(t, player2, 2, p2Ships, direction);
-                                    p2Ships++;
-                                }
-                            }
+                            if (!t.isOwned())
+                                if (checkAdjacent(t, player2.getBoard()))
+                                    if(assembleShip(t, player2, 2, p2Ships, direction))
+                                        p2Ships++;
                         }
                     }
                     break;
@@ -178,12 +167,10 @@ class GameController {
                         shipType = ShipEnum.TRIPLE;
                         if (clicked && frames % 60 == 0) {
                             Tile t = tileFromMouse(player2.getBoard());
-                            if (!t.isOwned()) {
-                                if (checkAdjacent(t, player2.getBoard())) {
-                                    assembleShip(t, player2, 3, p2Ships, direction);
-                                    p2Ships++;
-                                }
-                            }
+                            if (!t.isOwned())
+                                if (checkAdjacent(t, player2.getBoard()))
+                                    if(assembleShip(t, player2, 3, p2Ships, direction))
+                                        p2Ships++;
                         }
                     }
                     break;
@@ -191,12 +178,10 @@ class GameController {
                         shipType = ShipEnum.QUAD;
                         if (clicked && frames % 60 == 0) {
                             Tile t = tileFromMouse(player2.getBoard());
-                            if (!t.isOwned()) {
-                                if (checkAdjacent(t, player2.getBoard())) {
-                                    assembleShip(t, player2, 4, p2Ships, direction);
-                                    p2setup = false;
-                                }
-                            }
+                            if (!t.isOwned())
+                                if (checkAdjacent(t, player2.getBoard()))
+                                    if(assembleShip(t, player2, 4, p2Ships, direction))
+                                        p2setup = false;
                         }
                     }
                     break;
@@ -293,7 +278,7 @@ class GameController {
 
     boolean assembleShip(Tile t, Player player, int number, int shipnum, boolean dir) {
         if(!checkAdjacent(t, player.getBoard())) return false;
-        if(number > 1 && t.getName() != "Null" && Integer.parseInt(t.getName()) >= 90 &&  !dir) return false;
+        if(number > 1 && !t.getName().equals("Null") && Integer.parseInt(t.getName()) >= 90 &&  !dir) return false;
         if(number > 1 && t.getName().charAt(1) == '9'  &&  dir) return false;
         ArrayList<Tile> tiles = tilesFromTile(player.getBoard(), t, number);
         if(tiles.size() == 0) return false;
