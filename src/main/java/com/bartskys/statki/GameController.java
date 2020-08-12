@@ -317,8 +317,21 @@ class GameController {
             ViewRenderer.renderBox(PLAYER2SETUP);
         renderBoard(player1);
         renderBoard(player2);
-        if (isMouseOnTile(player1.getBoard()))
-            ViewRenderer.renderShip(tileFromMouse(player1.getBoard()));
+        if (isMouseOnTile(player1.getBoard())) {
+            ArrayList<Tile> tiles;
+            tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 1, direction);
+            if(shipType == ShipEnum.DOUBLE)
+                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 2, direction);
+            if(shipType == ShipEnum.TRIPLE)
+                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 3, direction);
+            if(shipType == ShipEnum.QUAD)
+                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 4, direction);
+            for (Tile t: tiles
+                 ) {
+                ViewRenderer.renderShip(t);
+            }
+
+        }
         if (isMouseOnTile(player2.getBoard()))
             ViewRenderer.renderShip(tileFromMouse(player2.getBoard()));
         ViewRenderer.renderFinish();
