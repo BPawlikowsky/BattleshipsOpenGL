@@ -8,8 +8,29 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="utils.Game - broken" />
+    <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="utils.Game - broken">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,7 +116,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20584795" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -533,26 +554,26 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="23" y="23" width="846" height="804" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1597302607288" />
-    <state width="1398" height="136" key="GridCell.Tab.0.bottom" timestamp="1597325354282">
+    <state width="1398" height="136" key="GridCell.Tab.0.bottom" timestamp="1597325843969">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597163105835" />
-    <state width="1398" height="136" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597325354282" />
-    <state width="1398" height="136" key="GridCell.Tab.0.center" timestamp="1597325354281">
+    <state width="1398" height="136" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597325843969" />
+    <state width="1398" height="136" key="GridCell.Tab.0.center" timestamp="1597325843968">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597163105834" />
-    <state width="1398" height="136" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1597325354281" />
-    <state width="1398" height="136" key="GridCell.Tab.0.left" timestamp="1597325354280">
+    <state width="1398" height="136" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1597325843968" />
+    <state width="1398" height="136" key="GridCell.Tab.0.left" timestamp="1597325843968">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597163105833" />
-    <state width="1398" height="136" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1597325354280" />
-    <state width="1398" height="136" key="GridCell.Tab.0.right" timestamp="1597325354281">
+    <state width="1398" height="136" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1597325843968" />
+    <state width="1398" height="136" key="GridCell.Tab.0.right" timestamp="1597325843969">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597163105835" />
-    <state width="1398" height="136" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1597325354281" />
+    <state width="1398" height="136" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1597325843969" />
     <state width="1398" height="265" key="GridCell.Tab.1.bottom" timestamp="1597301019327">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -593,10 +614,10 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="511" y="153" key="RollbackChangesDialog/0.23.1440.804@0.23.1440.804" timestamp="1597303318511" />
-    <state x="85" y="23" key="SettingsEditor" timestamp="1597325307195">
+    <state x="85" y="23" key="SettingsEditor" timestamp="1597325554989">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="85" y="23" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1597325307195" />
+    <state x="85" y="23" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1597325554989" />
     <state x="83" y="123" key="Vcs.Push.Dialog.v2" timestamp="1597299782171">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
