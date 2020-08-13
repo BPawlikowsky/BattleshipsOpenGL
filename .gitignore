@@ -1,6 +1,5 @@
-./out
-./target
-./.idea
-./t
-./META-INF
+./out/
+./target/
+./.idea/
+./META-INF/
 
