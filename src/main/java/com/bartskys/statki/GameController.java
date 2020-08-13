@@ -65,9 +65,6 @@ class GameController {
             }
             // Click register
             if (!clicked) {
-                System.out.println("mClick: " + mClick + " | mAction: " + mAction);
-                System.out.println("MOT: " + isMouseOnTile(player1.getBoard(), mouseX, mouseY));
-
                 if((mClick == GLFW_MOUSE_BUTTON_1 && mAction == GLFW_PRESS)) {
                     System.out.println("Clicked");
                     if((isMouseOnTile(player1.getBoard(), mouseX, mouseY) || isMouseOnTile(player2.getBoard(), mouseX, mouseY)))
@@ -80,7 +77,10 @@ class GameController {
             else if (isMouseOnTile(player2.getBoard(), mouseX,mouseY))
                 tempT = tileFromMouse(player2.getBoard(), mouseX, mouseY);
             else tempT = new Tile();
-            playerSetup(clicked, tempT);
+            if(p1setup)
+                playerSetup(clicked, tempT, player1);
+            if(p2setup && !p1setup)
+                playerSetup(clicked, tempT, player2);
 
             // Update game events and Counts frames and updates
             frameUpdate();
@@ -96,29 +96,35 @@ class GameController {
 
     private void render() {
         ViewRenderer.renderStart();
-        if (p1setup)
+        if (p1setup) {
             ViewRenderer.renderBox(PLAYER1SETUP);
-        if (p2setup)
+            renderSetup(player1);
+        }
+        else if (p2setup) {
             ViewRenderer.renderBox(PLAYER2SETUP);
-        renderBoard(player1);
-        renderBoard(player2);
-        if (isMouseOnTile(player1.getBoard(), mouseX, mouseY)) {
+            renderSetup(player2);
+        }
+
+        ViewRenderer.renderFinish();
+    }
+
+    private void renderSetup(Player player) {
+
+        if (isMouseOnTile(player.getBoard(), mouseX, mouseY)) {
             ArrayList<Tile> tiles;
-            tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard(), mouseX, mouseY), 1, direction);
+            tiles = tilesFromTile(player.getBoard(), tileFromMouse(player.getBoard(), mouseX, mouseY), 1);
 
             if(shipType == ShipEnum.DOUBLE)
-                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard(), mouseX, mouseY), 2, direction);
+                tiles = tilesFromTile(player.getBoard(), tileFromMouse(player.getBoard(), mouseX, mouseY), 2);
             if(shipType == ShipEnum.TRIPLE)
-                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard(), mouseX, mouseY), 3, direction);
+                tiles = tilesFromTile(player.getBoard(), tileFromMouse(player.getBoard(), mouseX, mouseY), 3);
             if(shipType == ShipEnum.QUAD)
-                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard(), mouseX, mouseY), 4, direction);
+                tiles = tilesFromTile(player.getBoard(), tileFromMouse(player.getBoard(), mouseX, mouseY), 4);
             for (Tile t: tiles) {
                 ViewRenderer.renderShip(t);
             }
         }
-        if (isMouseOnTile(player2.getBoard(), mouseX, mouseY))
-            ViewRenderer.renderShip(tileFromMouse(player2.getBoard(), mouseX, mouseY));
-        ViewRenderer.renderFinish();
+        renderBoard(player);
     }
 
     private void renderBoard(Player player) {
@@ -144,110 +150,74 @@ class GameController {
         glfwPollEvents();
     }
 
-    void playerSetup(boolean clicked, Tile t) {
+    void playerSetup(boolean clicked, Tile t, Player player) {
         if (p1setup || p2setup) {
-            if (p1setup) {
-                switch (p1Ships) {
-                    case 0:
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4: {
-                        shipType = ShipEnum.SINGLE;
-                        if (clicked) {
-                            if (!t.isOwned())
-                                if (checkAdjacent(t, player1.getBoard()))
-                                    if (assembleShip(t, player1, 1, p1Ships, direction))
-                                        p1Ships++;
-                        }
-                    }
-                    break;
-                    case 5:
-                    case 6:
-                    case 7: {
-                        shipType = ShipEnum.DOUBLE;
-                        if (clicked) {
-                            if (!t.isOwned())
-                                if (checkAdjacent(t, player1.getBoard()))
-                                    if (assembleShip(t, player1, 2, p1Ships, direction))
-                                        p1Ships++;
-                        }
-                    }
-                    break;
-                    case 8:
-                    case 9: {
-                        shipType = ShipEnum.TRIPLE;
-                        if (clicked) {
-                            if (!t.isOwned())
-                                if (checkAdjacent(t, player1.getBoard()))
-                                    if (assembleShip(t, player1, 3, p1Ships, direction))
-                                        p1Ships++;
-                        }
-                    }
-                    break;
-                    case 10: {
-                        shipType = ShipEnum.QUAD;
-                        if (clicked) {
-                            if (!t.isOwned())
-                                if (checkAdjacent(t, player1.getBoard()))
-                                    if (assembleShip(t, player1, 4, p1Ships, direction)) {
-                                        p1setup = false;
-                                    }
-                        }
+            int pShips = -1;
+            if (p1setup)
+                pShips = p1Ships;
+            if(p2setup && !p1setup)
+                pShips = p2Ships;
 
+            switch (pShips) {
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4: {
+                    shipType = ShipEnum.SINGLE;
+                    if (clicked) {
+                        if (!t.isOwned())
+                            if (checkAdjacent(t, player.getBoard()))
+                                if (assembleShip(t, player, 1, pShips, direction)) {
+                                    if(player.getName().equals(PLAYER1))
+                                        p1Ships++;
+                                    else if(player.getName().equals(PLAYER2)) p2Ships++;
+                                }
                     }
-                    break;
                 }
-            } else if (p2setup) {
-                switch (p2Ships) {
-                    case 0:
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4: {
-                        shipType = ShipEnum.SINGLE;
-                        if (clicked) {
-                            if (!t.isOwned())
-                                if (checkAdjacent(t, player2.getBoard()))
-                                    assembleShip(t, player2, 1, p2Ships, direction);
-                            p2Ships++;
-                        }
+                break;
+                case 5:
+                case 6:
+                case 7: {
+                    shipType = ShipEnum.DOUBLE;
+                    if (clicked) {
+                        if (!t.isOwned())
+                            if (checkAdjacent(t, player.getBoard()))
+                                if (assembleShip(t, player, 2, pShips, direction)) {
+                                    if(player.getName().equals(PLAYER1))
+                                        p1Ships++;
+                                    else p2Ships++;
+                                }
                     }
-                    break;
-                    case 5:
-                    case 6:
-                    case 7: {
-                        shipType = ShipEnum.DOUBLE;
-                        if (clicked) {
-                            if (!t.isOwned())
-                                if (checkAdjacent(t, player2.getBoard()))
-                                    if (assembleShip(t, player2, 2, p2Ships, direction))
-                                        p2Ships++;
-                        }
-                    }
-                    break;
-                    case 8:
-                    case 9: {
-                        shipType = ShipEnum.TRIPLE;
-                        if (clicked) {
-                            if (!t.isOwned())
-                                if (checkAdjacent(t, player2.getBoard()))
-                                    if (assembleShip(t, player2, 3, p2Ships, direction))
-                                        p2Ships++;
-                        }
-                    }
-                    break;
-                    case 10: {
-                        shipType = ShipEnum.QUAD;
-                        if (clicked) {
-                            if (!t.isOwned())
-                                if (checkAdjacent(t, player2.getBoard()))
-                                    if (assembleShip(t, player2, 4, p2Ships, direction))
-                                        p2setup = false;
-                        }
-                    }
-                    break;
                 }
+                break;
+                case 8:
+                case 9: {
+                    shipType = ShipEnum.TRIPLE;
+                    if (clicked) {
+                        if (!t.isOwned())
+                            if (checkAdjacent(t, player.getBoard()))
+                                if (assembleShip(t, player, 3, pShips, direction)) {
+                                    if(player.getName().equals(PLAYER1))
+                                        p1Ships++;
+                                    else p2Ships++;
+                                }
+                    }
+                }
+                break;
+                case 10: {
+                    shipType = ShipEnum.QUAD;
+                    if (clicked) {
+                        if (!t.isOwned())
+                            if (checkAdjacent(t, player.getBoard()))
+                                if (assembleShip(t, player, 4, pShips, direction)) {
+                                    if(player.getName().equals(PLAYER1))
+                                        p1setup = false;
+                                    else p2setup = false;
+                                }
+                    }
+                }
+                break;
             }
         }
     }
@@ -321,7 +291,7 @@ class GameController {
 
     boolean assembleShip(Tile t, Player player, int number, int shipnum, boolean dir) {
         //if(!checkAdjacent(t, player.getBoard())) return false;
-        ArrayList<Tile> tiles = tilesFromTile(player.getBoard(), t, number, dir);
+        ArrayList<Tile> tiles = tilesFromTile(player.getBoard(), t, number);
         if(tiles.size() == 0) return false;
         addShip(player, shipType, shipnum, tiles, dir);
 
@@ -344,7 +314,7 @@ class GameController {
 
     private boolean isMouseOnTile(ArrayList<Tile> tiles, double mouseX, double mouseY) {
         for (Tile t : tiles) {
-            float diameter = 0.25f; //Board tile dimeter
+            float diameter = 0.25f; //Board tile diameter
             if (
                     mouseX > t.getCoords().x - diameter &&
                             mouseX < (t.getCoords().x + diameter) &&
@@ -360,7 +330,7 @@ class GameController {
 
     private Tile tileFromMouse(ArrayList<Tile> tiles, double mouseX, double mouseY) {
         for (Tile t : tiles) {
-            float diameter = 0.25f; //Board tile dimeter
+            float diameter = 0.25f; //Board tile diameter
             if (
                     mouseX > (t.getCoords().x - diameter) &&
                             mouseX < (t.getCoords().x + diameter) &&
@@ -374,18 +344,23 @@ class GameController {
         return new Tile();
     }
 
-    private ArrayList<Tile> tilesFromTile(ArrayList<Tile> tiles, Tile tile, int number, boolean dir) {
+    private ArrayList<Tile> tilesFromTile(ArrayList<Tile> tiles, Tile tile, int number) {
         ArrayList<Tile> ts = new ArrayList<>();
         for (int i = 0; i < tiles.size(); i++) {
             if (tiles.get(i).equals(tile))
-                for (int j = 0; j < number; j++)
-                    if(i + (j * 10) < tiles.size() && i + j < tiles.size() &&
-                            tiles.get(i+j).getName().charAt(1) == tiles.get(i).getName().charAt(1))
-                        if(dir)
+                for (int j = 0; j < number; j++) {
+
+                    if(i + (j * 10) < tiles.size() && i + j < tiles.size()) {
+                        if(direction && !checkAdjacent(tiles.get(i + (j * 10)), tiles)) return new ArrayList<>();
+                        if(!direction && !checkAdjacent(tiles.get(i + j), tiles)) return new ArrayList<>();
+                        if(direction) {
                             ts.add(tiles.get(i + (j * 10)));
-                        else
-                            ts.add(tiles.get(i + j));
+                        } else if(tiles.get(i + j).getName().charAt(1) == tiles.get(i).getName().charAt(1))
+                                ts.add(tiles.get(i + j));
+                            else return new ArrayList<>();
+                    }
                     else return new ArrayList<>();
+                }
         }
         return ts;
     }
@@ -408,7 +383,6 @@ class GameController {
             frames = 0;
         }
     }
-
 
     private ArrayList<Tile> generateTiles(float posX, float posY, String player) {
         ArrayList<Tile> tiles = new ArrayList<>();
