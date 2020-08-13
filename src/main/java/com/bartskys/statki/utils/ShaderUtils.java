@@ -4,10 +4,6 @@ import static org.lwjgl.opengl.GL33.*;
 
 public class ShaderUtils {
 
-      private ShaderUtils() {
-
-      }
-
       public static int load(String vertPath, String fragPath) {
             String vert = FileUtils.loadAsSting(vertPath);
             String frag = FileUtils.loadAsSting(fragPath);

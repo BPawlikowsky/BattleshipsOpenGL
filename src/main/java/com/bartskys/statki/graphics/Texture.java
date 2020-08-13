@@ -11,7 +11,7 @@ import static org.lwjgl.stb.STBImage.stbi_set_flip_vertically_on_load;
 public class Texture {
 
       private int width, height;
-      private int texture;
+      private final int texture;
 
       public Texture(String path) {
             texture = load(path);

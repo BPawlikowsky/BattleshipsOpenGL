@@ -1,7 +1,6 @@
 package com.bartskys.statki.graphics;
 
 import org.joml.Matrix4f;
-import com.bartskys.statki.math.Vector3f;
 import com.bartskys.statki.utils.ShaderUtils;
 import org.lwjgl.BufferUtils;
 
@@ -16,12 +15,12 @@ public class Shader {
       static final int VERTEX_ATTRIB = 0;
       static final int TCOORD_ATTRIB = 1;
 
-      private FloatBuffer matrixBuffer = BufferUtils.createFloatBuffer(16);
+      private final FloatBuffer matrixBuffer = BufferUtils.createFloatBuffer(16);
 
 
 
       private final int ID;
-      private Map<String, Integer> locationCache = new HashMap<>();
+      private final Map<String, Integer> locationCache = new HashMap<>();
 
       private boolean enabled = false;
 
@@ -48,20 +47,20 @@ public class Shader {
             glUniform1i(getUniform(name), value);
       }
 
-      public void setUniform1f(String name, float value) {
-            if (!enabled) enable();
-            glUniform1f(getUniform(name), value);
-      }
-
-      public void setUniform2f(String name, float x, float y) {
-            if (!enabled) enable();
-            glUniform2f(getUniform(name), x, y);
-      }
-
-      public void setUniform3f(String name, Vector3f vector) {
-            if (!enabled) enable();
-            glUniform3f(getUniform(name), vector.x, vector.y, vector.z);
-      }
+//      public void setUniform1f(String name, float value) {
+//            if (!enabled) enable();
+//            glUniform1f(getUniform(name), value);
+//      }
+//
+//      public void setUniform2f(String name, float x, float y) {
+//            if (!enabled) enable();
+//            glUniform2f(getUniform(name), x, y);
+//      }
+//
+//      public void setUniform3f(String name, Vector3f vector) {
+//            if (!enabled) enable();
+//            glUniform3f(getUniform(name), vector.x, vector.y, vector.z);
+//      }
 
       public void setUniformMat4f(String name, Matrix4f matrix) {
             if (!enabled) enable();

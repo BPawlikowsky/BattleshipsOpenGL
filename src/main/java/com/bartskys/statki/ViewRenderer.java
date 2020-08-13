@@ -2,57 +2,39 @@ package com.bartskys.statki;
 
 import com.bartskys.statki.graphics.Shader;
 import com.bartskys.statki.input.Input;
-import com.bartskys.statki.input.MouseInput;
+import com.bartskys.statki.input.MouseInputClick;
+import com.bartskys.statki.input.MouseInputPos;
+import com.bartskys.statki.model.RenderBox;
 import com.bartskys.statki.model.Tile;
 
-import com.bartskys.statki.utils.NuklearGUI;
 import lombok.Getter;
 import org.joml.Matrix4f;
-import org.lwjgl.BufferUtils;
 import org.lwjgl.glfw.GLFWVidMode;
-import org.lwjgl.nuklear.NkAllocator;
-import org.lwjgl.nuklear.*;
-import org.lwjgl.nuklear.NkDrawVertexLayoutElement;
 import org.lwjgl.opengl.GL;
-import org.lwjgl.stb.STBTTAlignedQuad;
-import org.lwjgl.stb.STBTTFontinfo;
-import org.lwjgl.stb.STBTTPackContext;
-import org.lwjgl.stb.STBTTPackedchar;
 import org.lwjgl.system.MemoryStack;
-import org.lwjgl.system.Platform;
 
 
-import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
-import java.util.Objects;
 
-import static com.bartskys.statki.utils.IOUtil.ioResourceToByteBuffer;
 import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.nuklear.Nuklear.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL15.*;
-import static org.lwjgl.opengl.GL33.*;
 
-import static org.lwjgl.stb.STBTruetype.*;
 import static org.lwjgl.system.MemoryStack.stackPush;
 import static org.lwjgl.system.MemoryUtil.*;
 
 public class ViewRenderer {
 
-      @Getter
-      private static NuklearGUI nuklear;
-
-
       private static final int width = 1280;
       private static final int height = 720;
 
-      private static long window;;
+      private static long window;
+
+      private static final Input input = new Input();
 
       private static Shader TILE;
       @Getter
-      private static Matrix4f pro_matrix = new Matrix4f().ortho2D(
+      private static final Matrix4f pro_matrix = new Matrix4f().ortho2D(
               -10.0f,
               10.0f,
               -10.0f * 9.0f / 16.0f,
@@ -116,20 +98,16 @@ public class ViewRenderer {
 
             glClearColor(0f, 0f,0f, 1f);
 
-            nuklear = new NuklearGUI(window, width, height);
-
-            nuklear.init();
-
-            TILE = new Shader("shaders/bird.vert","shaders/bird.frag");
+            TILE = new Shader("shaders/shader.vert","shaders/shader.frag");
 
             initGameObjects();
       }
 
       public static void setCallbacks() {
-            glfwSetKeyCallback(window, new Input());
-            glfwSetCursorPosCallback(window, new MouseInput());
+            glfwSetKeyCallback(window, input);
+            glfwSetCursorPosCallback(window, new MouseInputPos());
+            glfwSetMouseButtonCallback(window, new MouseInputClick());
       }
-
 
       public static void initGameObjects() {
             setCallbacks();
@@ -139,7 +117,6 @@ public class ViewRenderer {
       }
 
       static void renderStart() {
-
             flagSetup();
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             glClearColor(0.4f, 0.7f, 0.9f, 1f);
@@ -166,12 +143,10 @@ public class ViewRenderer {
 
       static void terminate() {
             glfwDestroyWindow(window);
-            nuklear.shutdown();
             glfwTerminate();
       }
 
       static void renderEmptyTile(Tile tile) {
-
             TILE.enable();
             tile.getEmptyTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
@@ -183,7 +158,6 @@ public class ViewRenderer {
       }
 
       static void renderShot(Tile tile) {
-
             TILE.enable();
             tile.getShotAtTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
@@ -195,7 +169,6 @@ public class ViewRenderer {
       }
 
       public static void renderShip(Tile tile) {
-
             TILE.enable();
             tile.getShipTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
@@ -207,4 +180,15 @@ public class ViewRenderer {
             TILE.disable();
       }
 
+      public static void renderBox(RenderBox box) {
+            TILE.enable();
+            box.getTexture().bind();
+            Matrix4f ml_matrix = new Matrix4f().identity();
+
+            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(box.getCoords().x, box.getCoords().y, box.getCoords().z));
+            box.getMesh().render();
+            box.getMesh().unbind();
+            box.getTexture().unbind();
+            TILE.disable();
+      }
 }

@@ -1,18 +1,15 @@
 package com.bartskys.statki.model;
 
 import lombok.Getter;
-import lombok.Setter;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class Ship {
       @Getter
-      private List<Tile> tiles = new ArrayList<>();
+      private final List<Tile> tiles;
       @Getter
-      private boolean direction;
+      private final boolean direction;
       @Getter
-      private String name;
+      private final String name;
 
       public Ship(List<Tile> tiles, boolean direction, String name) {
             this.tiles = tiles;

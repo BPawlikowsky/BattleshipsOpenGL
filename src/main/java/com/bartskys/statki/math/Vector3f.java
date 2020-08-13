@@ -15,4 +15,9 @@ public class Vector3f {
             this.y = y;
             this.z = z;
       }
+
+      @Override
+      public String toString() {
+            return String.format("Vector3f{ x=%.2f, y=%.2f, z=%.2f}", x, y, z);
+      }
 }

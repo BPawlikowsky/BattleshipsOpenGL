@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 /.idea/*
 /META-INF/
 /src/test/
 /StatkiGame.iml
 /out/
 /target/
+=======
+./out/
+./target/
+./.idea/
+./META-INF/
+
+>>>>>>> recovery

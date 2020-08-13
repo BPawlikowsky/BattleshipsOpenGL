@@ -16,23 +16,59 @@ public class Tile {
       private boolean owned;
       @Getter @Setter
       private String ownedByShip;
-      private float SIZE = 0.49f;
+      private final float SIZE = 0.24f;
 
       @Getter
-      private String name;
+      private final String name;
       @Getter
-      private Texture emptyTile;
+      private final Texture emptyTile;
       @Getter
-      private Texture shipTile;
+      private final Texture shipTile;
       @Getter
-      private Texture shotAtTile;
+      private final Texture shotAtTile;
       @Getter
-      private VertexArray mesh;
+      private final VertexArray mesh;
+      @Getter
+      private final String player;
 
-      public Tile(String name, Vector3f coords) {
+      public Tile() {
+            coords = new Vector3f();
+            name = "Null";
+            player = "";
+            shotAt = false;
+            owned = false;
+            ownedByShip = "";
+
+            float[] vertices = {
+                    -SIZE,  SIZE, 0.0f,
+                    -SIZE, -SIZE, 0.0f,
+                    SIZE, -SIZE, 0.0f,
+                    SIZE,  SIZE, 0.0f
+            };
+
+            byte[] indices = {
+                    0, 1, 2,
+                    2, 3, 0
+            };
+
+            float[] tcs = {
+                    0, 1,
+                    0, 0,
+                    1, 0,
+                    1, 1,
+            };
+
+            mesh = new VertexArray(vertices, indices, tcs);
+            emptyTile = new Texture("res/tile.png");
+            shipTile = new Texture("res/ship.png");
+            shotAtTile = new Texture("res/shot.png");
+      }
+
+      public Tile(String name, Vector3f coords, String player) {
 
             this.coords = coords;
             this.name = name;
+            this.player = player;
             shotAt = false;
             owned = false;
             ownedByShip = "";
