@@ -76,6 +76,52 @@ class GameController {
         ViewRenderer.terminate();
     }
 
+    private void render() {
+        ViewRenderer.renderStart();
+        if (p1setup)
+            ViewRenderer.renderBox(PLAYER1SETUP);
+        if (p2setup)
+            ViewRenderer.renderBox(PLAYER2SETUP);
+        renderBoard(player1);
+        renderBoard(player2);
+        if (isMouseOnTile(player1.getBoard())) {
+            ArrayList<Tile> tiles;
+            tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 1, direction);
+            if(shipType == ShipEnum.DOUBLE)
+                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 2, direction);
+            if(shipType == ShipEnum.TRIPLE)
+                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 3, direction);
+            if(shipType == ShipEnum.QUAD)
+                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 4, direction);
+            for (Tile t: tiles
+                 ) {
+                ViewRenderer.renderShip(t);
+            }
+
+        }
+        if (isMouseOnTile(player2.getBoard()))
+            ViewRenderer.renderShip(tileFromMouse(player2.getBoard()));
+        ViewRenderer.renderFinish();
+    }
+
+    private void renderBoard(Player player) {
+        for (Tile t : player.getBoard()) {
+            if (t.isOwned())
+                ViewRenderer.renderShip(t);
+            else
+                ViewRenderer.renderEmptyTile(t);
+        }
+    }
+
+    private void update() {
+
+
+        // Aligning mouse position to the board so that the mouse coords correspond to the board coords
+        mouseX = ((float) MouseInputPos.xPos / 1280f - 1.0f) * 10.0f;
+        mouseY = ((float) MouseInputPos.yPos / 720f - 1.0f) * (-10.0f * 9.0f / 16.0f);
+        glfwPollEvents();
+    }
+
     void playerSetup(boolean clicked) {
         if (p1setup || p2setup) {
             if (p1setup) {
@@ -126,9 +172,9 @@ class GameController {
                             Tile t = tileFromMouse(player1.getBoard());
                             if (!t.isOwned())
                                 if (checkAdjacent(t, player1.getBoard()))
-                                        if(assembleShip(t, player1, 4, p1Ships, direction)){
+                                    if(assembleShip(t, player1, 4, p1Ships, direction)){
                                         p1setup = false;
-                            }
+                                    }
                         }
 
                     }
@@ -147,7 +193,7 @@ class GameController {
                             if (!t.isOwned())
                                 if (checkAdjacent(t, player2.getBoard()))
                                     assembleShip(t, player2, 1, p2Ships, direction);
-                                    p2Ships++;
+                            p2Ships++;
                         }
                     }
                     break;
@@ -218,7 +264,7 @@ class GameController {
                             board.get(j - 11).isOwned()
                     ) return false;
                 } else if (board.get(j).getCoords().x == xLo &&
-                            board.get(j).getCoords().y < yLo &&
+                        board.get(j).getCoords().y < yLo &&
                         board.get(j).getCoords().y > yHi) {
                     if (board.get(j + 1).isOwned() ||
                             board.get(j - 9).isOwned() ||
@@ -259,27 +305,8 @@ class GameController {
         return true;
     }
 
-    int checkCorner(Tile tile, ArrayList<Tile> board) {
-
-        float xLo = board.get(0).getCoords().x;
-        float yLo = board.get(0).getCoords().y;
-        float xHi = board.get(9).getCoords().x;
-        float yHi = board.get(99).getCoords().y;
-        System.out.printf("Check Corner | xLo: %.2f | xHi: %.2f | yLo: %.2f | yHi: %.2f\n", xLo, xHi, yLo, yHi);
-        for (Tile value : board) {
-            if (tile.equals(value)) {
-                if (value.getCoords().x == xHi) {
-                    return 0;
-                } else if (value.getCoords().y == yHi) {
-                    return 1;
-                }
-            }
-        }
-        return -1;
-    }
-
     boolean assembleShip(Tile t, Player player, int number, int shipnum, boolean dir) {
-        if(!checkAdjacent(t, player.getBoard())) return false;
+        //if(!checkAdjacent(t, player.getBoard())) return false;
         ArrayList<Tile> tiles = tilesFromTile(player.getBoard(), t, number, dir);
         if(tiles.size() == 0) return false;
         addShip(player, shipType, shipnum, tiles, true);
@@ -299,52 +326,6 @@ class GameController {
 
     void addShip(Player player, ShipEnum shipType, int shipNumber, ArrayList<Tile> t, boolean dir) {
         player.getShips().add(new Ship(t, dir, shipType + String.valueOf(shipNumber)));
-    }
-
-    private void render() {
-        ViewRenderer.renderStart();
-        if (p1setup)
-            ViewRenderer.renderBox(PLAYER1SETUP);
-        if (p2setup)
-            ViewRenderer.renderBox(PLAYER2SETUP);
-        renderBoard(player1);
-        renderBoard(player2);
-        if (isMouseOnTile(player1.getBoard())) {
-            ArrayList<Tile> tiles;
-            tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 1, direction);
-            if(shipType == ShipEnum.DOUBLE)
-                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 2, direction);
-            if(shipType == ShipEnum.TRIPLE)
-                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 3, direction);
-            if(shipType == ShipEnum.QUAD)
-                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 4, direction);
-            for (Tile t: tiles
-                 ) {
-                ViewRenderer.renderShip(t);
-            }
-
-        }
-        if (isMouseOnTile(player2.getBoard()))
-            ViewRenderer.renderShip(tileFromMouse(player2.getBoard()));
-        ViewRenderer.renderFinish();
-    }
-
-    private void renderBoard(Player player) {
-        for (Tile t : player.getBoard()) {
-            if (t.isOwned())
-                ViewRenderer.renderShip(t);
-            else
-                ViewRenderer.renderEmptyTile(t);
-        }
-    }
-
-    private void update() {
-
-
-        // Aligning mouse position to the board so that the mouse coords correspond to the board coords
-        mouseX = ((float) MouseInputPos.xPos / 1280f - 1.0f) * 10.0f;
-        mouseY = ((float) MouseInputPos.yPos / 720f - 1.0f) * (-10.0f * 9.0f / 16.0f);
-        glfwPollEvents();
     }
 
     private boolean isMouseOnTile(ArrayList<Tile> tiles) {
@@ -444,25 +425,4 @@ class GameController {
             frames = 0;
         }
     }
-
-//    void showAdj(ArrayList<Tile> board, int pos) {
-//        Tile el = board.get(pos-11);
-//        System.out.printf("Element 50-11: \n\tName: %s\n\tCoords: %s\n",pos, el.getName(), el.getCoords().toString());
-//        el = board.get(pos-10);
-//        System.out.printf("Element 50-10: \n\tName: %s\n\tCoords: %s\n",pos, el.getName(), el.getCoords().toString());
-//        el = board.get(pos-9);
-//        System.out.printf("Element 50-9: \n\tName: %s\n\tCoords: %s\n",pos, el.getName(), el.getCoords().toString());
-//        el = board.get(pos-1);
-//        System.out.printf("Element 50-1: \n\tName: %s\n\tCoords: %s\n",pos, el.getName(), el.getCoords().toString());
-//        el = board.get(pos);
-//        System.out.printf("Element 50: \n\tName: %s\n\tCoords: %s\n",pos, el.getName(), el.getCoords().toString());
-//        el = board.get(pos+1);
-//        System.out.printf("Element 50+1: \n\tName: %s\n\tCoords: %s\n",pos, el.getName(), el.getCoords().toString());
-//        el = board.get(pos+9);
-//        System.out.printf("Element 50+9: \n\tName: %s\n\tCoords: %s\n",pos, el.getName(), el.getCoords().toString());
-//        el = board.get(pos+10);
-//        System.out.printf("Element 50+10: \n\tName: %s\n\tCoords: %s\n",pos, el.getName(), el.getCoords().toString());
-//        el = board.get(pos+11);
-//        System.out.printf("Element %d+11: \n\tName: %s\n\tCoords: %s\n", pos, el.getName(), el.getCoords().toString());
-//    }
 }

@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -414,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597263366728</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="corners now work!">
+      <created>1597299251782</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1597299251782</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +469,8 @@
     <MESSAGE value="Player setup 95% done TODO: Right side collumn and bottom row are not accesible to put DOUBLE, TRIPLE and QUAD on.(Dumb corner checking)" />
     <MESSAGE value="Direction works" />
     <MESSAGE value="Crude overlay of type of ship that is being placed. Done for today!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Crude overlay of type of ship that is being placed. Done for today!" />
+    <MESSAGE value="corners now work!" />
+    <option name="LAST_COMMIT_MESSAGE" value="corners now work!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="520" y="290" width="506" height="377" key="#Scopes" timestamp="1597161917488">
@@ -479,14 +485,18 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="458" y="208" key="#com.intellij.ide.util.PackageChooserDialog/0.23.1440.804@0.23.1440.804" timestamp="1597164863472" />
+    <state x="265" y="206" width="494" height="255" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1597299581554">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="265" y="206" width="494" height="255" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1440.804@0.23.1440.804" timestamp="1597299581554" />
     <state x="227" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597160794376">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="227" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.804@0.23.1440.804" timestamp="1597160794376" />
-    <state x="297" y="23" width="846" height="804" key="CommitChangelistDialog2" timestamp="1597263366514">
+    <state x="23" y="23" width="846" height="804" key="CommitChangelistDialog2" timestamp="1597299251498">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="297" y="23" width="846" height="804" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1597263366514" />
+    <state x="23" y="23" width="846" height="804" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1597299251498" />
     <state width="1398" height="136" key="GridCell.Tab.0.bottom" timestamp="1597299149646">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -539,6 +549,10 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="265" key="GridCell.Tab.2.right/0.23.1440.804@0.23.1440.804" timestamp="1597259689433" />
+    <state x="167" y="23" width="607" height="804" key="RefactorJ.ExtractClass" timestamp="1597299704258">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="167" y="23" width="607" height="804" key="RefactorJ.ExtractClass/0.23.1440.804@0.23.1440.804" timestamp="1597299704258" />
     <state x="416" y="23" key="SettingsEditor" timestamp="1589757286404">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
