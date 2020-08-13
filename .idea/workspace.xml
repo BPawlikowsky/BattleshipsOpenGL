@@ -28,8 +28,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="utils.Game - broken">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -630,10 +629,10 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="520" y="291" key="scopes/0.23.1440.804@0.23.1440.804" timestamp="1597161647240" />
-    <state x="385" y="151" width="670" height="676" key="search.everywhere.popup" timestamp="1597263053445">
+    <state x="385" y="151" width="670" height="676" key="search.everywhere.popup" timestamp="1597325880890">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="385" y="151" width="670" height="676" key="search.everywhere.popup/0.23.1440.804@0.23.1440.804" timestamp="1597263053445" />
+    <state x="385" y="151" width="670" height="676" key="search.everywhere.popup/0.23.1440.804@0.23.1440.804" timestamp="1597325880890" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

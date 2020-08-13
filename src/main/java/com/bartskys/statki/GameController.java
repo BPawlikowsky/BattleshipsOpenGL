@@ -379,7 +379,8 @@ class GameController {
         for (int i = 0; i < tiles.size(); i++) {
             if (tiles.get(i).equals(tile))
                 for (int j = 0; j < number; j++)
-                    if(i + (j * 10) < tiles.size() && i + j < tiles.size())
+                    if(i + (j * 10) < tiles.size() && i + j < tiles.size() &&
+                            tiles.get(i+j).getName().charAt(1) == tiles.get(i).getName().charAt(1))
                         if(dir)
                             ts.add(tiles.get(i + (j * 10)));
                         else
