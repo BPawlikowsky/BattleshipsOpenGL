@@ -1,133 +1,19 @@
-package com.bartskys.statki;
+package com.bartskys.statki.utils;
 
-import com.bartskys.statki.input.Input;
-import com.bartskys.statki.input.MouseInputClick;
-import com.bartskys.statki.input.MouseInputPos;
 import com.bartskys.statki.math.Vector3f;
-import com.bartskys.statki.model.*;
-
+import com.bartskys.statki.model.Player;
+import com.bartskys.statki.model.Ship;
+import com.bartskys.statki.model.ShipEnum;
+import com.bartskys.statki.model.Tile;
 
 import java.util.ArrayList;
-
-import static org.lwjgl.glfw.GLFW.*;
-
-class GameController {
-    private static final String PLAYER1 = "Player01";
-    private static final String PLAYER2 = "Player02";
-    private static RenderBox PLAYER1SETUP;
-    private static RenderBox PLAYER2SETUP;
-    int p1Ships = 1;
-    int p2Ships = 1;
-    private static boolean running;
-    private final Player player1, player2;
-    private boolean p1setup, p2setup;
-    private float mouseX, mouseY;
-    float boardPosX = -2.2f;
-    float boardPosY = 2.0f;
-    ShipEnum shipType = ShipEnum.SINGLE;
-    boolean direction = true;
-    //Frame counting
-    long lastTime = System.currentTimeMillis();
-    long timer = System.currentTimeMillis();
-    double delta = 0.0;
-    double ns = 1000000000.0 / 60.0;
-    int updates = 0;
-    int frames = 0;
-    //-------------
-
-    GameController() {
-        ViewRenderer.init();
-        running = true;
-        player1 = new Player(generateTiles(boardPosX, boardPosY - 10.0f, PLAYER1), PLAYER1);
-        player2 = new Player(generateTiles(boardPosX, boardPosY + 1.3f, PLAYER2), PLAYER2);
-        p1setup = p2setup = true;
-        PLAYER1SETUP = new RenderBox(
-                "PlayerSetup",
-                new Vector3f(-5.8f, 4.0f, 0.0f)
-        );
-        PLAYER2SETUP = new RenderBox(
-                "PlayerSetup",
-                new Vector3f(5.5f, 4.0f, 0.0f)
-        );
-    }
-
-    void mainLoop() {
-        boolean clicked = false;
-        boolean buttonD = false;
-        //Main Loop
-        while (running) {
-            // Click register
-            if (!clicked) clicked =
-                    (MouseInputClick.mbutton == GLFW_MOUSE_BUTTON_1 &&
-                            MouseInputClick.maction == GLFW_PRESS &&
-                    (isMouseOnTile(player1.getBoard()) || isMouseOnTile(player2.getBoard())));
-            if(Input.isKeyDown(GLFW_KEY_D) && !buttonD) {direction = !direction; buttonD = true;}
-            // Update game events and Counts frames and updates
-            frameUpdate();
-
-            playerSetup(clicked);
-
-            // Render after update
-            render();
-            // Click reset
-            if (frames >= 30 && clicked)
-                clicked = false;
-            if (frames >= 30 && buttonD)
-                buttonD = false;
-
-            if (glfwWindowShouldClose(ViewRenderer.getWindow()))
-                running = false;
-        }
-        ViewRenderer.terminate();
-    }
-
-    private void render() {
-        ViewRenderer.renderStart();
-        if (p1setup)
-            ViewRenderer.renderBox(PLAYER1SETUP);
-        if (p2setup)
-            ViewRenderer.renderBox(PLAYER2SETUP);
-        renderBoard(player1);
-        renderBoard(player2);
-        if (isMouseOnTile(player1.getBoard())) {
-            ArrayList<Tile> tiles;
-            tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 1, direction);
-            if(shipType == ShipEnum.DOUBLE)
-                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 2, direction);
-            if(shipType == ShipEnum.TRIPLE)
-                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 3, direction);
-            if(shipType == ShipEnum.QUAD)
-                tiles = tilesFromTile(player1.getBoard(), tileFromMouse(player1.getBoard()), 4, direction);
-            for (Tile t: tiles
-                 ) {
-                ViewRenderer.renderShip(t);
-            }
-
-        }
-        if (isMouseOnTile(player2.getBoard()))
-            ViewRenderer.renderShip(tileFromMouse(player2.getBoard()));
-        ViewRenderer.renderFinish();
-    }
-
-    private void renderBoard(Player player) {
-        for (Tile t : player.getBoard()) {
-            if (t.isOwned())
-                ViewRenderer.renderShip(t);
-            else
-                ViewRenderer.renderEmptyTile(t);
-        }
-    }
-
-    private void update() {
-
-
-        // Aligning mouse position to the board so that the mouse coords correspond to the board coords
-        mouseX = ((float) MouseInputPos.xPos / 1280f - 1.0f) * 10.0f;
-        mouseY = ((float) MouseInputPos.yPos / 720f - 1.0f) * (-10.0f * 9.0f / 16.0f);
-        glfwPollEvents();
-    }
-
-    void playerSetup(boolean clicked) {
+public class Game {
+    public static void playerSetup(
+            boolean clicked, int frames, float mouseX, float mouseY,
+            Player player1, Player player2,
+            boolean p1setup, boolean p2setup,
+            int p1Ships, int p2Ships,
+            ShipEnum shipType, boolean direction) {
         if (p1setup || p2setup) {
             if (p1setup) {
                 switch (p1Ships) {
@@ -137,11 +23,11 @@ class GameController {
                     case 3:
                     case 4: {
                         shipType = ShipEnum.SINGLE;
-                        if (clicked) {
-                            Tile t = tileFromMouse(player1.getBoard());
+                        if (clicked && frames % 60 == 0) {
+                            Tile t = tileFromMouse(player1.getBoard(), mouseX, mouseY);
                             if (!t.isOwned())
                                 if (checkAdjacent(t, player1.getBoard()))
-                                    if(assembleShip(t, player1, 1, p1Ships, direction))
+                                    if(assembleShip(t, player1, 1, p1Ships, direction, shipType))
                                         p1Ships++;
                         }
                     }
@@ -150,11 +36,11 @@ class GameController {
                     case 6:
                     case 7: {
                         shipType = ShipEnum.DOUBLE;
-                        if (clicked) {
-                            Tile t = tileFromMouse(player1.getBoard());
+                        if (clicked && frames % 60 == 0) {
+                            Tile t = tileFromMouse(player1.getBoard(), mouseX, mouseY);
                             if (!t.isOwned())
                                 if (checkAdjacent(t, player1.getBoard()))
-                                    if(assembleShip(t, player1, 2, p1Ships, direction))
+                                    if(assembleShip(t, player1, 2, p1Ships, direction, shipType))
                                         p1Ships++;
                         }
                     }
@@ -162,22 +48,22 @@ class GameController {
                     case 8:
                     case 9: {
                         shipType = ShipEnum.TRIPLE;
-                        if (clicked) {
-                            Tile t = tileFromMouse(player1.getBoard());
+                        if (clicked && frames % 60 == 0) {
+                            Tile t = tileFromMouse(player1.getBoard(), mouseX, mouseY);
                             if (!t.isOwned())
                                 if (checkAdjacent(t, player1.getBoard()))
-                                    if(assembleShip(t, player1, 3, p1Ships, direction))
+                                    if(assembleShip(t, player1, 3, p1Ships, direction, shipType))
                                         p1Ships++;
                         }
                     }
                     break;
                     case 10: {
                         shipType = ShipEnum.QUAD;
-                        if (clicked) {
-                            Tile t = tileFromMouse(player1.getBoard());
+                        if (clicked && frames % 60 == 0) {
+                            Tile t = tileFromMouse(player1.getBoard(), mouseX, mouseY);
                             if (!t.isOwned())
                                 if (checkAdjacent(t, player1.getBoard()))
-                                    if(assembleShip(t, player1, 4, p1Ships, direction)){
+                                    if(assembleShip(t, player1, 4, p1Ships, direction, shipType)){
                                         p1setup = false;
                                     }
                         }
@@ -193,11 +79,11 @@ class GameController {
                     case 3:
                     case 4: {
                         shipType = ShipEnum.SINGLE;
-                        if (clicked) {
-                            Tile t = tileFromMouse(player2.getBoard());
+                        if (clicked && frames % 60 == 0) {
+                            Tile t = tileFromMouse(player2.getBoard(), mouseX, mouseY);
                             if (!t.isOwned())
                                 if (checkAdjacent(t, player2.getBoard()))
-                                    assembleShip(t, player2, 1, p2Ships, direction);
+                                    assembleShip(t, player2, 1, p2Ships, direction, shipType);
                             p2Ships++;
                         }
                     }
@@ -206,11 +92,11 @@ class GameController {
                     case 6:
                     case 7: {
                         shipType = ShipEnum.DOUBLE;
-                        if (clicked) {
-                            Tile t = tileFromMouse(player2.getBoard());
+                        if (clicked && frames % 60 == 0) {
+                            Tile t = tileFromMouse(player2.getBoard(), mouseX, mouseY);
                             if (!t.isOwned())
                                 if (checkAdjacent(t, player2.getBoard()))
-                                    if(assembleShip(t, player2, 2, p2Ships, direction))
+                                    if(assembleShip(t, player2, 2, p2Ships, direction, shipType))
                                         p2Ships++;
                         }
                     }
@@ -218,22 +104,22 @@ class GameController {
                     case 8:
                     case 9: {
                         shipType = ShipEnum.TRIPLE;
-                        if (clicked) {
-                            Tile t = tileFromMouse(player2.getBoard());
+                        if (clicked && frames % 60 == 0) {
+                            Tile t = tileFromMouse(player2.getBoard(), mouseX, mouseY);
                             if (!t.isOwned())
                                 if (checkAdjacent(t, player2.getBoard()))
-                                    if(assembleShip(t, player2, 3, p2Ships, direction))
+                                    if(assembleShip(t, player2, 3, p2Ships, direction, shipType))
                                         p2Ships++;
                         }
                     }
                     break;
                     case 10: {
                         shipType = ShipEnum.QUAD;
-                        if (clicked) {
-                            Tile t = tileFromMouse(player2.getBoard());
+                        if (clicked && frames % 60 == 0) {
+                            Tile t = tileFromMouse(player2.getBoard(), mouseX, mouseY);
                             if (!t.isOwned())
                                 if (checkAdjacent(t, player2.getBoard()))
-                                    if(assembleShip(t, player2, 4, p2Ships, direction))
+                                    if(assembleShip(t, player2, 4, p2Ships, direction, shipType))
                                         p2setup = false;
                         }
                     }
@@ -243,7 +129,7 @@ class GameController {
         }
     }
 
-    boolean checkAdjacent(Tile tile, ArrayList<Tile> board) {
+    public static boolean checkAdjacent(Tile tile, ArrayList<Tile> board) {
 
         float xLo = board.get(0).getCoords().x;
         float yLo = board.get(0).getCoords().y;
@@ -310,7 +196,7 @@ class GameController {
         return true;
     }
 
-    boolean assembleShip(Tile t, Player player, int number, int shipnum, boolean dir) {
+    public static boolean assembleShip(Tile t, Player player, int number, int shipnum, boolean dir, ShipEnum shipType) {
         //if(!checkAdjacent(t, player.getBoard())) return false;
         ArrayList<Tile> tiles = tilesFromTile(player.getBoard(), t, number, dir);
         if(tiles.size() == 0) return false;
@@ -329,11 +215,11 @@ class GameController {
         return true;
     }
 
-    void addShip(Player player, ShipEnum shipType, int shipNumber, ArrayList<Tile> t, boolean dir) {
+    public static void addShip(Player player, ShipEnum shipType, int shipNumber, ArrayList<Tile> t, boolean dir) {
         player.getShips().add(new Ship(t, dir, shipType + String.valueOf(shipNumber)));
     }
 
-    private boolean isMouseOnTile(ArrayList<Tile> tiles) {
+    public static boolean isMouseOnTile(ArrayList<Tile> tiles, float mouseX, float mouseY) {
         for (Tile t : tiles) {
             float diameter = 0.25f; //Board tile dimeter
             if (
@@ -355,7 +241,7 @@ class GameController {
         return false;
     }
 
-    private Tile tileFromMouse(ArrayList<Tile> tiles) {
+    public static Tile tileFromMouse(ArrayList<Tile> tiles, float mouseX, float mouseY) {
         for (Tile t : tiles) {
             float diameter = 0.25f; //Board tile dimeter
             if (
@@ -370,7 +256,7 @@ class GameController {
         return new Tile("Null", new Vector3f(0.0f, 0.0f, 0.0f), "null");
     }
 
-    private ArrayList<Tile> tilesFromTile(ArrayList<Tile> tiles, Tile tile, int number, boolean dir) {
+    public static ArrayList<Tile> tilesFromTile(ArrayList<Tile> tiles, Tile tile, int number, boolean dir) {
         ArrayList<Tile> ts = new ArrayList<>();
         for (int i = 0; i < tiles.size(); i++) {
             if (tiles.get(i).equals(tile))
@@ -385,7 +271,7 @@ class GameController {
         return ts;
     }
 
-    private ArrayList<Tile> generateTiles(float posX, float posY, String player) {
+    public static ArrayList<Tile> generateTiles(float posX, float posY, String player) {
         ArrayList<Tile> tiles = new ArrayList<>();
 
         float scale = 0.5f;
@@ -410,24 +296,5 @@ class GameController {
 //            }
 
         return tiles;
-    }
-
-    private void frameUpdate() {
-        //Timed updates
-        long now = System.nanoTime();
-        delta += (now - lastTime) / ns;
-        lastTime = now;
-        if (delta >= 1.0) {
-            update();
-            updates++;
-            delta--;
-        }
-        frames++;
-        if (System.currentTimeMillis() - timer > 1000) {
-            timer += 1000;
-            System.out.println(updates + " ups, " + frames + " fps");
-            updates = 0;
-            frames = 0;
-        }
     }
 }

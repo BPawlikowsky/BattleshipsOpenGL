@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <lwjgl.version>3.2.4-SNAPSHOT</lwjgl.version>
+        <lwjgl.version>3.2.3</lwjgl.version>
         <joml.version>1.9.20</joml.version>
         <lwjgl.natives>natives-macos</lwjgl.natives>
     </properties>
@@ -63,10 +63,6 @@
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>
-            <artifactId>lwjgl-nuklear</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.lwjgl</groupId>
             <artifactId>lwjgl-openal</artifactId>
         </dependency>
         <dependency>
@@ -108,11 +104,6 @@
         <dependency>
             <groupId>org.lwjgl</groupId>
             <artifactId>lwjgl-nanovg</artifactId>
-            <classifier>${lwjgl.natives}</classifier>
-        </dependency>
-        <dependency>
-            <groupId>org.lwjgl</groupId>
-            <artifactId>lwjgl-nuklear</artifactId>
             <classifier>${lwjgl.natives}</classifier>
         </dependency>
         <dependency>

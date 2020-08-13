@@ -5,9 +5,22 @@
       <artifact name="StatkiGame:jar" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="">
+    <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="utils.Game - broken">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/statki-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,11 +65,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="CoordsSystem" />
+        <entry key="$PROJECT_DIR$" value="PlayerSetup" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1OWbu3C6YcOsEEPcMp866dteZpW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -83,16 +103,17 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20584795" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.bartskys.statki.model" />
-      <recent name="com.bartskys.statki.utils" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res" />
+      <recent name="C:\dev\IdeaProjects\StatkiGame\src\main\java\com\bartskys\statki\utils" />
+      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res" />
@@ -101,10 +122,9 @@
       <recent name="C:\dev\IdeaProjects\StatkiGame\src\main\java\com\bartskys\statki\res" />
       <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\META-INF" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res" />
-      <recent name="C:\dev\IdeaProjects\StatkiGame\src\main\java\com\bartskys\statki\utils" />
-      <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bartskys.statki.model" />
+      <recent name="com.bartskys.statki.utils" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -114,8 +134,11 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8 (3)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.bartskys.statki.Main" />
-      <module name="Statki_OpenGL" />
+      <module name="statki" />
       <option name="VM_PARAMETERS" value="-XstartOnFirstThread" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/java/com/bartskys/statki" />
       <extension name="coverage">
@@ -237,13 +260,14 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.imgui-master [check]" />
-        <item itemvalue="Gradle.imgui-master [compileJava]" />
         <item itemvalue="Gradle.imgui-master [javadoc]" />
+        <item itemvalue="Gradle.imgui-master [compileJava]" />
+        <item itemvalue="Gradle.imgui-master [check]" />
         <item itemvalue="Gradle.imgui-master [build]" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -419,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597299251782</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="corners now work!">
+      <created>1597299769229</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1597299769229</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,13 +501,22 @@
     <MESSAGE value="Direction works" />
     <MESSAGE value="Crude overlay of type of ship that is being placed. Done for today!" />
     <MESSAGE value="corners now work!" />
-    <option name="LAST_COMMIT_MESSAGE" value="corners now work!" />
+    <MESSAGE value="utils.Game - broken" />
+    <option name="LAST_COMMIT_MESSAGE" value="utils.Game - broken" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="447" y="260" key="#Notifications" timestamp="1597302427023">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="447" y="260" key="#Notifications/0.23.1440.804@0.23.1440.804" timestamp="1597302427023" />
     <state x="520" y="290" width="506" height="377" key="#Scopes" timestamp="1597161917488">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="520" y="290" width="506" height="377" key="#Scopes/0.23.1440.804@0.23.1440.804" timestamp="1597161917488" />
+    <state x="184" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597302496052">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="184" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.804@0.23.1440.804" timestamp="1597302496052" />
     <state x="533" y="135" key="#com.intellij.ide.util.MemberChooser" timestamp="1597240201266">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -485,6 +525,10 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="458" y="208" key="#com.intellij.ide.util.PackageChooserDialog/0.23.1440.804@0.23.1440.804" timestamp="1597164863472" />
+    <state x="408" y="168" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1597302109551">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="408" y="168" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.804@0.23.1440.804" timestamp="1597302109551" />
     <state x="265" y="206" width="494" height="255" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1597299581554">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -493,74 +537,82 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="227" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.804@0.23.1440.804" timestamp="1597160794376" />
-    <state x="23" y="23" width="846" height="804" key="CommitChangelistDialog2" timestamp="1597299251498">
+    <state x="461" y="285" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1597302659428">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="23" y="23" width="846" height="804" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1597299251498" />
-    <state width="1398" height="136" key="GridCell.Tab.0.bottom" timestamp="1597299149646">
+    <state x="461" y="285" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.804@0.23.1440.804" timestamp="1597302659428" />
+    <state x="23" y="23" width="846" height="804" key="CommitChangelistDialog2" timestamp="1597302607288">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="23" y="23" width="846" height="804" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1597302607288" />
+    <state width="1398" height="136" key="GridCell.Tab.0.bottom" timestamp="1597304592922">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597163105835" />
-    <state width="1398" height="136" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597299149646" />
-    <state width="1398" height="136" key="GridCell.Tab.0.center" timestamp="1597299149645">
+    <state width="1398" height="136" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597304592922" />
+    <state width="1398" height="136" key="GridCell.Tab.0.center" timestamp="1597304592922">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597163105834" />
-    <state width="1398" height="136" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1597299149645" />
-    <state width="1398" height="136" key="GridCell.Tab.0.left" timestamp="1597299149644">
+    <state width="1398" height="136" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1597304592922" />
+    <state width="1398" height="136" key="GridCell.Tab.0.left" timestamp="1597304592921">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597163105833" />
-    <state width="1398" height="136" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1597299149644" />
-    <state width="1398" height="136" key="GridCell.Tab.0.right" timestamp="1597299149646">
+    <state width="1398" height="136" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1597304592921" />
+    <state width="1398" height="136" key="GridCell.Tab.0.right" timestamp="1597304592922">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597163105835" />
-    <state width="1398" height="136" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1597299149646" />
-    <state width="1398" height="265" key="GridCell.Tab.1.bottom" timestamp="1597259689432">
+    <state width="1398" height="136" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1597304592922" />
+    <state width="1398" height="265" key="GridCell.Tab.1.bottom" timestamp="1597301019327">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.1.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597259689432" />
-    <state width="1398" height="265" key="GridCell.Tab.1.center" timestamp="1597259689431">
+    <state width="1398" height="265" key="GridCell.Tab.1.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597301019327" />
+    <state width="1398" height="265" key="GridCell.Tab.1.center" timestamp="1597301019327">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.1.center/0.23.1440.804@0.23.1440.804" timestamp="1597259689431" />
-    <state width="1398" height="265" key="GridCell.Tab.1.left" timestamp="1597259689431">
+    <state width="1398" height="265" key="GridCell.Tab.1.center/0.23.1440.804@0.23.1440.804" timestamp="1597301019327" />
+    <state width="1398" height="265" key="GridCell.Tab.1.left" timestamp="1597301019326">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.1.left/0.23.1440.804@0.23.1440.804" timestamp="1597259689431" />
-    <state width="1398" height="265" key="GridCell.Tab.1.right" timestamp="1597259689432">
+    <state width="1398" height="265" key="GridCell.Tab.1.left/0.23.1440.804@0.23.1440.804" timestamp="1597301019326" />
+    <state width="1398" height="265" key="GridCell.Tab.1.right" timestamp="1597301019327">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.1.right/0.23.1440.804@0.23.1440.804" timestamp="1597259689432" />
-    <state width="1398" height="265" key="GridCell.Tab.2.bottom" timestamp="1597259689433">
+    <state width="1398" height="265" key="GridCell.Tab.1.right/0.23.1440.804@0.23.1440.804" timestamp="1597301019327" />
+    <state width="1398" height="265" key="GridCell.Tab.2.bottom" timestamp="1597301019329">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.2.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597259689433" />
-    <state width="1398" height="265" key="GridCell.Tab.2.center" timestamp="1597259689433">
+    <state width="1398" height="265" key="GridCell.Tab.2.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597301019329" />
+    <state width="1398" height="265" key="GridCell.Tab.2.center" timestamp="1597301019328">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.2.center/0.23.1440.804@0.23.1440.804" timestamp="1597259689433" />
-    <state width="1398" height="265" key="GridCell.Tab.2.left" timestamp="1597259689432">
+    <state width="1398" height="265" key="GridCell.Tab.2.center/0.23.1440.804@0.23.1440.804" timestamp="1597301019328" />
+    <state width="1398" height="265" key="GridCell.Tab.2.left" timestamp="1597301019328">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.2.left/0.23.1440.804@0.23.1440.804" timestamp="1597259689432" />
-    <state width="1398" height="265" key="GridCell.Tab.2.right" timestamp="1597259689433">
+    <state width="1398" height="265" key="GridCell.Tab.2.left/0.23.1440.804@0.23.1440.804" timestamp="1597301019328" />
+    <state width="1398" height="265" key="GridCell.Tab.2.right" timestamp="1597301019328">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.2.right/0.23.1440.804@0.23.1440.804" timestamp="1597259689433" />
+    <state width="1398" height="265" key="GridCell.Tab.2.right/0.23.1440.804@0.23.1440.804" timestamp="1597301019328" />
     <state x="167" y="23" width="607" height="804" key="RefactorJ.ExtractClass" timestamp="1597299704258">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="167" y="23" width="607" height="804" key="RefactorJ.ExtractClass/0.23.1440.804@0.23.1440.804" timestamp="1597299704258" />
-    <state x="416" y="23" key="SettingsEditor" timestamp="1589757286404">
+    <state x="511" y="153" key="RollbackChangesDialog" timestamp="1597303318511">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="416" y="23" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1589757286404" />
-    <state x="320" y="165" key="Vcs.Push.Dialog.v2" timestamp="1597262238433">
+    <state x="511" y="153" key="RollbackChangesDialog/0.23.1440.804@0.23.1440.804" timestamp="1597303318511" />
+    <state x="85" y="23" key="SettingsEditor" timestamp="1597301687536">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="320" y="165" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1597262238433" />
+    <state x="85" y="23" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1597301687536" />
+    <state x="83" y="123" key="Vcs.Push.Dialog.v2" timestamp="1597299782171">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="83" y="123" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1597299782171" />
     <state x="513" y="292" key="git4idea.rebase.GitRebaseDialog" timestamp="1597160591523">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
