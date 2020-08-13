@@ -1,7 +1,6 @@
 package com.bartskys.statki.input;
 
 import org.lwjgl.glfw.GLFW;
-import org.lwjgl.glfw.GLFWCursorPosCallback;
 import org.lwjgl.glfw.GLFWKeyCallback;
 
 public class Input extends GLFWKeyCallback  {

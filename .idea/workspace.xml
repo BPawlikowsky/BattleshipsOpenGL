@@ -5,28 +5,97 @@
       <artifact name="StatkiGame:jar" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Statki_OpenGL.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/libassimp.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/libglfw.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/liblwjgl.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/liblwjgl_opengl.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/liblwjgl_stb.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/libopenal.dylib" beforeDir="false" />
-=======
     <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="utils.Game - broken">
+      <change afterPath="$PROJECT_DIR$/.idea/$CACHE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_joml_joml_1_9_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_assimp_3_2_4_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_nanovg_natives_macos_3_2_4_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_natives_macos_3_2_4_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_nuklear_natives_macos_3_2_4_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_openal_3_2_4_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_openal_natives_macos_3_2_4_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_opengl_3_2_4_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_par_3_2_4_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_par_natives_macos_3_2_4_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_stb_3_2_4_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_stb_natives_macos_3_2_4_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_vulkan_3_2_4_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInputClick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInputPos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/RenderBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/ShipEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/playersetup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/shader.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/shader.vert" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statki.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/bartsky.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/bartsky.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FETCHHEAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StatkiGame.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid1961.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid2204.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid2211.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Shader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Shader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Texture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Texture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/VertexArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/VertexArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/hs_err_pid2505.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Bird.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Level.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Pipe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/math/Vector3f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/math/Vector3f.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Ship.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/FiraSans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/bg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/bird.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/pipe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bg.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bg.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bird.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bird.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/fade.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/fade.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/pipe.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/pipe.vert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/IOUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/NuklearGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/ShaderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/ShaderUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/ViewRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/ViewRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Shader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Shader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Texture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Texture.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/VertexArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/VertexArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/Input.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/MouseInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Bird.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Level.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Pipe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/math/Vector3f.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/math/Vector3f.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Ship.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Ship.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/IOUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/NuklearGUI$Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/NuklearGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/ShaderUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/ShaderUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/statki-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +138,20 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="PlayerSetup" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1OWbu3C6YcOsEEPcMp866dteZpW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -80,6 +161,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -96,7 +178,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20584795" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -104,6 +186,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res" />
       <recent name="C:\dev\IdeaProjects\StatkiGame\src\main\java\com\bartskys\statki\utils" />
       <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\src\com\bartskys\statki\shaders" />
     </key>
@@ -115,6 +198,7 @@
       <recent name="C:\Users\bartsky\SDA\roboczy\IdeaProjects\StatkiGame\META-INF" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bartskys.statki.model" />
       <recent name="com.bartskys.statki.utils" />
     </key>
   </component>
@@ -125,8 +209,11 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8 (3)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.bartskys.statki.Main" />
-      <module name="Statki_OpenGL" />
+      <module name="statki" />
       <option name="VM_PARAMETERS" value="-XstartOnFirstThread" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/java/com/bartskys/statki" />
       <extension name="coverage">
@@ -248,13 +335,14 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.imgui-master [check]" />
-        <item itemvalue="Gradle.imgui-master [compileJava]" />
         <item itemvalue="Gradle.imgui-master [javadoc]" />
+        <item itemvalue="Gradle.imgui-master [compileJava]" />
+        <item itemvalue="Gradle.imgui-master [check]" />
         <item itemvalue="Gradle.imgui-master [build]" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -297,7 +385,147 @@
       <option name="project" value="LOCAL" />
       <updated>1564441868048</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Koords working, tiles a detected!">
+      <created>1597160527240</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597160527241</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Koords working, tiles a detected!">
+      <created>1597160686567</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597160686567</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Cleanup">
+      <created>1597161829568</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1597161829568</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Cleanup">
+      <created>1597164411650</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1597164411650</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Cleanup more">
+      <created>1597166122015</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1597166122015</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Starting player setup, have to clean up code to get it to render additional info and modify the main loop to account for player setup">
+      <created>1597216754674</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1597216754674</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Starting player setup, have to clean up code to get it to render additional info and modify the main loop to account for player setup">
+      <created>1597217275120</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1597217275120</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Shifted the isMouseOnTile method and separated it from rendering a tile, added a new method to get a tile to render after it has been &quot;selected&quot;">
+      <created>1597225375808</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1597225375808</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Basic ship adding added, click control( one click every second is registered)">
+      <created>1597233259335</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1597233259335</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Two tile ships added, can do direction, and displays right!">
+      <created>1597241488571</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1597241488571</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Basic player setup done, no direction control or tile availability checks">
+      <created>1597244115889</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1597244115889</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Basic ownership checking">
+      <created>1597244768699</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1597244768699</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Checking mania!!! Checked almost all out of bounds expections, there may be more lurking...">
+      <created>1597259646648</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1597259646648</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Checking mania!!! Checked almost all out of bounds expections, there may be more lurking...">
+      <created>1597260083843</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1597260083843</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Checking mania!!! Checked almost all out of bounds expections, there may be more lurking...">
+      <created>1597260147307</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1597260147307</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Player setup 95% done TODO: Right side collumn and bottom row are not accesible to put DOUBLE, TRIPLE and QUAD on.(Dumb corner checking)">
+      <created>1597261444936</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1597261444936</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Direction works">
+      <created>1597262231011</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1597262231011</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Crude overlay of type of ship that is being placed. Done for today!">
+      <created>1597263366728</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1597263366728</updated>
+    </task>
+    <task id="LOCAL-00023" summary="corners now work!">
+      <created>1597299251782</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1597299251782</updated>
+    </task>
+    <task id="LOCAL-00024" summary="corners now work!">
+      <created>1597299769229</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1597299769229</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,155 +562,116 @@
     <MESSAGE value="render tiles done" />
     <MESSAGE value="render specific state tales" />
     <MESSAGE value="coordination system skeetch" />
-    <option name="LAST_COMMIT_MESSAGE" value="coordination system skeetch" />
+    <MESSAGE value="Koords working, tiles a detected!" />
+    <MESSAGE value="Cleanup" />
+    <MESSAGE value="Cleanup more" />
+    <MESSAGE value="Starting player setup, have to clean up code to get it to render additional info and modify the main loop to account for player setup" />
+    <MESSAGE value="Shifted the isMouseOnTile method and separated it from rendering a tile, added a new method to get a tile to render after it has been &quot;selected&quot;" />
+    <MESSAGE value="Basic ship adding added, click control( one click every second is registered)" />
+    <MESSAGE value="Two tile ships added, can do direction, and displays right!" />
+    <MESSAGE value="Basic player setup done, no direction control or tile availability checks" />
+    <MESSAGE value="Basic ownership checking" />
+    <MESSAGE value="Checking mania!!! Checked almost all out of bounds expections, there may be more lurking..." />
+    <MESSAGE value="Player setup 95% done TODO: Right side collumn and bottom row are not accesible to put DOUBLE, TRIPLE and QUAD on.(Dumb corner checking)" />
+    <MESSAGE value="Direction works" />
+    <MESSAGE value="Crude overlay of type of ship that is being placed. Done for today!" />
+    <MESSAGE value="corners now work!" />
+    <MESSAGE value="utils.Game - broken" />
+    <option name="LAST_COMMIT_MESSAGE" value="utils.Game - broken" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="691" y="200" key="#Notifications" timestamp="1581271382975">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="691" y="200" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1581271382975" />
-    <state x="369" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581281203665">
+    <state x="447" y="260" key="#Notifications" timestamp="1597302427023">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="553" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581271290024" />
-    <state x="369" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.804@0.23.1440.804" timestamp="1581281203665" />
-    <state x="678" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1581291493146">
+    <state x="447" y="260" key="#Notifications/0.23.1440.804@0.23.1440.804" timestamp="1597302427023" />
+    <state x="520" y="290" width="506" height="377" key="#Scopes" timestamp="1597161917488">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="904" y="258" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581260843688" />
-    <state x="678" y="222" key="#com.intellij.ide.util.MemberChooser/0.23.1440.804@0.23.1440.804" timestamp="1581291493146" />
-    <state x="642" y="280" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581279227445">
+    <state x="520" y="290" width="506" height="377" key="#Scopes/0.23.1440.804@0.23.1440.804" timestamp="1597161917488" />
+    <state x="184" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597302496052">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="642" y="280" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.804@0.23.1440.804" timestamp="1581279227445" />
-    <state x="829" y="289" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581263259520">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="829" y="289" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581263259520" />
-    <state x="829" y="296" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1581272171755">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="829" y="296" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581272171755" />
-    <state x="996" y="297" key="FileChooserDialogImpl" timestamp="1581273920275">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="996" y="297" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581273920275" />
-    <state width="1398" height="213" key="GridCell.Tab.0.bottom" timestamp="1588705348362">
+    <state x="184" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.804@0.23.1440.804" timestamp="1597302496052" />
+    <state x="533" y="135" key="#com.intellij.ide.util.MemberChooser" timestamp="1597240201266">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1573" height="178" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1398" height="213" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1588705348362" />
-    <state width="1398" height="213" key="GridCell.Tab.0.center" timestamp="1588705348361">
+    <state x="533" y="135" key="#com.intellij.ide.util.MemberChooser/0.23.1440.804@0.23.1440.804" timestamp="1597240201266" />
+    <state x="458" y="208" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1597164863472">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-<<<<<<< Updated upstream
-    <state width="1573" height="178" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1398" height="213" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1588705348361" />
-    <state width="1398" height="213" key="GridCell.Tab.0.left" timestamp="1588705348361">
+    <state x="458" y="208" key="#com.intellij.ide.util.PackageChooserDialog/0.23.1440.804@0.23.1440.804" timestamp="1597164863472" />
+    <state x="408" y="168" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1597302109551">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1573" height="178" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1398" height="213" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1588705348361" />
-    <state width="1398" height="213" key="GridCell.Tab.0.right" timestamp="1588705348361">
+    <state x="408" y="168" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.804@0.23.1440.804" timestamp="1597302109551" />
+    <state x="265" y="206" width="494" height="255" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1597299581554">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1573" height="178" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581274032010" />
-    <state width="1398" height="213" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1588705348361" />
-    <state x="629" y="197" key="Maven.ArtifactSearchDialog" timestamp="1581273525164">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="629" y="197" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581273525164" />
-    <state x="761" y="160" width="681" height="761" key="NewModule_or_Project.wizard" timestamp="1581273921730">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="761" y="160" width="681" height="761" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1581273921730" />
-    <state x="521" y="350" key="ReplaceDuplicatesPrompt" timestamp="1581290110618">
+    <state x="265" y="206" width="494" height="255" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1440.804@0.23.1440.804" timestamp="1597299581554" />
+    <state x="227" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597160794376">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="521" y="350" key="ReplaceDuplicatesPrompt/0.23.1440.804@0.23.1440.804" timestamp="1581290110618" />
-    <state x="416" y="23" key="SettingsEditor" timestamp="1589757286404">
+    <state x="227" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.804@0.23.1440.804" timestamp="1597160794376" />
+    <state x="461" y="285" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1597302659428">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="579" y="116" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581273962734" />
-    <state x="416" y="23" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1589757286404" />
-    <state x="665" y="311" key="com.intellij.ide.util.TipDialog" timestamp="1581899760839">
-      <screen x="0" y="23" width="1440" height="804" />
-    </state>
-    <state x="886" y="372" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581271735394" />
-    <state x="665" y="311" key="com.intellij.ide.util.TipDialog/0.23.1440.804@0.23.1440.804" timestamp="1581899760839" />
-    <state x="622" y="256" width="542" height="491" key="extract.method.dialog" timestamp="1581378092338">
-      <screen x="0" y="23" width="1440" height="804" />
-    </state>
-    <state x="829" y="302" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581265540502" />
-    <state x="622" y="256" width="542" height="491" key="extract.method.dialog/0.23.1440.804@0.23.1440.804" timestamp="1581378092338" />
-    <state x="807" y="166" key="refactoring.ChangeSignatureDialog" timestamp="1581262998347">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="807" y="166" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581262998347" />
-    <state x="755" y="253" width="672" height="677" key="run.anything.popup" timestamp="1581271685600">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="755" y="253" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581271685600" />
-    <state x="762" y="260" width="672" height="678" key="search.everywhere.popup" timestamp="1581256231402">
-      <screen x="0" y="0" width="1920" height="1040" />
-=======
     <state x="461" y="285" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.804@0.23.1440.804" timestamp="1597302659428" />
-    <state x="23" y="23" width="846" height="804" key="CommitChangelistDialog2" timestamp="1597304649969">
+    <state x="23" y="23" width="846" height="804" key="CommitChangelistDialog2" timestamp="1597302607288">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="23" y="23" width="846" height="804" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1597304649969" />
-    <state width="1398" height="136" key="GridCell.Tab.0.bottom" timestamp="1597311156317">
+    <state x="23" y="23" width="846" height="804" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1597302607288" />
+    <state width="1398" height="136" key="GridCell.Tab.0.bottom" timestamp="1597324644486">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597163105835" />
-    <state width="1398" height="136" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597311156317" />
-    <state width="1398" height="136" key="GridCell.Tab.0.center" timestamp="1597311156317">
+    <state width="1398" height="136" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597324644486" />
+    <state width="1398" height="136" key="GridCell.Tab.0.center" timestamp="1597324644485">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597163105834" />
-    <state width="1398" height="136" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1597311156317" />
-    <state width="1398" height="136" key="GridCell.Tab.0.left" timestamp="1597311156316">
+    <state width="1398" height="136" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1597324644485" />
+    <state width="1398" height="136" key="GridCell.Tab.0.left" timestamp="1597324644485">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597163105833" />
-    <state width="1398" height="136" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1597311156316" />
-    <state width="1398" height="136" key="GridCell.Tab.0.right" timestamp="1597311156317">
+    <state width="1398" height="136" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1597324644485" />
+    <state width="1398" height="136" key="GridCell.Tab.0.right" timestamp="1597324644486">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597163105835" />
-    <state width="1398" height="136" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1597311156317" />
-    <state width="1398" height="265" key="GridCell.Tab.1.bottom" timestamp="1597309627330">
+    <state width="1398" height="136" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1597324644486" />
+    <state width="1398" height="265" key="GridCell.Tab.1.bottom" timestamp="1597301019327">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.1.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597309627330" />
-    <state width="1398" height="265" key="GridCell.Tab.1.center" timestamp="1597309627330">
+    <state width="1398" height="265" key="GridCell.Tab.1.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597301019327" />
+    <state width="1398" height="265" key="GridCell.Tab.1.center" timestamp="1597301019327">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.1.center/0.23.1440.804@0.23.1440.804" timestamp="1597309627330" />
-    <state width="1398" height="265" key="GridCell.Tab.1.left" timestamp="1597309627329">
+    <state width="1398" height="265" key="GridCell.Tab.1.center/0.23.1440.804@0.23.1440.804" timestamp="1597301019327" />
+    <state width="1398" height="265" key="GridCell.Tab.1.left" timestamp="1597301019326">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.1.left/0.23.1440.804@0.23.1440.804" timestamp="1597309627329" />
-    <state width="1398" height="265" key="GridCell.Tab.1.right" timestamp="1597309627330">
+    <state width="1398" height="265" key="GridCell.Tab.1.left/0.23.1440.804@0.23.1440.804" timestamp="1597301019326" />
+    <state width="1398" height="265" key="GridCell.Tab.1.right" timestamp="1597301019327">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.1.right/0.23.1440.804@0.23.1440.804" timestamp="1597309627330" />
-    <state width="1398" height="265" key="GridCell.Tab.2.bottom" timestamp="1597309627331">
+    <state width="1398" height="265" key="GridCell.Tab.1.right/0.23.1440.804@0.23.1440.804" timestamp="1597301019327" />
+    <state width="1398" height="265" key="GridCell.Tab.2.bottom" timestamp="1597301019329">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.2.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597309627331" />
-    <state width="1398" height="265" key="GridCell.Tab.2.center" timestamp="1597309627331">
+    <state width="1398" height="265" key="GridCell.Tab.2.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597301019329" />
+    <state width="1398" height="265" key="GridCell.Tab.2.center" timestamp="1597301019328">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.2.center/0.23.1440.804@0.23.1440.804" timestamp="1597309627331" />
-    <state width="1398" height="265" key="GridCell.Tab.2.left" timestamp="1597309627330">
+    <state width="1398" height="265" key="GridCell.Tab.2.center/0.23.1440.804@0.23.1440.804" timestamp="1597301019328" />
+    <state width="1398" height="265" key="GridCell.Tab.2.left" timestamp="1597301019328">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.2.left/0.23.1440.804@0.23.1440.804" timestamp="1597309627330" />
-    <state width="1398" height="265" key="GridCell.Tab.2.right" timestamp="1597309627331">
+    <state width="1398" height="265" key="GridCell.Tab.2.left/0.23.1440.804@0.23.1440.804" timestamp="1597301019328" />
+    <state width="1398" height="265" key="GridCell.Tab.2.right" timestamp="1597301019328">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="265" key="GridCell.Tab.2.right/0.23.1440.804@0.23.1440.804" timestamp="1597309627331" />
+    <state width="1398" height="265" key="GridCell.Tab.2.right/0.23.1440.804@0.23.1440.804" timestamp="1597301019328" />
     <state x="167" y="23" width="607" height="804" key="RefactorJ.ExtractClass" timestamp="1597299704258">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -509,20 +698,10 @@
     <state x="520" y="291" key="scopes/0.23.1440.804@0.23.1440.804" timestamp="1597161647240" />
     <state x="385" y="151" width="670" height="676" key="search.everywhere.popup" timestamp="1597263053445">
       <screen x="0" y="23" width="1440" height="804" />
->>>>>>> Stashed changes
     </state>
-    <state x="762" y="260" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581256231402" />
+    <state x="385" y="151" width="670" height="676" key="search.everywhere.popup/0.23.1440.804@0.23.1440.804" timestamp="1597263053445" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="player1.board[12]" />
