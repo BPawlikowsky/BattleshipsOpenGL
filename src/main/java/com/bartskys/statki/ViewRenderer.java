@@ -168,6 +168,17 @@ public class ViewRenderer {
             TILE.disable();
       }
 
+      static void renderHit(Tile tile) {
+            TILE.enable();
+            tile.getHitTile().bind();
+            Matrix4f ml_matrix = new Matrix4f().identity();
+            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(tile.getCoords().x, tile.getCoords().y, tile.getCoords().z));
+            tile.getMesh().render();
+            tile.getMesh().unbind();
+            tile.getHitTile().unbind();
+            TILE.disable();
+      }
+
       public static void renderShip(Tile tile) {
             TILE.enable();
             tile.getShipTile().bind();

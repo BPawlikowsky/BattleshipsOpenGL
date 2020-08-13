@@ -27,6 +27,8 @@ public class Tile {
       @Getter
       private final Texture shotAtTile;
       @Getter
+      private final Texture hitTile;
+      @Getter
       private final VertexArray mesh;
       @Getter
       private final String player;
@@ -62,6 +64,7 @@ public class Tile {
             emptyTile = new Texture("res/tile.png");
             shipTile = new Texture("res/ship.png");
             shotAtTile = new Texture("res/shot.png");
+            hitTile = new Texture("res/hit.png");
       }
 
       public Tile(String name, Vector3f coords, String player) {
@@ -96,5 +99,6 @@ public class Tile {
             emptyTile = new Texture("res/tile.png");
             shipTile = new Texture("res/ship.png");
             shotAtTile = new Texture("res/shot.png");
+            hitTile = new Texture("res/hit.png");
       }
 }
