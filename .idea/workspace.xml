@@ -9,94 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="utils.Game - broken">
-      <change afterPath="$PROJECT_DIR$/.idea/$CACHE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_joml_joml_1_9_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_assimp_3_2_4_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_nanovg_natives_macos_3_2_4_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_natives_macos_3_2_4_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_nuklear_natives_macos_3_2_4_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_openal_3_2_4_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_openal_natives_macos_3_2_4_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_opengl_3_2_4_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_par_3_2_4_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_par_natives_macos_3_2_4_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_stb_3_2_4_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_stb_natives_macos_3_2_4_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_vulkan_3_2_4_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInputClick.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInputPos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/RenderBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/ShipEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/playersetup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/shader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/shader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statki.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/bartsky.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/bartsky.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FETCHHEAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/StatkiGame.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid1961.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid2204.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid2211.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/ViewRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Shader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Shader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Texture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/Texture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/VertexArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/graphics/VertexArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/hs_err_pid2505.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/input/MouseInput.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Bird.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Level.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/level/Pipe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/math/Vector3f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/math/Vector3f.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/model/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/FiraSans.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/bg.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/bird.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/res/pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bg.frag" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bg.vert" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bird.frag" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/bird.vert" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/fade.frag" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/fade.vert" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/pipe.frag" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/shaders/pipe.vert" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/IOUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/NuklearGUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/ShaderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bartskys/statki/utils/ShaderUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/GameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/ViewRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/ViewRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Shader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Shader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Texture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/Texture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/VertexArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/graphics/VertexArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/Input.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/input/MouseInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Bird.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Level.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/level/Pipe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/math/Vector3f.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/math/Vector3f.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Ship.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Ship.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/model/Tile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/IOUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/NuklearGUI$Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/NuklearGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/ShaderUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bartskys/statki/utils/ShaderUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/statki-1.0-SNAPSHOT.jar" beforeDir="false" />
-    </list>
+    <list default="true" id="fb7b0ee0-eeab-4548-9bd6-13a77381a49c" name="Default Changelist" comment="utils.Game - broken" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -620,26 +533,26 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="23" y="23" width="846" height="804" key="CommitChangelistDialog2/0.23.1440.804@0.23.1440.804" timestamp="1597302607288" />
-    <state width="1398" height="136" key="GridCell.Tab.0.bottom" timestamp="1597324644486">
+    <state width="1398" height="136" key="GridCell.Tab.0.bottom" timestamp="1597324713913">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597163105835" />
-    <state width="1398" height="136" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597324644486" />
-    <state width="1398" height="136" key="GridCell.Tab.0.center" timestamp="1597324644485">
+    <state width="1398" height="136" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1597324713913" />
+    <state width="1398" height="136" key="GridCell.Tab.0.center" timestamp="1597324713912">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597163105834" />
-    <state width="1398" height="136" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1597324644485" />
-    <state width="1398" height="136" key="GridCell.Tab.0.left" timestamp="1597324644485">
+    <state width="1398" height="136" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1597324713912" />
+    <state width="1398" height="136" key="GridCell.Tab.0.left" timestamp="1597324713911">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597163105833" />
-    <state width="1398" height="136" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1597324644485" />
-    <state width="1398" height="136" key="GridCell.Tab.0.right" timestamp="1597324644486">
+    <state width="1398" height="136" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1597324713911" />
+    <state width="1398" height="136" key="GridCell.Tab.0.right" timestamp="1597324713912">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1398" height="107" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597163105835" />
-    <state width="1398" height="136" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1597324644486" />
+    <state width="1398" height="136" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1597324713912" />
     <state width="1398" height="265" key="GridCell.Tab.1.bottom" timestamp="1597301019327">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
