@@ -280,16 +280,8 @@ class GameController {
 
     boolean assembleShip(Tile t, Player player, int number, int shipnum, boolean dir) {
         if(!checkAdjacent(t, player.getBoard())) return false;
-        if(number > 1 && !t.getName().equals("Null") && Integer.parseInt(t.getName()) >= 90 &&  !dir) return false;
-        if(number > 1 && t.getName().charAt(1) == '9'  &&  dir) return false;
         ArrayList<Tile> tiles = tilesFromTile(player.getBoard(), t, number, dir);
         if(tiles.size() == 0) return false;
-        for (int i = 0; i < tiles.size(); i++) {
-            if(i+1 < tiles.size())
-                if(number > 1 && checkCorner(tiles.get(i+1), player.getBoard()) >= 0) return false;
-            else if(i+1 > tiles.size())return false;
-            if(!checkAdjacent(tiles.get(i), player.getBoard())) return false;
-        }
         addShip(player, shipType, shipnum, tiles, true);
 
         System.out.println("Ship " + shipType + " added to " + player.getName() + " | " + shipnum);
