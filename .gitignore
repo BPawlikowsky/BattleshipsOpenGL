@@ -1,5 +1,6 @@
-**/.idea
-**/META-INF
+/.idea
+/META-INF
 /src/test
 **/statki.iml
-**/target
+/target
+/.idea/
