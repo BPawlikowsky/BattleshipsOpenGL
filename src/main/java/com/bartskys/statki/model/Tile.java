@@ -29,7 +29,42 @@ public class Tile {
       @Getter
       private VertexArray mesh;
 
+<<<<<<< Updated upstream
       public Tile(String name, Vector3f coords) {
+=======
+      public Tile() {
+            name = "Null";
+            player = "";
+            shotAt = false;
+            owned = false;
+            ownedByShip = "";
+
+            float[] vertices = {
+                    -SIZE,  SIZE, 0.0f,
+                    -SIZE, -SIZE, 0.0f,
+                    SIZE, -SIZE, 0.0f,
+                    SIZE,  SIZE, 0.0f
+            };
+
+            byte[] indices = {
+                    0, 1, 2,
+                    2, 3, 0
+            };
+
+            float[] tcs = {
+                    0, 1,
+                    0, 0,
+                    1, 0,
+                    1, 1,
+            };
+            mesh = new VertexArray(vertices, indices, tcs);
+            emptyTile = new Texture("res/tile.png");
+            shipTile = new Texture("res/ship.png");
+            shotAtTile = new Texture("res/shot.png");
+      }
+
+      public Tile(String name, Vector3f coords, String player) {
+>>>>>>> Stashed changes
 
             this.coords = coords;
             this.name = name;
