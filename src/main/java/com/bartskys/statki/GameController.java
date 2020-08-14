@@ -108,6 +108,16 @@ class GameController {
         ViewRenderer.terminate();
     }
 
+    void showBoard(Player player) {
+        for (Tile t :
+                player.getBoard()) {
+            if(t.isOwned()) System.out.println(t.getName() + " Owned: " +
+                    t.isOwned() + " Owned by ship: " +
+                    t.getOwnedByShip() + " Coords: " +
+                    t.getCoords().toString());
+        }
+    }
+
     private boolean shoot(Tile shot, Player player) {
         for (Tile t : player.getBoard()) {
             if(t.equals(shot)) {
@@ -133,6 +143,8 @@ class GameController {
         else if(!p1setup && !p2setup && !turn)
             renderShotBoard(player1);
 
+        if(winner(player1)) ViewRenderer.renderBox(PLAYER1SETUP);
+        if(winner(player2)) ViewRenderer.renderBox(PLAYER2SETUP);
         ViewRenderer.renderFinish();
     }
 
@@ -195,6 +207,16 @@ class GameController {
         }
     }
 
+    private boolean winner(Player player) {
+        int owned, shot;
+        owned = shot = 0;
+        for (Tile t : player.getBoard()) {
+            if(t.isShotAt() && t.isOwned()) shot++;
+            if(t.isOwned()) owned++;
+        }
+        if(shot == owned) return true;
+        else return false;
+    }
 
     void playerSetup(Tile t, Player player) {
         if (p1setup || p2setup) {
@@ -249,9 +271,14 @@ class GameController {
                         if (!t.isOwned())
                             if (checkAdjacent(t, player.getBoard()))
                                 if (assembleShip(t, player, 4, pShips, direction))
-                                    if(player.getName().equals(PLAYER1))
+                                    if(player.getName().equals(PLAYER1)) {
+                                        showBoard(player1);
                                         p1setup = false;
-                                    else p2setup = false;
+                                    }
+                                    else {
+                                        showBoard(player2);
+                                        p2setup = false;
+                                    }
                     }
                 } break;
             }
