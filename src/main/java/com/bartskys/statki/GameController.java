@@ -38,6 +38,7 @@ class GameController {
     boolean clickWait = false;
     boolean buttonD = false;
     boolean turn = true;
+    boolean winner = false;
 
     GameController() {
         ViewRenderer.init();
@@ -95,6 +96,7 @@ class GameController {
                             if(shoot(t, player1)) turn = !turn;
                     }
                 }
+                if(winner(player1) || winner(player2)) winner = true;
             }
             // Update game events and Counts frames and updates
             frameUpdate();
@@ -138,13 +140,17 @@ class GameController {
             ViewRenderer.renderBox(PLAYER2SETUP);
             renderSetup(player2);
         }
-        if(!p1setup && !p2setup && turn)
+        if(!p1setup && !p2setup && turn && !winner)
             renderShotBoard(player2);
         else if(!p1setup && !p2setup && !turn)
             renderShotBoard(player1);
 
         if(winner(player1)) ViewRenderer.renderBox(PLAYER1SETUP);
         if(winner(player2)) ViewRenderer.renderBox(PLAYER2SETUP);
+        if(winner) {
+            renderWinnerBoard(player1);
+            renderWinnerBoard(player2);
+        }
         ViewRenderer.renderFinish();
     }
 
@@ -204,6 +210,16 @@ class GameController {
             }
             else
                 ViewRenderer.renderEmptyTile(t);
+        }
+    }
+
+    private void renderWinnerBoard(Player player) {
+        for (Tile t : player.getBoard()) {
+            if (t.isShotAt() && t.isOwned()) {
+                ViewRenderer.renderHit(t);
+            }
+            if(t.isShotAt() && !t.isOwned()) ViewRenderer.renderShot(t);
+            else ViewRenderer.renderEmptyTile(t);
         }
     }
 
