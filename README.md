@@ -1,5 +1,5 @@
 # Battleships OpenGL
-This is a battleship game written in Java with use of LWJGL, originally make for school work, it's based on The Cherno Flappy Bird Tutorial( The math library and coordinate transformations mainly).
+This is a battleship game written in Java with use of LWJGL, originally make for school work, it's based on The Cherno's Flappy Bird Tutorial https://github.com/TheCherno/Flappy ( The math library and coordinate transformations mainly).
 
 This is a Work In Progress, the game uses all the basic Java 8 features like Lambdas, Generics and Streams, at least I've tried to get it be be as compient to Java standards as possible. The LWJGL is a great tool to use, and it was the easiest thing to setup in this project.
 
