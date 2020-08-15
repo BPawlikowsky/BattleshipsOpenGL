@@ -20,7 +20,7 @@ public class RenderBox {
     @Getter
     private final VertexArray mesh;
 
-    public RenderBox(String name, Vector3f coords) {
+    public RenderBox(String name,String path, Vector3f coords, float sizeX, float sizeY) {
 
         this.coords = coords;
         this.name = name;
@@ -46,6 +46,6 @@ public class RenderBox {
         };
 
         mesh = new VertexArray(vertices, indices, tcs);
-        texture = new Texture("res/playersetup.png");
+        texture = new Texture(path);
     }
 }

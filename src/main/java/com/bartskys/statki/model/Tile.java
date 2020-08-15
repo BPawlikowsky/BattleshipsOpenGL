@@ -16,7 +16,7 @@ public class Tile {
       private boolean owned;
       @Getter @Setter
       private String ownedByShip;
-      private final float SIZE = 0.24f;
+      private final float SIZE = 0.243f;
 
       @Getter
       private final String name;
@@ -61,7 +61,7 @@ public class Tile {
             };
 
             mesh = new VertexArray(vertices, indices, tcs);
-            emptyTile = new Texture("res/tile.png");
+            emptyTile = new Texture("res/transp.png");
             shipTile = new Texture("res/ship.png");
             shotAtTile = new Texture("res/shot.png");
             hitTile = new Texture("res/hit.png");
@@ -96,7 +96,7 @@ public class Tile {
             };
 
             mesh = new VertexArray(vertices, indices, tcs);
-            emptyTile = new Texture("res/tile.png");
+            emptyTile = new Texture("res/transp.png");
             shipTile = new Texture("res/ship.png");
             shotAtTile = new Texture("res/shot.png");
             hitTile = new Texture("res/hit.png");

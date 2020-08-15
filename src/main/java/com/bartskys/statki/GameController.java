@@ -7,6 +7,8 @@ import com.bartskys.statki.math.Vector3f;
 import com.bartskys.statki.model.*;
 
 import java.util.ArrayList;
+import java.util.Random;
+
 import static org.lwjgl.glfw.GLFW.*;
 
 class GameController {
@@ -15,13 +17,15 @@ class GameController {
     private static final String PLAYER2 = "Player02";
     private static RenderBox PLAYER1SETUP;
     private static RenderBox PLAYER2SETUP;
+    private static RenderBox BACKGROUND;
     int p1Ships = 1;
     int p2Ships = 1;
+    float scale = 0.489f;
     private static boolean running;
     private final Player player1, player2;
     private boolean p1setup, p2setup;
-    float boardPosX = -2.2f;
-    float boardPosY = 2.0f;
+    float boardPosX = -1.1f;
+    float boardPosY = 2.52f;
     ShipEnum shipType = ShipEnum.SINGLE;
     boolean direction = true;
 
@@ -44,15 +48,27 @@ class GameController {
         ViewRenderer.init();
         running = true;
         player1 = new Player(generateTiles(boardPosX, boardPosY - 10.0f, PLAYER1), PLAYER1);
-        player2 = new Player(generateTiles(boardPosX, boardPosY + 1.3f, PLAYER2), PLAYER2);
+        player2 = new Player(generateTiles(boardPosX, boardPosY +0.265f, PLAYER2), PLAYER2);
         p1setup = p2setup = true;
         PLAYER1SETUP = new RenderBox(
                 "PlayerSetup",
-                new Vector3f(-5.8f, 4.0f, 0.0f)
+                "res/playersetup.png",
+                new Vector3f(-5.8f, 4.0f, 0.0f),
+                1.28f,
+                0.24f
         );
         PLAYER2SETUP = new RenderBox(
                 "PlayerSetup",
-                new Vector3f(5.5f, 4.0f, 0.0f)
+                "res/playersetup.png",
+                new Vector3f(5.5f, 4.0f, 0.0f),
+                1.28f,
+                0.24f
+        );
+        BACKGROUND = new RenderBox(
+                "background",
+                "res/statkitlo.png",
+                new Vector3f(0.0f, 0.0f, -0.1f),
+                12.80f * 0.8f, 7.20f * 0.8f
         );
     }
 
@@ -60,6 +76,12 @@ class GameController {
 
         //Main Loop
         while (running) {
+            if(p1setup) {
+                randClick(player1);
+            }
+            if(!p1setup && p2setup) {
+                randClick(player2);
+            }
 
             // Player Setup
             if((p1setup || p2setup) && Input.isKeyDown(GLFW_KEY_D) && !buttonD) {
@@ -80,20 +102,24 @@ class GameController {
             }
 
             // Main Game
-            if(!p1setup && !p2setup) {
+            if(!p1setup && !p2setup && !winner) {
                 if(turn) {
+                    randClick(player2);
                     if(mClick == GLFW_MOUSE_BUTTON_1 && mAction == GLFW_PRESS && !clickWait)
                         if(isMouseOnTile(player2.getBoard(), mouseX, mouseY)) {
                             clickWait = true;
                             Tile t = tileFromMouse(player2.getBoard(), mouseX, mouseY);
-                            if(shoot(t, player2)) turn = !turn;
+                            if(!t.isShotAt())
+                                if(shoot(t, player2)) turn = !turn;
                     }
                 } else {
+                    randClick(player1);
                     if(mClick == GLFW_MOUSE_BUTTON_1 && mAction == GLFW_PRESS && !clickWait)
                         if(isMouseOnTile(player1.getBoard(), mouseX, mouseY)) {
                             clickWait = true;
                             Tile t = tileFromMouse(player1.getBoard(), mouseX, mouseY);
-                            if(shoot(t, player1)) turn = !turn;
+                            if(!t.isShotAt())
+                                if(shoot(t, player1)) turn = !turn;
                     }
                 }
                 if(winner(player1) || winner(player2)) winner = true;
@@ -110,14 +136,24 @@ class GameController {
         ViewRenderer.terminate();
     }
 
-    void showBoard(Player player) {
-        for (Tile t :
-                player.getBoard()) {
-            if(t.isOwned()) System.out.println(t.getName() + " Owned: " +
-                    t.isOwned() + " Owned by ship: " +
-                    t.getOwnedByShip() + " Coords: " +
-                    t.getCoords().toString());
+    private void randClick(Player player) {
+        Vector3f randCoords = randTileCoords(player.getBoard());
+        mouseX = randCoords.x;
+        mouseY = randCoords.y;
+        mClick = GLFW_MOUSE_BUTTON_1;
+        mAction = GLFW_PRESS;
+    }
+
+    Vector3f randTileCoords(ArrayList<Tile> board) {
+        Random r = new Random();
+        int x = r.nextInt(10);
+        int y = r.nextInt(10);
+        if(x % 2 == 0) direction = !direction;
+        String s = Integer.toString(x) + Integer.toString(y);
+        for(Tile t : board) {
+            if(s.equals(t.getName())) return t.getCoords();
         }
+        return new Vector3f();
     }
 
     private boolean shoot(Tile shot, Player player) {
@@ -132,6 +168,7 @@ class GameController {
 
     private void render() {
         ViewRenderer.renderStart();
+        ViewRenderer.renderBox(BACKGROUND);
         if (p1setup) {
             ViewRenderer.renderBox(PLAYER1SETUP);
             renderSetup(player1);
@@ -151,6 +188,7 @@ class GameController {
             renderWinnerBoard(player1);
             renderWinnerBoard(player2);
         }
+
         ViewRenderer.renderFinish();
     }
 
@@ -165,6 +203,7 @@ class GameController {
             clickWait = false;
         if (frames >= 30 && Input.isKeyDown(GLFW_KEY_D) && buttonD)
             buttonD = false;
+
         glfwPollEvents();
     }
 
@@ -288,11 +327,11 @@ class GameController {
                             if (checkAdjacent(t, player.getBoard()))
                                 if (assembleShip(t, player, 4, pShips, direction))
                                     if(player.getName().equals(PLAYER1)) {
-                                        showBoard(player1);
+                                        //showBoard(player1);
                                         p1setup = false;
                                     }
                                     else {
-                                        showBoard(player2);
+                                        //showBoard(player2);
                                         p2setup = false;
                                     }
                     }
@@ -310,7 +349,7 @@ class GameController {
         //System.out.printf("Check Adj | xLo: %.2f | xHi: %.2f | yLo: %.2f | yHi: %.2f\n", xLo, xHi, yLo, yHi);
         for (int j = 0; j < board.size(); j++) {
             if (tile.equals(board.get(j))) {
-                System.out.println(board.get(j).getCoords().toString());
+                //System.out.println(board.get(j).getCoords().toString());
                 if (board.get(j).getCoords().x > xLo &&
                         board.get(j).getCoords().x < xHi &&
                         board.get(j).getCoords().y < yLo &&
@@ -425,15 +464,14 @@ class GameController {
         for (int i = 0; i < tiles.size(); i++) {
             if (tiles.get(i).equals(tile))
                 for (int j = 0; j < number; j++) {
-                    if(i + (j * 10) < tiles.size() && i + j < tiles.size()) {
-                        if(direction && !checkAdjacent(tiles.get(i + (j * 10)), tiles)) return new ArrayList<>();
-                        if(!direction && !checkAdjacent(tiles.get(i + j), tiles)) return new ArrayList<>();
-                        if(direction) {
+                    if(direction && i + (j * 10) >= tiles.size()) return new ArrayList<>();
+                    if(!direction && i + j >= tiles.size()) return new ArrayList<>();
+                    if(direction && !checkAdjacent(tiles.get(i + (j * 10)), tiles)) return new ArrayList<>();
+                    if(!direction && !checkAdjacent(tiles.get(i + j), tiles)) return new ArrayList<>();
+                    if(direction) {
                             ts.add(tiles.get(i + (j * 10)));
-                        } else if(tiles.get(i + j).getName().charAt(1) == tiles.get(i).getName().charAt(1))
+                    } else if(tiles.get(i + j).getName().charAt(1) == tiles.get(i).getName().charAt(1))
                                 ts.add(tiles.get(i + j));
-                            else return new ArrayList<>();
-                    }
                     else return new ArrayList<>();
                 }
         }
@@ -462,8 +500,6 @@ class GameController {
     private ArrayList<Tile> generateTiles(float posX, float posY, String player) {
         ArrayList<Tile> tiles = new ArrayList<>();
 
-        float scale = 0.5f;
-
         for (int y = 9; y >= 0; y--) {
             for (int x = 0; x < 10; x++) {
                 tiles.add(new Tile(
@@ -471,10 +507,20 @@ class GameController {
                         new Vector3f(
                                 (x * scale) + posY,
                                 (y * scale) + posX,
-                                0.1f), player)
+                                0.0f), player)
                 );
             }
         }
         return tiles;
+    }
+
+    void showBoard(Player player) {
+        for (Tile t :
+                player.getBoard()) {
+            if(t.isOwned()) System.out.println(t.getName() + " Owned: " +
+                    t.isOwned() + " Owned by ship: " +
+                    t.getOwnedByShip() + " Coords: " +
+                    t.getCoords().toString());
+        }
     }
 }

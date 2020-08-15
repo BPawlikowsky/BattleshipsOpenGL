@@ -16,7 +16,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <lwjgl.version>3.2.3</lwjgl.version>
         <joml.version>1.9.20</joml.version>
-        <lwjgl.natives>natives-macos</lwjgl.natives>
+        <lwjgl.natives>natives-windows</lwjgl.natives>
     </properties>
 
     <repositories>
@@ -171,10 +171,6 @@
                 <version>2.22.1</version>
             </plugin>
             <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.2</version>
-            </plugin>
-            <plugin>
                 <artifactId>maven-install-plugin</artifactId>
                 <version>2.5.2</version>
             </plugin>
@@ -191,6 +187,26 @@
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>3.0.0</version>
             </plugin>
+            <plugin>
+
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <includes>
+                        <include>org.lwjgl</include>
+                    </includes>
+                    <excludes>
+                        <exclude>.gitignore</exclude>
+                    </excludes>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.bartskys.statki.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+
         </plugins>
 
     </build>
