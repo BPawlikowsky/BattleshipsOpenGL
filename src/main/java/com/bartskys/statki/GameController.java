@@ -15,9 +15,11 @@ class GameController {
 
     private static final String PLAYER1 = "Player01";
     private static final String PLAYER2 = "Player02";
-    private static RenderBox PLAYER1SETUP;
-    private static RenderBox PLAYER2SETUP;
+    private static Sign PLAYER1SETUP;
+    private static Sign PLAYER2SETUP;
     private static RenderBox BACKGROUND;
+
+    private RenderBox test;
     int p1Ships = 1;
     int p2Ships = 1;
     float scale = 0.489f;
@@ -43,6 +45,10 @@ class GameController {
     boolean buttonD = false;
     boolean turn = true;
     boolean winner = false;
+    int p1tries = 0;
+    int p2tries = 0;
+    Sign s;
+
 
     GameController() {
         ViewRenderer.init();
@@ -50,19 +56,15 @@ class GameController {
         player1 = new Player(generateTiles(boardPosX, boardPosY - 10.0f, PLAYER1), PLAYER1);
         player2 = new Player(generateTiles(boardPosX, boardPosY +0.265f, PLAYER2), PLAYER2);
         p1setup = p2setup = true;
-        PLAYER1SETUP = new RenderBox(
-                "PlayerSetup",
-                "res/playersetup.png",
-                new Vector3f(-5.8f, 4.0f, 0.0f),
-                1.28f,
-                0.24f
+        PLAYER1SETUP = new Sign(
+                "Player1 Setup",
+                -8f,
+                 4.25f
         );
-        PLAYER2SETUP = new RenderBox(
-                "PlayerSetup",
-                "res/playersetup.png",
-                new Vector3f(5.5f, 4.0f, 0.0f),
-                1.28f,
-                0.24f
+        PLAYER2SETUP = new Sign(
+                "Player2 Setup",
+                2.25f,
+                4.25f
         );
         BACKGROUND = new RenderBox(
                 "background",
@@ -70,6 +72,13 @@ class GameController {
                 new Vector3f(0.0f, 0.0f, -0.1f),
                 12.80f * 0.8f, 7.20f * 0.8f
         );
+        test = new RenderBox(
+                "test",
+                "res/a.png",
+                new Vector3f(),
+                0.30f, 0.30f
+        );
+        s = new Sign("abcdefghijklmnopr", 0.0f, 0.0f);
     }
 
     void mainLoop() {
@@ -78,9 +87,11 @@ class GameController {
         while (running) {
             if(p1setup) {
                 randClick(player1);
+                p1tries++;
             }
             if(!p1setup && p2setup) {
                 randClick(player2);
+                p2tries++;
             }
 
             // Player Setup
@@ -109,8 +120,9 @@ class GameController {
                         if(isMouseOnTile(player2.getBoard(), mouseX, mouseY)) {
                             clickWait = true;
                             Tile t = tileFromMouse(player2.getBoard(), mouseX, mouseY);
+                            p1tries++;
                             if(!t.isShotAt())
-                                if(shoot(t, player2)) turn = !turn;
+                                if(shoot(t, player2)) {turn = !turn;}
                     }
                 } else {
                     randClick(player1);
@@ -118,11 +130,15 @@ class GameController {
                         if(isMouseOnTile(player1.getBoard(), mouseX, mouseY)) {
                             clickWait = true;
                             Tile t = tileFromMouse(player1.getBoard(), mouseX, mouseY);
+                            p2tries++;
                             if(!t.isShotAt())
-                                if(shoot(t, player1)) turn = !turn;
+                                if(shoot(t, player1)) {turn = !turn;}
                     }
                 }
-                if(winner(player1) || winner(player2)) winner = true;
+                if(winner(player1) || winner(player2)) {
+                    winner = true;
+                    System.out.println("P1 Tries: " + p1tries + " | P2 Tries: " + p2tries);
+                }
             }
             // Update game events and Counts frames and updates
             frameUpdate();
@@ -169,12 +185,14 @@ class GameController {
     private void render() {
         ViewRenderer.renderStart();
         ViewRenderer.renderBox(BACKGROUND);
+        //ViewRenderer.renderBox(test);
+        //renderSign(s);
         if (p1setup) {
-            ViewRenderer.renderBox(PLAYER1SETUP);
+            renderSign(PLAYER1SETUP);
             renderSetup(player1);
         }
         else if (p2setup) {
-            ViewRenderer.renderBox(PLAYER2SETUP);
+            renderSign(PLAYER2SETUP);
             renderSetup(player2);
         }
         if(!p1setup && !p2setup && turn && !winner)
@@ -182,8 +200,16 @@ class GameController {
         else if(!p1setup && !p2setup && !turn)
             renderShotBoard(player1);
 
-        if(winner(player1)) ViewRenderer.renderBox(PLAYER1SETUP);
-        if(winner(player2)) ViewRenderer.renderBox(PLAYER2SETUP);
+        if(!p1setup && winner(player1)) renderSign(
+                new Sign("player1 won",
+                        -7.5f,
+                        4.25f)
+        );
+        if(!p2setup && winner(player2)) renderSign(
+                new Sign("player2 won",
+                        2.75f,
+                        4.25f)
+        );
         if(winner) {
             renderWinnerBoard(player1);
             renderWinnerBoard(player2);
@@ -205,6 +231,12 @@ class GameController {
             buttonD = false;
 
         glfwPollEvents();
+    }
+
+    private void renderSign(Sign sign) {
+        for(RenderBox r : sign.getSign()) {
+            ViewRenderer.renderBox(r);
+        }
     }
 
     private void renderSetup(Player player) {
@@ -329,10 +361,14 @@ class GameController {
                                     if(player.getName().equals(PLAYER1)) {
                                         //showBoard(player1);
                                         p1setup = false;
+                                        System.out.println("P1 Tries:  " + p1tries);
+                                        p1tries = 0;
                                     }
                                     else {
                                         //showBoard(player2);
                                         p2setup = false;
+                                        System.out.println("P2 Tries:  " + p2tries);
+                                        p2tries = 0;
                                     }
                     }
                 } break;
