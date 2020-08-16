@@ -20,7 +20,7 @@ public class Bullet {
         name = "bullet";
         from = to = new Vector3f();
         animation = false;
-        bullet = new RenderBox(name, "res/dot.png", from,0.0f, 0.0f);
+        bullet = new RenderBox();
     }
 
     public Bullet(Vector3f from, Vector3f to, boolean animation, int num, RenderBox b) {

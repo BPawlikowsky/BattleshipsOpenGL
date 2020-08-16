@@ -8,9 +8,9 @@ import lombok.Setter;
 
 public class RenderBox {
     @Getter @Setter
-    private float sizeX = 1.28f;
+    private float sizeX;
     @Getter @Setter
-    private float sizeY = 0.24f;
+    private float sizeY;
     @Getter @Setter
     private Vector3f position;
     @Getter
@@ -18,9 +18,18 @@ public class RenderBox {
     @Getter
     private final Texture texture;
     @Getter
-    private final VertexArray mesh;
+    private VertexArray mesh;
 
-    public RenderBox(String name,String path, Vector3f position, float sizeX, float sizeY) {
+    public RenderBox() {
+
+        name = "Empty";
+        texture = new Texture("res/transp.png");
+        position = new Vector3f();
+        sizeX = 0.0f;
+        sizeY = 0.0f;
+    }
+
+    public RenderBox(String name, String path, Vector3f position, float sizeX, float sizeY) {
 
         this.position = position;
         this.name = name;
@@ -47,5 +56,29 @@ public class RenderBox {
 
         mesh = new VertexArray(vertices, indices, tcs);
         texture = new Texture(path);
+    }
+
+    public void updateSize() {
+        float[] vertices = {
+                -sizeX,  sizeY, 0.0f,
+                -sizeX, -sizeY, 0.0f,
+                sizeX, -sizeY, 0.0f,
+                sizeX,  sizeY, 0.0f
+        };
+
+        byte[] indices = {
+                0, 1, 2,
+                2, 3, 0
+        };
+
+        float[] tcs = {
+                // right order to view with the above combo of vertices and indices
+                0, 0,
+                0, 1,
+                1, 1,
+                1, 0
+        };
+
+        mesh = new VertexArray(vertices, indices, tcs);
     }
 }

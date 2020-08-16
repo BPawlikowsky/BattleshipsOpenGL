@@ -16,6 +16,10 @@ class GameController {
     private static final String PLAYER1 = "Player01";
     private static final String PLAYER2 = "Player02";
     private static final float TILESIZE = 0.24f;
+    private static final float TILESPACE = 0.5f;
+    private float bulletSpeed = 0.04f;
+    int particleCount = 25;
+    int pLifespan = 10;
     private static Sign PLAYER1SETUP;
     private static Sign PLAYER2SETUP;
     private static RenderBox BACKGROUND;
@@ -48,9 +52,11 @@ class GameController {
     int p2tries = 0;
     Vector3f from, to; // Animation variables than need to be updated every frame
     private boolean animation = false;
+    private boolean pAnimation = false;
     ArrayList<Bullet> bullets;
     ArrayList<Tile> p1Buffer, p2Buffer;
-    private float bulletSpeed = 0.05f;
+    ArrayList<Particle> particles;
+    Particle testP;
 
     GameController() {
         ViewRenderer.init();
@@ -89,6 +95,7 @@ class GameController {
 
         //Main Loop
         while (running) {
+            // Computer Setup
             if(p1setup) {
                 randClick(player1);
                 p1tries++;
@@ -117,10 +124,10 @@ class GameController {
             }
 
             // Main Game
-            if(!animation && !p1setup && !p2setup && !winner) {
+            if(!pAnimation && !animation && !p1setup && !p2setup && !winner) {
                 if(turn) {
-                    randClick(player2);
                     p2Buffer = copyBoard(player2.getBoard());
+                    randClick(player2);
                     if(mClick == GLFW_MOUSE_BUTTON_1 && mAction == GLFW_PRESS && !clickWait)
                         if(isMouseOnTile(player2.getBoard(), mouseX, mouseY)) {
                             clickWait = true;
@@ -128,10 +135,13 @@ class GameController {
                             p1tries++;
                             if(!t.isShotAt()) {
                                 if(shoot(t, player2)) {
-                                    if(!animation) {
+                                    if(!animation && !pAnimation) {
                                         to = t.getPosition();
                                         from = randTilePosition(player1.getBoard());
+                                        if(t.isOwned()) particleCount = 50;
+                                        else particleCount = 5;
                                         generateBullets(player1);
+                                        generateParticles(t, particleCount);
                                         animation = true;
                                     }
                                     turn = !turn;
@@ -140,8 +150,8 @@ class GameController {
                     }
                 }
                 else {
-                    randClick(player1);
                     p1Buffer = copyBoard(player1.getBoard());
+                    randClick(player1);
                     if(mClick == GLFW_MOUSE_BUTTON_1 && mAction == GLFW_PRESS && !clickWait)
                         if(isMouseOnTile(player1.getBoard(), mouseX, mouseY)) {
                             clickWait = true;
@@ -149,10 +159,13 @@ class GameController {
                             p2tries++;
                             if(!t.isShotAt()) {
                                 if(shoot(t, player1)) {
-                                    if(!animation) {
+                                    if(!animation && !pAnimation) {
                                         to = t.getPosition();
                                         from = randTilePosition(player2.getBoard());
+                                        if(t.isOwned()) particleCount = 50;
+                                        else particleCount = 5;
                                         generateBullets(player2);
+                                        generateParticles(t, particleCount);
                                         animation = true;
                                     }
                                     turn = !turn;
@@ -186,14 +199,42 @@ class GameController {
         }
     }
 
+    private void generateParticles(Tile t, int number) {
+        Random r = new Random();
+        particles = new ArrayList<>();
+        for (int i = 0; i < number; i++) {
+           Particle p = new Particle(
+                   r.nextInt(pLifespan) + 5,
+                   new Vector3f(
+                           (t.getPosition().x - TILESIZE) + (r.nextFloat()/2),
+                           (t.getPosition().y - TILESIZE) + (r.nextFloat()/2),
+                           0.0f
+                   ),
+                   r.nextFloat() * 0.5f + 0.05f,
+                   r.nextFloat() * 0.5f
+           );
+           particles.add(p);
+        }
+    }
+
+    private void animateParticles() {
+        for(Particle p : particles) {
+            RenderBox r = p.getRenderBox();
+           p.getRenderBox().setSizeX(r.getSizeX() + p.getSpeed()*0.1f);
+           p.getRenderBox().setSizeY(r.getSizeY() + p.getSpeed()*0.1f);
+           p.getRenderBox().updateSize();
+           p.setLifespan(p.getLifespan()-1);
+        }
+    }
+
     private void animateShots(ArrayList<Bullet> bullets) {
-        float speed = 0.05f;
+        float speed;
         for(Bullet b : bullets) {
             speed = b.getSpeed();
             b.updatePos(speed);
             if(
-                Math.abs(b.getTo().x - b.getFrom().x) < TILESIZE*0.1f &&
-                Math.abs(b.getTo().y - b.getFrom().y) < TILESIZE*0.1f
+                Math.abs(b.getTo().x - b.getFrom().x) <= TILESIZE*0.1f &&
+                Math.abs(b.getTo().y - b.getFrom().y) <= TILESIZE*0.1f
             )
                 b.setAnimation(false);
 
@@ -231,11 +272,16 @@ class GameController {
     }
 
     private void render() {
+        if(!animation && !p1setup && !p2setup && !clickWait) {
+            p1Buffer = copyBoard(player1.getBoard());
+            p2Buffer = copyBoard(player2.getBoard());
+        }
+
         ViewRenderer.renderStart();
         ViewRenderer.renderBox(BACKGROUND);
-        //ViewRenderer.renderBox(test);
-        //renderSign(s);
-        if(animation) renderShots(bullets);
+        if(!animation && pAnimation)
+            renderParticles();
+
         if (p1setup) {
             renderSign(PLAYER1SETUP);
             renderSetup(player1);
@@ -264,36 +310,71 @@ class GameController {
             renderWinnerBoard(player2);
         }
 
+        if(animation)
+            renderShots();
+
+
         ViewRenderer.renderFinish();
     }
 
-    private void renderShots(ArrayList<Bullet> bullets) {
+    private void renderShots() {
         for(Bullet b : bullets) {
             ViewRenderer.renderBox(b.getBullet());
         }
     }
 
-    private void update() {
-        if(!animation && !p1setup && !p2setup) {
-            p1Buffer = copyBoard(player1.getBoard());
-            p2Buffer = copyBoard(player2.getBoard());
+    private void renderParticles() {
+        for(Particle p : particles) {
+            if(p.getLifespan() > 0)
+                ViewRenderer.renderBox(p.getRenderBox());
         }
+    }
+
+    private void update() {
         // Aligning mouse position to the board so that the mouse coords correspond to the board coords
-        if(animation && checkAnim(bullets)) {
-            animateShots(bullets);
+        if(animation) {
+            if(checkAnim(bullets)) {
+                clickWait = true;
+                animateShots(bullets);
+            } else {
+                pAnimation = true;
+                animation = false;
+            }
         } else {
-            animation = false;
             if(!p1setup && !p2setup){
                 p1Buffer = copyBoard(player1.getBoard());
                 p2Buffer = copyBoard(player2.getBoard());
             }
         }
+
+        if(!animation && pAnimation) {
+            int sum = 0;
+            animateParticles();
+            for(Particle p : particles) {
+                sum += p.getLifespan();
+            }
+            if(sum <= 0) pAnimation = false;
+            else {
+                pAnimation = true;
+                clickWait = true;
+            }
+        }
+
         mouseX = ((float) MouseInputPos.xPos / 1280f - 1.0f) * 10.0f;
         mouseY = ((float) MouseInputPos.yPos / 720f - 1.0f) * (-10.0f * 9.0f / 16.0f);
         mClick = MouseInputClick.mbutton;
         mAction = MouseInputClick.maction;
         // Click reset
-        if (frames >= 30 && mAction != GLFW_PRESS && clickWait)
+
+        int wait = 30;
+        // Done for testing so bullet speed could be super fast. TODO: Remove this for "prod"
+        if(p1setup || p2setup)
+            wait = 30;
+        else
+            wait =  1;
+        //---------------------------------------------------------
+
+        if (frames >= wait && mAction != GLFW_PRESS && clickWait)
             clickWait = false;
         if (frames >= 30 && Input.isKeyDown(GLFW_KEY_D) && buttonD)
             buttonD = false;
