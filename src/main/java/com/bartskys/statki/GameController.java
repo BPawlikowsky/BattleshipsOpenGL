@@ -15,11 +15,12 @@ class GameController {
 
     private static final String PLAYER1 = "Player01";
     private static final String PLAYER2 = "Player02";
+    private static final float TILESIZE = 0.24f;
     private static Sign PLAYER1SETUP;
     private static Sign PLAYER2SETUP;
     private static RenderBox BACKGROUND;
 
-    private RenderBox test;
+    private Bullet bullet;
     int p1Ships = 1;
     int p2Ships = 1;
     float scale = 0.489f;
@@ -47,7 +48,9 @@ class GameController {
     boolean winner = false;
     int p1tries = 0;
     int p2tries = 0;
-    Sign s;
+    Vector3f from, to; // Animation variables than need to be updated every frame
+    private boolean animation = false;
+    ArrayList<Bullet> bullets;
 
 
     GameController() {
@@ -56,6 +59,8 @@ class GameController {
         player1 = new Player(generateTiles(boardPosX, boardPosY - 10.0f, PLAYER1), PLAYER1);
         player2 = new Player(generateTiles(boardPosX, boardPosY +0.265f, PLAYER2), PLAYER2);
         p1setup = p2setup = true;
+        from = to = new Vector3f();
+
         PLAYER1SETUP = new Sign(
                 "Player1 Setup",
                 -8f,
@@ -72,13 +77,14 @@ class GameController {
                 new Vector3f(0.0f, 0.0f, -0.1f),
                 12.80f * 0.8f, 7.20f * 0.8f
         );
-        test = new RenderBox(
-                "test",
-                "res/a.png",
-                new Vector3f(),
-                0.30f, 0.30f
-        );
-        s = new Sign("abcdefghijklmnopr", 0.0f, 0.0f);
+        bullet = new Bullet();
+        bullets = new ArrayList<>();
+        for(int i = 0; i < 10; i++) {
+            bullets.add(new Bullet(
+                    from, to, animation, i,
+                    new RenderBox("bullet"+i,"res/dot.png",from, TILESIZE, TILESIZE)
+            ));
+        }
     }
 
     void mainLoop() {
@@ -113,7 +119,7 @@ class GameController {
             }
 
             // Main Game
-            if(!p1setup && !p2setup && !winner) {
+            if(!animation && !p1setup && !p2setup && !winner) {
                 if(turn) {
                     randClick(player2);
                     if(mClick == GLFW_MOUSE_BUTTON_1 && mAction == GLFW_PRESS && !clickWait)
@@ -122,9 +128,18 @@ class GameController {
                             Tile t = tileFromMouse(player2.getBoard(), mouseX, mouseY);
                             p1tries++;
                             if(!t.isShotAt())
-                                if(shoot(t, player2)) {turn = !turn;}
+                                if(shoot(t, player2)) {
+                                    if(!animation) {
+                                        to = t.getCoords();
+                                        from = randTileCoords(player1.getBoard());
+                                        generateBullets(player1);
+                                        animation = true;
+                                    }
+                                    turn = !turn;
+                                }
                     }
-                } else {
+                }
+                else {
                     randClick(player1);
                     if(mClick == GLFW_MOUSE_BUTTON_1 && mAction == GLFW_PRESS && !clickWait)
                         if(isMouseOnTile(player1.getBoard(), mouseX, mouseY)) {
@@ -132,7 +147,15 @@ class GameController {
                             Tile t = tileFromMouse(player1.getBoard(), mouseX, mouseY);
                             p2tries++;
                             if(!t.isShotAt())
-                                if(shoot(t, player1)) {turn = !turn;}
+                                if(shoot(t, player1)) {
+                                    if(!animation) {
+                                        to = t.getCoords();
+                                        from = randTileCoords(player2.getBoard());
+                                        generateBullets(player2);
+                                        animation = true;
+                                    }
+                                    turn = !turn;
+                                }
                     }
                 }
                 if(winner(player1) || winner(player2)) {
@@ -150,6 +173,27 @@ class GameController {
                 running = false;
         }
         ViewRenderer.terminate();
+    }
+
+    private void generateBullets(Player player) {
+        for(Bullet b : bullets) {
+            b.setTo(to);
+            b.setFrom(randTileCoords(player.getBoard()));
+            b.setAnimation(true);
+        }
+    }
+
+    private void animateShots(ArrayList<Bullet> bullets) {
+        float speed = 0.05f;
+        for(Bullet b : bullets) {
+            b.updatePos(speed);
+            if(
+                Math.abs(b.getTo().x - b.getFrom().x) < TILESIZE*0.1f &&
+                Math.abs(b.getTo().y - b.getFrom().y) < TILESIZE*0.1f
+            )
+                b.setAnimation(false);
+
+        }
     }
 
     private void randClick(Player player) {
@@ -187,6 +231,7 @@ class GameController {
         ViewRenderer.renderBox(BACKGROUND);
         //ViewRenderer.renderBox(test);
         //renderSign(s);
+        if(animation) renderShots(bullets);
         if (p1setup) {
             renderSign(PLAYER1SETUP);
             renderSetup(player1);
@@ -195,10 +240,10 @@ class GameController {
             renderSign(PLAYER2SETUP);
             renderSetup(player2);
         }
-        if(!p1setup && !p2setup && turn && !winner)
+        if(!p1setup && !p2setup) {
             renderShotBoard(player2);
-        else if(!p1setup && !p2setup && !turn)
             renderShotBoard(player1);
+        }
 
         if(!p1setup && winner(player1)) renderSign(
                 new Sign("player1 won",
@@ -218,8 +263,18 @@ class GameController {
         ViewRenderer.renderFinish();
     }
 
+    private void renderShots(ArrayList<Bullet> bullets) {
+        for(Bullet b : bullets) {
+            System.out.println(b.getName() + " rendering  | Coords: " + b.getFrom().toString());
+            ViewRenderer.renderBox(b.getBullet());
+        }
+    }
+
     private void update() {
         // Aligning mouse position to the board so that the mouse coords correspond to the board coords
+        if(checkAnim(bullets)) {
+            animateShots(bullets);
+        } else animation = false;
         mouseX = ((float) MouseInputPos.xPos / 1280f - 1.0f) * 10.0f;
         mouseY = ((float) MouseInputPos.yPos / 720f - 1.0f) * (-10.0f * 9.0f / 16.0f);
         mClick = MouseInputClick.mbutton;
@@ -231,6 +286,13 @@ class GameController {
             buttonD = false;
 
         glfwPollEvents();
+    }
+
+    private boolean checkAnim(ArrayList<Bullet> bullets) {
+        for(Bullet b : bullets)
+            if(b.isAnimation()) return true;
+
+        return false;
     }
 
     private void renderSign(Sign sign) {
