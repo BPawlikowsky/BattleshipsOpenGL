@@ -150,7 +150,7 @@ public class ViewRenderer {
             TILE.enable();
             tile.getEmptyTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
-            TILE.setUniformMat4f("ml_matrix", ml_matrix.translate(tile.getCoords().x, tile.getCoords().y, tile.getCoords().z));
+            TILE.setUniformMat4f("ml_matrix", ml_matrix.translate(tile.getPosition().x, tile.getPosition().y, tile.getPosition().z));
             tile.getMesh().render();
             tile.getMesh().unbind();
             tile.getEmptyTile().unbind();
@@ -161,7 +161,7 @@ public class ViewRenderer {
             TILE.enable();
             tile.getShotAtTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
-            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(tile.getCoords().x, tile.getCoords().y, tile.getCoords().z));
+            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(tile.getPosition().x, tile.getPosition().y, tile.getPosition().z));
             tile.getMesh().render();
             tile.getMesh().unbind();
             tile.getShotAtTile().unbind();
@@ -172,7 +172,7 @@ public class ViewRenderer {
             TILE.enable();
             tile.getHitTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
-            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(tile.getCoords().x, tile.getCoords().y, tile.getCoords().z));
+            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(tile.getPosition().x, tile.getPosition().y, tile.getPosition().z));
             tile.getMesh().render();
             tile.getMesh().unbind();
             tile.getHitTile().unbind();
@@ -184,7 +184,7 @@ public class ViewRenderer {
             tile.getShipTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
 
-            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(tile.getCoords().x, tile.getCoords().y, tile.getCoords().z));
+            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(tile.getPosition().x, tile.getPosition().y, tile.getPosition().z));
             tile.getMesh().render();
             tile.getMesh().unbind();
             tile.getShipTile().unbind();
@@ -197,7 +197,7 @@ public class ViewRenderer {
 
             Matrix4f ml_matrix = new Matrix4f().identity();
 
-            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(box.getCoords().x, box.getCoords().y, box.getCoords().z));
+            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(box.getPosition().x, box.getPosition().y, box.getPosition().z));
             box.getMesh().render();
             box.getMesh().unbind();
             box.getTexture().unbind();

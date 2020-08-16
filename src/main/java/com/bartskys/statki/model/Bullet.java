@@ -13,6 +13,8 @@ public class Bullet {
     private boolean animation;
     @Getter
     private RenderBox bullet;
+    @Setter @Getter
+    float speed;
 
     public Bullet() {
         name = "bullet";
@@ -35,6 +37,6 @@ public class Bullet {
                 from.y + (to.y - from.y) * speed,
                 0.0f
         );
-        bullet.setCoords(from);
+        bullet.setPosition(from);
     }
 }

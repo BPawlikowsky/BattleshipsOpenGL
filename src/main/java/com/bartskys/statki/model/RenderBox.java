@@ -12,7 +12,7 @@ public class RenderBox {
     @Getter @Setter
     private float sizeY = 0.24f;
     @Getter @Setter
-    private Vector3f coords;
+    private Vector3f position;
     @Getter
     private final String name;
     @Getter
@@ -20,9 +20,9 @@ public class RenderBox {
     @Getter
     private final VertexArray mesh;
 
-    public RenderBox(String name,String path, Vector3f coords, float sizeX, float sizeY) {
+    public RenderBox(String name,String path, Vector3f position, float sizeX, float sizeY) {
 
-        this.coords = coords;
+        this.position = position;
         this.name = name;
 
         float[] vertices = {
