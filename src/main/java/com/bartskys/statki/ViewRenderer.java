@@ -196,8 +196,24 @@ public class ViewRenderer {
             box.getTexture().bind();
 
             Matrix4f ml_matrix = new Matrix4f().identity();
-
             TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(box.getPosition().x, box.getPosition().y, box.getPosition().z));
+            box.getMesh().render();
+            box.getMesh().unbind();
+            box.getTexture().unbind();
+            TILE.disable();
+      }
+
+      public static void renderBoxScale(RenderBox box, float scale) {
+            TILE.enable();
+            box.getTexture().bind();
+
+            Matrix4f ml_matrix = new Matrix4f().identity();
+            TILE.setUniformMat4f("ml_matrix",
+                    ml_matrix.translate(
+                            box.getPosition().x,
+                            box.getPosition().y,
+                           0.0f
+                    ).scaleXY(scale,scale));
             box.getMesh().render();
             box.getMesh().unbind();
             box.getTexture().unbind();

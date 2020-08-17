@@ -15,7 +15,7 @@ public class Particle {
     private RenderBox renderBox;
     @Getter@Setter
     private float speed;
-    @Getter
+    @Getter@Setter
     private float size;
 
     public Particle() {
@@ -43,14 +43,13 @@ public class Particle {
                 size,
                 size
         );
-        renderBox.updateSize();
     }
 
-    public void setSize(float size) {
-        renderBox.setSizeX(size);
-        renderBox.setSizeY(size);
-        renderBox.updateSize();
-    }
+//    public void setSize(float size) {
+//        renderBox.setSizeX(size);
+//        renderBox.setSizeY(size);
+//        renderBox.updateSize();
+//    }
 
     public void setPosition(Vector3f newPosition) {
         position = newPosition;

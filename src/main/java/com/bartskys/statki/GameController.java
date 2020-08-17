@@ -18,8 +18,8 @@ class GameController {
     private static final float TILESIZE = 0.24f;
     private static final float TILESPACE = 0.5f;
     private float bulletSpeed = 0.04f;
-    int particleCount = 25;
-    int pLifespan = 10;
+    int particleCount = 100;
+    int pLifespan = 100;
     private static Sign PLAYER1SETUP;
     private static Sign PLAYER2SETUP;
     private static RenderBox BACKGROUND;
@@ -83,7 +83,7 @@ class GameController {
                 12.80f * 0.8f, 7.20f * 0.8f
         );
         bullets = new ArrayList<>();
-        for(int i = 0; i < 25; i++) {
+        for(int i = 0; i < 100; i++) {
             bullets.add(new Bullet(
                     from, to, animation, i,
                     new RenderBox("bullet"+i,"res/dot.png",from, TILESIZE, TILESIZE)
@@ -110,7 +110,8 @@ class GameController {
                 direction = !direction;
                 buttonD = true;
             }
-            if(mClick == GLFW_MOUSE_BUTTON_1 && mAction == GLFW_PRESS && !clickWait) {
+
+            if(!animation && !pAnimation && mClick == GLFW_MOUSE_BUTTON_1 && mAction == GLFW_PRESS && !clickWait) {
                 Tile tempT;
                 if(isMouseOnTile(player1.getBoard(), mouseX, mouseY))
                     tempT = tileFromMouse(player1.getBoard(), mouseX, mouseY);
@@ -138,8 +139,8 @@ class GameController {
                                     if(!animation && !pAnimation) {
                                         to = t.getPosition();
                                         from = randTilePosition(player1.getBoard());
-                                        if(t.isOwned()) particleCount = 50;
-                                        else particleCount = 5;
+                                        //if(t.isOwned()) particleCount = 50;
+                                        //else particleCount = 5;
                                         generateBullets(player1);
                                         generateParticles(t, particleCount);
                                         animation = true;
@@ -162,8 +163,8 @@ class GameController {
                                     if(!animation && !pAnimation) {
                                         to = t.getPosition();
                                         from = randTilePosition(player2.getBoard());
-                                        if(t.isOwned()) particleCount = 50;
-                                        else particleCount = 5;
+//                                        if(t.isOwned()) particleCount = 50;
+//                                        else particleCount = 5;
                                         generateBullets(player2);
                                         generateParticles(t, particleCount);
                                         animation = true;
@@ -173,7 +174,7 @@ class GameController {
                             }
                     }
                 }
-                if(winner(player1) || winner(player2)) {
+                if(!animation && !pAnimation && winner(player1) || winner(player2)) {
                     winner = true;
                     System.out.println("P1 Tries: " + p1tries + " | P2 Tries: " + p2tries);
                 }
@@ -181,8 +182,7 @@ class GameController {
             // Update game events and Counts frames and updates
             frameUpdate();
 
-            // Render after update
-            render();
+
 
             if (glfwWindowShouldClose(ViewRenderer.getWindow()))
                 running = false;
@@ -191,38 +191,53 @@ class GameController {
     }
 
     private void generateBullets(Player player) {
+        Random r = new Random();
         for(Bullet b : bullets) {
-            b.setTo(to);
+            b.setTo(new Vector3f(
+                    (to.x - TILESIZE/2) + (r.nextFloat()*0.3f),
+                    (to.y - TILESIZE/2) + (r.nextFloat()*0.3f),
+                    0.0f
+            ));
             b.setFrom(randTilePosition(player.getBoard()));
             b.setAnimation(true);
-            b.setSpeed(bulletSpeed + (new Random().nextFloat() * bulletSpeed ));
+            b.setSpeed(bulletSpeed + (new Random().nextFloat() * bulletSpeed));
+            b.setSize((r.nextFloat()+r.nextFloat())/2);
         }
     }
 
     private void generateParticles(Tile t, int number) {
         Random r = new Random();
-        particles = new ArrayList<>();
-        for (int i = 0; i < number; i++) {
-           Particle p = new Particle(
-                   r.nextInt(pLifespan) + 5,
-                   new Vector3f(
-                           (t.getPosition().x - TILESIZE) + (r.nextFloat()/2),
-                           (t.getPosition().y - TILESIZE) + (r.nextFloat()/2),
-                           0.0f
-                   ),
-                   r.nextFloat() * 0.5f + 0.05f,
-                   r.nextFloat() * 0.5f
-           );
-           particles.add(p);
+        if(particles == null) {
+            particles = new ArrayList<>();
+            for (int i = 0; i < number; i++) {
+                Particle p = new Particle(
+                        r.nextInt(pLifespan) + 5,
+                        new Vector3f(
+                                (t.getPosition().x - TILESIZE) + (r.nextFloat()/2),
+                                (t.getPosition().y - TILESIZE) + (r.nextFloat()/2),
+                                0.0f
+                        ),
+                        r.nextFloat() * 0.5f + 0.05f,
+                        r.nextFloat() * 0.5f
+                );
+                particles.add(p);
+            }
+        }
+        for (Particle p : particles) {
+           p.setLifespan(r.nextInt(pLifespan) + pLifespan/5);
+           p.setPosition(new Vector3f(
+                   (t.getPosition().x - TILESIZE) + (r.nextFloat()/2),
+                   (t.getPosition().y - TILESIZE) + (r.nextFloat()/2),
+                   0.0f
+           ));
+           p.setSpeed((r.nextFloat() + 0.1f) * 0.1f);
+           p.setSize(r.nextFloat() * 0.1f);
         }
     }
 
     private void animateParticles() {
         for(Particle p : particles) {
-            RenderBox r = p.getRenderBox();
-           p.getRenderBox().setSizeX(r.getSizeX() + p.getSpeed()*0.1f);
-           p.getRenderBox().setSizeY(r.getSizeY() + p.getSpeed()*0.1f);
-           p.getRenderBox().updateSize();
+           p.setSize(p.getSize() + (p.getSpeed()*p.getSize())*0.4f);
            p.setLifespan(p.getLifespan()-1);
         }
     }
@@ -232,9 +247,21 @@ class GameController {
         for(Bullet b : bullets) {
             speed = b.getSpeed();
             b.updatePos(speed);
+            float absX = Math.abs(b.getTo().x - b.getFrom().x);
+            float absY = Math.abs(b.getTo().y - b.getFrom().y);
+
             if(
-                Math.abs(b.getTo().x - b.getFrom().x) <= TILESIZE*0.1f &&
-                Math.abs(b.getTo().y - b.getFrom().y) <= TILESIZE*0.1f
+                    absX > (TILESIZE*60f)-absX
+            ) {
+                System.out.println("Scaling");
+                b.setSize(b.getSize()+(b.getSize()*0.04f));
+            }
+            if(
+                    absX <= TILESIZE*40f-absX
+            ) b.setSize(b.getSize() - (b.getSize() * 0.01f));
+            if(
+                absX <= TILESIZE*0.2f &&
+                absY <= TILESIZE*0.2f
             )
                 b.setAnimation(false);
 
@@ -272,13 +299,15 @@ class GameController {
     }
 
     private void render() {
-        if(!animation && !p1setup && !p2setup && !clickWait) {
+        if(!animation && !pAnimation && !p1setup && !p2setup && !clickWait) {
             p1Buffer = copyBoard(player1.getBoard());
             p2Buffer = copyBoard(player2.getBoard());
         }
 
         ViewRenderer.renderStart();
         ViewRenderer.renderBox(BACKGROUND);
+        if(animation)
+            renderShots();
         if(!animation && pAnimation)
             renderParticles();
 
@@ -295,12 +324,12 @@ class GameController {
             renderShotBoard(p2Buffer);
         }
 
-        if(!p1setup && winner(player1)) renderSign(
+        if(!animation && !pAnimation && !p1setup && winner(player1)) renderSign(
                 new Sign("player1 won",
                         -7.5f,
                         4.25f)
         );
-        if(!p2setup && winner(player2)) renderSign(
+        if(!animation && !pAnimation && !p2setup && winner(player2)) renderSign(
                 new Sign("player2 won",
                         2.75f,
                         4.25f)
@@ -310,23 +339,19 @@ class GameController {
             renderWinnerBoard(player2);
         }
 
-        if(animation)
-            renderShots();
-
-
         ViewRenderer.renderFinish();
     }
 
     private void renderShots() {
         for(Bullet b : bullets) {
-            ViewRenderer.renderBox(b.getBullet());
+            ViewRenderer.renderBoxScale(b.getBullet(), b.getSize());
         }
     }
 
     private void renderParticles() {
         for(Particle p : particles) {
             if(p.getLifespan() > 0)
-                ViewRenderer.renderBox(p.getRenderBox());
+                ViewRenderer.renderBoxScale(p.getRenderBox(), p.getSize());
         }
     }
 
@@ -341,7 +366,7 @@ class GameController {
                 animation = false;
             }
         } else {
-            if(!p1setup && !p2setup){
+            if(!animation && !pAnimation && !p1setup && !p2setup){
                 p1Buffer = copyBoard(player1.getBoard());
                 p2Buffer = copyBoard(player2.getBoard());
             }
@@ -690,6 +715,8 @@ class GameController {
         lastTime = now;
         if (delta >= 1.0) {
             update();
+            // Render after update
+            render();
             updates++;
             delta--;
         }

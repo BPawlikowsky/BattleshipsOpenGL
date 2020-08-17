@@ -14,7 +14,9 @@ public class Bullet {
     @Getter
     private RenderBox bullet;
     @Setter @Getter
-    float speed;
+    private float speed;
+    @Getter@Setter
+    private float size;
 
     public Bullet() {
         name = "bullet";
