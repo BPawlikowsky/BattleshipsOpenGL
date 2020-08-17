@@ -33,6 +33,7 @@ public class ViewRenderer {
       private static final Input input = new Input();
 
       private static Shader TILE;
+      private static Shader FADE;
       @Getter
       private static final Matrix4f pro_matrix = new Matrix4f().ortho2D(
               -10.0f,
@@ -99,6 +100,7 @@ public class ViewRenderer {
             glClearColor(0f, 0f,0f, 1f);
 
             TILE = new Shader("shaders/shader.vert","shaders/shader.frag");
+            FADE = new Shader("shaders/shader.vert","shaders/fade.frag");
 
             initGameObjects();
       }
@@ -123,7 +125,6 @@ public class ViewRenderer {
       }
 
       public static void flagSetup() {
-            glEnable(GL_DEPTH_TEST);
             glEnable(GL_BLEND);
             glActiveTexture(GL_TEXTURE1);
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -202,7 +203,26 @@ public class ViewRenderer {
             box.getTexture().unbind();
             TILE.disable();
       }
+      public static void renderBoxFade(RenderBox box, float time, float scale) {
+            FADE.enable();
+            box.getTexture().bind();
 
+            FADE.setUniformMat4f("pr_matrix", pro_matrix);
+            FADE.setUniform1i("tex", 1);
+            Matrix4f ml_matrix = new Matrix4f().identity();
+            FADE.setUniformMat4f("ml_matrix",
+                    ml_matrix.translate(
+                            box.getPosition().x,
+                            box.getPosition().y,
+                            0.0f
+                    ).scaleXY(scale,scale));
+            FADE.setUniform1f("time", time);
+
+            box.getMesh().render();
+            box.getMesh().unbind();
+            box.getTexture().unbind();
+            FADE.disable();
+      }
       public static void renderBoxScale(RenderBox box, float scale) {
             TILE.enable();
             box.getTexture().bind();

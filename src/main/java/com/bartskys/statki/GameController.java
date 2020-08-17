@@ -19,7 +19,7 @@ class GameController {
     private static final float TILESPACE = 0.5f;
     private float bulletSpeed = 0.04f;
     int particleCount = 100;
-    int pLifespan = 100;
+    int pLifespan = 50;
     private static Sign PLAYER1SETUP;
     private static Sign PLAYER2SETUP;
     private static RenderBox BACKGROUND;
@@ -56,7 +56,8 @@ class GameController {
     ArrayList<Bullet> bullets;
     ArrayList<Tile> p1Buffer, p2Buffer;
     ArrayList<Particle> particles;
-    Particle testP;
+    RenderBox testP;
+    float time = 0.0f;
 
     GameController() {
         ViewRenderer.init();
@@ -89,6 +90,7 @@ class GameController {
                     new RenderBox("bullet"+i,"res/dot.png",from, TILESIZE, TILESIZE)
             ));
         }
+        testP = new RenderBox("test", "res/shot.png", new Vector3f(), 1f,1f);
     }
 
     void mainLoop() {
@@ -139,8 +141,17 @@ class GameController {
                                     if(!animation && !pAnimation) {
                                         to = t.getPosition();
                                         from = randTilePosition(player1.getBoard());
-                                        //if(t.isOwned()) particleCount = 50;
-                                        //else particleCount = 5;
+                                        if(t.isOwned()) {
+                                            particles = null;
+                                            particleCount = 1000;
+                                            pLifespan = 200;
+                                        }
+                                        else {
+                                            particles = null;
+                                            particleCount = 55;
+                                            pLifespan = 50;
+                                        }
+
                                         generateBullets(player1);
                                         generateParticles(t, particleCount);
                                         animation = true;
@@ -163,8 +174,17 @@ class GameController {
                                     if(!animation && !pAnimation) {
                                         to = t.getPosition();
                                         from = randTilePosition(player2.getBoard());
-//                                        if(t.isOwned()) particleCount = 50;
-//                                        else particleCount = 5;
+                                        if(t.isOwned()) {
+                                            particles = null;
+                                            particleCount = 1000;
+                                            pLifespan = 100;
+                                        }
+                                        else {
+                                            particles = null;
+                                            particleCount = 55;
+                                            pLifespan = 50;
+                                        }
+
                                         generateBullets(player2);
                                         generateParticles(t, particleCount);
                                         animation = true;
@@ -211,15 +231,16 @@ class GameController {
             particles = new ArrayList<>();
             for (int i = 0; i < number; i++) {
                 Particle p = new Particle(
-                        r.nextInt(pLifespan) + 5,
+                        r.nextInt(pLifespan) + pLifespan/5,
                         new Vector3f(
                                 (t.getPosition().x - TILESIZE) + (r.nextFloat()/2),
                                 (t.getPosition().y - TILESIZE) + (r.nextFloat()/2),
                                 0.0f
                         ),
-                        r.nextFloat() * 0.5f + 0.05f,
-                        r.nextFloat() * 0.5f
+                        (r.nextFloat() + 0.9f) * 0.1f,
+                        r.nextFloat() * 0.1f
                 );
+                p.setAlive(true);
                 particles.add(p);
             }
         }
@@ -230,14 +251,15 @@ class GameController {
                    (t.getPosition().y - TILESIZE) + (r.nextFloat()/2),
                    0.0f
            ));
-           p.setSpeed((r.nextFloat() + 0.1f) * 0.1f);
+           p.setSpeed((r.nextFloat() + 0.9f) * 0.1f);
            p.setSize(r.nextFloat() * 0.1f);
+           p.setAlive(true);
         }
     }
 
     private void animateParticles() {
         for(Particle p : particles) {
-           p.setSize(p.getSize() + (p.getSpeed()*p.getSize())*0.4f);
+           p.setSize(p.getSize() + (p.getSpeed()*p.getSize())*0.5f);
            p.setLifespan(p.getLifespan()-1);
         }
     }
@@ -253,7 +275,6 @@ class GameController {
             if(
                     absX > (TILESIZE*60f)-absX
             ) {
-                System.out.println("Scaling");
                 b.setSize(b.getSize()+(b.getSize()*0.04f));
             }
             if(
@@ -306,6 +327,7 @@ class GameController {
 
         ViewRenderer.renderStart();
         ViewRenderer.renderBox(BACKGROUND);
+        //ViewRenderer.renderBox(testP);
         if(animation)
             renderShots();
         if(!animation && pAnimation)
@@ -342,18 +364,7 @@ class GameController {
         ViewRenderer.renderFinish();
     }
 
-    private void renderShots() {
-        for(Bullet b : bullets) {
-            ViewRenderer.renderBoxScale(b.getBullet(), b.getSize());
-        }
-    }
 
-    private void renderParticles() {
-        for(Particle p : particles) {
-            if(p.getLifespan() > 0)
-                ViewRenderer.renderBoxScale(p.getRenderBox(), p.getSize());
-        }
-    }
 
     private void update() {
         // Aligning mouse position to the board so that the mouse coords correspond to the board coords
@@ -363,6 +374,7 @@ class GameController {
                 animateShots(bullets);
             } else {
                 pAnimation = true;
+                time = 0.0f;
                 animation = false;
             }
         } else {
@@ -373,16 +385,13 @@ class GameController {
         }
 
         if(!animation && pAnimation) {
-            int sum = 0;
-            animateParticles();
-            for(Particle p : particles) {
-                sum += p.getLifespan();
-            }
-            if(sum <= 0) pAnimation = false;
-            else {
-                pAnimation = true;
+            if(time < pLifespan) time++;
+            if(checkParticles()) {
                 clickWait = true;
-            }
+                animateParticles();
+            } else pAnimation = false;
+
+
         }
 
         mouseX = ((float) MouseInputPos.xPos / 1280f - 1.0f) * 10.0f;
@@ -405,6 +414,13 @@ class GameController {
             buttonD = false;
 
         glfwPollEvents();
+    }
+
+    private boolean checkParticles() {
+        for (Particle p : particles) {
+            if (p.isAlive()) return true;
+        }
+        return false;
     }
 
     private ArrayList<Tile> copyBoard(ArrayList<Tile> board) {
@@ -475,6 +491,25 @@ class GameController {
             }
             else
                 ViewRenderer.renderEmptyTile(t);
+        }
+    }
+
+    private void renderShots() {
+        for(Bullet b : bullets) {
+            ViewRenderer.renderBoxScale(b.getBullet(), b.getSize());
+        }
+    }
+
+    private void renderParticles() {
+        for(Particle p : particles) {
+            if(p.isAlive())
+                if(p.getLifespan() < 50) {
+                    ViewRenderer.renderBoxFade(
+                            p.getRenderBox(),
+                            time *(1f/p.getLifespan()*0.5f),
+                            p.getSize()
+                    );
+                }
         }
     }
 

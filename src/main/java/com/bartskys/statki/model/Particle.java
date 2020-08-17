@@ -17,6 +17,8 @@ public class Particle {
     private float speed;
     @Getter@Setter
     private float size;
+    @Getter@Setter
+    private boolean alive = true;
 
     public Particle() {
        lifespan = new Random().nextInt(10);
@@ -45,11 +47,10 @@ public class Particle {
         );
     }
 
-//    public void setSize(float size) {
-//        renderBox.setSizeX(size);
-//        renderBox.setSizeY(size);
-//        renderBox.updateSize();
-//    }
+    public void setLifespan(int lifespan) {
+        this.lifespan = lifespan;
+        if(this.lifespan <= 25) alive = false;
+    }
 
     public void setPosition(Vector3f newPosition) {
         position = newPosition;
