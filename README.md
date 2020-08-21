@@ -15,4 +15,4 @@ Here are some screenshots:
 
 ![Screenshot04](src/main/java/com/bartskys/statki/res/Screenshot04.png)
 
-![Screenshot05](src/main/java/com/bartskys/statki/res/battleships.gif)
+![Screenshot04](src/main/java/com/bartskys/statki/res/Screenshot05.gif)
