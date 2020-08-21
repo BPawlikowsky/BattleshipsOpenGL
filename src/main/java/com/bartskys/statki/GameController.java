@@ -15,8 +15,13 @@ class GameController {
 
     private static final String PLAYER1 = "Player01";
     private static final String PLAYER2 = "Player02";
-    private static RenderBox PLAYER1SETUP;
-    private static RenderBox PLAYER2SETUP;
+    private static final float TILESIZE = 0.24f;
+    private static final float TILESPACE = 0.5f;
+    private float bulletSpeed = 0.04f;
+    int particleCount = 100;
+    int pLifespan = 50;
+    private static Sign PLAYER1SETUP;
+    private static Sign PLAYER2SETUP;
     private static RenderBox BACKGROUND;
     int p1Ships = 1;
     int p2Ships = 1;
@@ -43,6 +48,16 @@ class GameController {
     boolean buttonD = false;
     boolean turn = true;
     boolean winner = false;
+    int p1tries = 0;
+    int p2tries = 0;
+    Vector3f from, to; // Animation variables than need to be updated every frame
+    private boolean animation = false;
+    private boolean pAnimation = false;
+    ArrayList<Bullet> bullets;
+    ArrayList<Tile> p1Buffer, p2Buffer;
+    ArrayList<Particle> particles;
+    RenderBox testP;
+    float time = 0.0f;
 
     GameController() {
         ViewRenderer.init();
@@ -50,19 +65,17 @@ class GameController {
         player1 = new Player(generateTiles(boardPosX, boardPosY - 10.0f, PLAYER1), PLAYER1);
         player2 = new Player(generateTiles(boardPosX, boardPosY +0.265f, PLAYER2), PLAYER2);
         p1setup = p2setup = true;
-        PLAYER1SETUP = new RenderBox(
-                "PlayerSetup",
-                "res/playersetup.png",
-                new Vector3f(-5.8f, 4.0f, 0.0f),
-                1.28f,
-                0.24f
+        from = to = new Vector3f();
+
+        PLAYER1SETUP = new Sign(
+                "Player1 Setup",
+                -8f,
+                 4.25f
         );
-        PLAYER2SETUP = new RenderBox(
-                "PlayerSetup",
-                "res/playersetup.png",
-                new Vector3f(5.5f, 4.0f, 0.0f),
-                1.28f,
-                0.24f
+        PLAYER2SETUP = new Sign(
+                "Player2 Setup",
+                2.25f,
+                4.25f
         );
         BACKGROUND = new RenderBox(
                 "background",
@@ -70,17 +83,28 @@ class GameController {
                 new Vector3f(0.0f, 0.0f, -0.1f),
                 12.80f * 0.8f, 7.20f * 0.8f
         );
+        bullets = new ArrayList<>();
+        for(int i = 0; i < 100; i++) {
+            bullets.add(new Bullet(
+                    from, to, animation, i,
+                    new RenderBox("bullet"+i,"res/dot.png",from, TILESIZE, TILESIZE)
+            ));
+        }
+        testP = new RenderBox("test", "res/shot.png", new Vector3f(), 1f,1f);
     }
 
     void mainLoop() {
 
         //Main Loop
         while (running) {
+            // Computer Setup
             if(p1setup) {
                 randClick(player1);
+                p1tries++;
             }
             if(!p1setup && p2setup) {
                 randClick(player2);
+                p2tries++;
             }
 
             // Player Setup
@@ -88,7 +112,8 @@ class GameController {
                 direction = !direction;
                 buttonD = true;
             }
-            if(mClick == GLFW_MOUSE_BUTTON_1 && mAction == GLFW_PRESS && !clickWait) {
+
+            if(!animation && !pAnimation && mClick == GLFW_MOUSE_BUTTON_1 && mAction == GLFW_PRESS && !clickWait) {
                 Tile tempT;
                 if(isMouseOnTile(player1.getBoard(), mouseX, mouseY))
                     tempT = tileFromMouse(player1.getBoard(), mouseX, mouseY);
@@ -102,33 +127,82 @@ class GameController {
             }
 
             // Main Game
-            if(!p1setup && !p2setup && !winner) {
+            if(!pAnimation && !animation && !p1setup && !p2setup && !winner) {
                 if(turn) {
+                    p2Buffer = copyBoard(player2.getBoard());
                     randClick(player2);
                     if(mClick == GLFW_MOUSE_BUTTON_1 && mAction == GLFW_PRESS && !clickWait)
                         if(isMouseOnTile(player2.getBoard(), mouseX, mouseY)) {
                             clickWait = true;
                             Tile t = tileFromMouse(player2.getBoard(), mouseX, mouseY);
-                            if(!t.isShotAt())
-                                if(shoot(t, player2)) turn = !turn;
+                            p1tries++;
+                            if(!t.isShotAt()) {
+                                if(shoot(t, player2)) {
+                                    if(!animation && !pAnimation) {
+                                        to = t.getPosition();
+                                        from = randTilePosition(player1.getBoard());
+                                        if(t.isOwned()) {
+                                            particles = null;
+                                            particleCount = 1000;
+                                            pLifespan = 200;
+                                        }
+                                        else {
+                                            particles = null;
+                                            particleCount = 55;
+                                            pLifespan = 50;
+                                        }
+
+                                        generateBullets(player1);
+                                        generateParticles(t, particleCount);
+                                        animation = true;
+                                    }
+                                    turn = !turn;
+                                }
+                            }
                     }
-                } else {
+                }
+                else {
+                    p1Buffer = copyBoard(player1.getBoard());
                     randClick(player1);
                     if(mClick == GLFW_MOUSE_BUTTON_1 && mAction == GLFW_PRESS && !clickWait)
                         if(isMouseOnTile(player1.getBoard(), mouseX, mouseY)) {
                             clickWait = true;
                             Tile t = tileFromMouse(player1.getBoard(), mouseX, mouseY);
-                            if(!t.isShotAt())
-                                if(shoot(t, player1)) turn = !turn;
+                            p2tries++;
+                            if(!t.isShotAt()) {
+                                if(shoot(t, player1)) {
+                                    if(!animation && !pAnimation) {
+                                        to = t.getPosition();
+                                        from = randTilePosition(player2.getBoard());
+                                        if(t.isOwned()) {
+                                            particles = null;
+                                            particleCount = 1000;
+                                            pLifespan = 100;
+                                        }
+                                        else {
+                                            particles = null;
+                                            particleCount = 55;
+                                            pLifespan = 50;
+                                        }
+
+                                        generateBullets(player2);
+                                        generateParticles(t, particleCount);
+                                        animation = true;
+                                    }
+                                    turn = !turn;
+                                }
+                            }
                     }
                 }
-                if(winner(player1) || winner(player2)) winner = true;
+                if(!animation && !pAnimation && winner(player1) || winner(player2)) {
+                    winner = true;
+                    System.out.println("P1 Tries: " + p1tries + " | P2 Tries: " + p2tries);
+                }
             }
             // Update game events and Counts frames and updates
             frameUpdate();
 
-            // Render after update
-            render();
+
 
             if (glfwWindowShouldClose(ViewRenderer.getWindow()))
                 running = false;
@@ -136,22 +210,101 @@ class GameController {
         ViewRenderer.terminate();
     }
 
+    private void generateBullets(Player player) {
+        Random r = new Random();
+        for(Bullet b : bullets) {
+            b.setTo(new Vector3f(
+                    (to.x - TILESIZE/2) + (r.nextFloat()*0.3f),
+                    (to.y - TILESIZE/2) + (r.nextFloat()*0.3f),
+                    0.0f
+            ));
+            b.setFrom(randTilePosition(player.getBoard()));
+            b.setAnimation(true);
+            b.setSpeed(bulletSpeed + (new Random().nextFloat() * bulletSpeed));
+            b.setSize((r.nextFloat()+r.nextFloat())/2);
+        }
+    }
+
+    private void generateParticles(Tile t, int number) {
+        Random r = new Random();
+        if(particles == null) {
+            particles = new ArrayList<>();
+            for (int i = 0; i < number; i++) {
+                Particle p = new Particle(
+                        r.nextInt(pLifespan) + pLifespan/5,
+                        new Vector3f(
+                                (t.getPosition().x - TILESIZE) + (r.nextFloat()/2),
+                                (t.getPosition().y - TILESIZE) + (r.nextFloat()/2),
+                                0.0f
+                        ),
+                        (r.nextFloat() + 0.9f) * 0.1f,
+                        r.nextFloat() * 0.1f
+                );
+                p.setAlive(true);
+                particles.add(p);
+            }
+        }
+        for (Particle p : particles) {
+           p.setLifespan(r.nextInt(pLifespan) + pLifespan/5);
+           p.setPosition(new Vector3f(
+                   (t.getPosition().x - TILESIZE) + (r.nextFloat()/2),
+                   (t.getPosition().y - TILESIZE) + (r.nextFloat()/2),
+                   0.0f
+           ));
+           p.setSpeed((r.nextFloat() + 0.9f) * 0.1f);
+           p.setSize(r.nextFloat() * 0.1f);
+           p.setAlive(true);
+        }
+    }
+
+    private void animateParticles() {
+        for(Particle p : particles) {
+           p.setSize(p.getSize() + (p.getSpeed()*p.getSize())*0.5f);
+           p.setLifespan(p.getLifespan()-1);
+        }
+    }
+
+    private void animateShots(ArrayList<Bullet> bullets) {
+        float speed;
+        for(Bullet b : bullets) {
+            speed = b.getSpeed();
+            b.updatePos(speed);
+            float absX = Math.abs(b.getTo().x - b.getFrom().x);
+            float absY = Math.abs(b.getTo().y - b.getFrom().y);
+
+            if(
+                    absX > (TILESIZE*60f)-absX
+            ) {
+                b.setSize(b.getSize()+(b.getSize()*0.04f));
+            }
+            if(
+                    absX <= TILESIZE*40f-absX
+            ) b.setSize(b.getSize() - (b.getSize() * 0.01f));
+            if(
+                absX <= TILESIZE*0.2f &&
+                absY <= TILESIZE*0.2f
+            )
+                b.setAnimation(false);
+
+        }
+    }
+
     private void randClick(Player player) {
-        Vector3f randCoords = randTileCoords(player.getBoard());
+        Vector3f randCoords = randTilePosition(player.getBoard());
         mouseX = randCoords.x;
         mouseY = randCoords.y;
         mClick = GLFW_MOUSE_BUTTON_1;
         mAction = GLFW_PRESS;
     }
 
-    Vector3f randTileCoords(ArrayList<Tile> board) {
+    Vector3f randTilePosition(ArrayList<Tile> board) {
         Random r = new Random();
         int x = r.nextInt(10);
         int y = r.nextInt(10);
         if(x % 2 == 0) direction = !direction;
         String s = Integer.toString(x) + Integer.toString(y);
         for(Tile t : board) {
-            if(s.equals(t.getName())) return t.getCoords();
+            if(s.equals(t.getName())) return t.getPosition();
         }
         return new Vector3f();
     }
@@ -167,23 +320,42 @@ class GameController {
     }
 
     private void render() {
+        if(!animation && !pAnimation && !p1setup && !p2setup && !clickWait) {
+            p1Buffer = copyBoard(player1.getBoard());
+            p2Buffer = copyBoard(player2.getBoard());
+        }
+
         ViewRenderer.renderStart();
         ViewRenderer.renderBox(BACKGROUND);
+        //ViewRenderer.renderBox(testP);
+        if(animation)
+            renderShots();
+        if(!animation && pAnimation)
+            renderParticles();
+
         if (p1setup) {
-            ViewRenderer.renderBox(PLAYER1SETUP);
+            renderSign(PLAYER1SETUP);
             renderSetup(player1);
         }
         else if (p2setup) {
-            ViewRenderer.renderBox(PLAYER2SETUP);
+            renderSign(PLAYER2SETUP);
             renderSetup(player2);
         }
-        if(!p1setup && !p2setup && turn && !winner)
-            renderShotBoard(player2);
-        else if(!p1setup && !p2setup && !turn)
-            renderShotBoard(player1);
+        if(!p1setup && !p2setup) {
+            renderShotBoard(p1Buffer);
+            renderShotBoard(p2Buffer);
+        }
 
-        if(winner(player1)) ViewRenderer.renderBox(PLAYER1SETUP);
-        if(winner(player2)) ViewRenderer.renderBox(PLAYER2SETUP);
+        if(!animation && !pAnimation && !p1setup && winner(player1)) renderSign(
+                new Sign("player1 won",
+                        -7.5f,
+                        4.25f)
+        );
+        if(!animation && !pAnimation && !p2setup && winner(player2)) renderSign(
+                new Sign("player2 won",
+                        2.75f,
+                        4.25f)
+        );
         if(winner) {
             renderWinnerBoard(player1);
             renderWinnerBoard(player2);
@@ -192,19 +364,89 @@ class GameController {
         ViewRenderer.renderFinish();
     }
 
+
+
     private void update() {
         // Aligning mouse position to the board so that the mouse coords correspond to the board coords
+        if(animation) {
+            if(checkAnim(bullets)) {
+                clickWait = true;
+                animateShots(bullets);
+            } else {
+                pAnimation = true;
+                time = 0.0f;
+                animation = false;
+            }
+        } else {
+            if(!animation && !pAnimation && !p1setup && !p2setup){
+                p1Buffer = copyBoard(player1.getBoard());
+                p2Buffer = copyBoard(player2.getBoard());
+            }
+        }
+
+        if(!animation && pAnimation) {
+            if(time < pLifespan) time++;
+            if(checkParticles()) {
+                clickWait = true;
+                animateParticles();
+            } else pAnimation = false;
+
+
+        }
+
         mouseX = ((float) MouseInputPos.xPos / 1280f - 1.0f) * 10.0f;
         mouseY = ((float) MouseInputPos.yPos / 720f - 1.0f) * (-10.0f * 9.0f / 16.0f);
         mClick = MouseInputClick.mbutton;
         mAction = MouseInputClick.maction;
         // Click reset
-        if (frames >= 30 && mAction != GLFW_PRESS && clickWait)
+
+        int wait = 30;
+        // Done for testing so bullet speed could be super fast. TODO: Remove this for "prod"
+        if(p1setup || p2setup)
+            wait = 30;
+        else
+            wait =  1;
+        //---------------------------------------------------------
+
+        if (frames >= wait && mAction != GLFW_PRESS && clickWait)
             clickWait = false;
         if (frames >= 30 && Input.isKeyDown(GLFW_KEY_D) && buttonD)
             buttonD = false;
 
         glfwPollEvents();
+    }
+
+    private boolean checkParticles() {
+        for (Particle p : particles) {
+            if (p.isAlive()) return true;
+        }
+        return false;
+    }
+
+    private ArrayList<Tile> copyBoard(ArrayList<Tile> board) {
+        ArrayList<Tile> copy = new ArrayList<>();
+        for(int i = 0; i < board.size(); i++) {
+            Tile t = board.get(i);
+            Tile copyT = new Tile(t.getName(), t.getPosition(), t.getPlayer());
+            copyT.setOwned(t.isOwned());
+            copyT.setShotAt(t.isShotAt());
+            copyT.setOwnedByShip(t.getOwnedByShip());
+            copy.add(copyT);
+        }
+        return copy;
+    }
+
+    private boolean checkAnim(ArrayList<Bullet> bullets) {
+        for(Bullet b : bullets)
+            if(b.isAnimation()) return true;
+
+        return false;
+    }
+
+    private void renderSign(Sign sign) {
+        for(RenderBox r : sign.getSign()) {
+            ViewRenderer.renderBox(r);
+        }
     }
 
     private void renderSetup(Player player) {
@@ -240,8 +482,8 @@ class GameController {
         }
     }
 
-    private void renderShotBoard(Player player) {
-        for (Tile t : player.getBoard()) {
+    private void renderShotBoard(ArrayList<Tile> board) {
+        for (Tile t : board) {
             if (t.isShotAt()) {
                 if(t.isOwned())
                     ViewRenderer.renderHit(t);
@@ -249,6 +491,25 @@ class GameController {
             }
             else
                 ViewRenderer.renderEmptyTile(t);
+        }
+    }
+
+    private void renderShots() {
+        for(Bullet b : bullets) {
+            ViewRenderer.renderBoxScale(b.getBullet(), b.getSize());
+        }
+    }
+
+    private void renderParticles() {
+        for(Particle p : particles) {
+            if(p.isAlive())
+                if(p.getLifespan() < 50) {
+                    ViewRenderer.renderBoxFade(
+                            p.getRenderBox(),
+                            time *(1f/p.getLifespan()*0.5f),
+                            p.getSize()
+                    );
+                }
         }
     }
 
@@ -329,10 +590,14 @@ class GameController {
                                     if(player.getName().equals(PLAYER1)) {
                                         //showBoard(player1);
                                         p1setup = false;
+                                        System.out.println("P1 Tries:  " + p1tries);
+                                        p1tries = 0;
                                     }
                                     else {
                                         //showBoard(player2);
                                         p2setup = false;
+                                        System.out.println("P2 Tries:  " + p2tries);
+                                        p2tries = 0;
                                     }
                     }
                 } break;
@@ -342,18 +607,18 @@ class GameController {
 
     boolean checkAdjacent(Tile tile, ArrayList<Tile> board) {
 
-        float xLo = board.get(0).getCoords().x;
-        float yLo = board.get(0).getCoords().y;
-        float xHi = board.get(9).getCoords().x;
-        float yHi = board.get(99).getCoords().y;
+        float xLo = board.get(0).getPosition().x;
+        float yLo = board.get(0).getPosition().y;
+        float xHi = board.get(9).getPosition().x;
+        float yHi = board.get(99).getPosition().y;
         //System.out.printf("Check Adj | xLo: %.2f | xHi: %.2f | yLo: %.2f | yHi: %.2f\n", xLo, xHi, yLo, yHi);
         for (int j = 0; j < board.size(); j++) {
             if (tile.equals(board.get(j))) {
                 //System.out.println(board.get(j).getCoords().toString());
-                if (board.get(j).getCoords().x > xLo &&
-                        board.get(j).getCoords().x < xHi &&
-                        board.get(j).getCoords().y < yLo &&
-                        board.get(j).getCoords().y > yHi
+                if (board.get(j).getPosition().x > xLo &&
+                        board.get(j).getPosition().x < xHi &&
+                        board.get(j).getPosition().y < yLo &&
+                        board.get(j).getPosition().y > yHi
                 ) {
                     if (board.get(j + 1).isOwned() ||
                             board.get(j - 1).isOwned() ||
@@ -364,36 +629,36 @@ class GameController {
                             board.get(j + 11).isOwned() ||
                             board.get(j - 11).isOwned()
                     ) return false;
-                } else if (board.get(j).getCoords().x == xLo &&
-                        board.get(j).getCoords().y < yLo &&
-                        board.get(j).getCoords().y > yHi) {
+                } else if (board.get(j).getPosition().x == xLo &&
+                        board.get(j).getPosition().y < yLo &&
+                        board.get(j).getPosition().y > yHi) {
                     if (board.get(j + 1).isOwned() ||
                             board.get(j - 9).isOwned() ||
                             board.get(j + 10).isOwned() ||
                             board.get(j - 10).isOwned() ||
                             board.get(j + 11).isOwned()
                     ) return false;
-                } else if (board.get(j).getCoords().x == xHi &&
-                        board.get(j).getCoords().y < yLo &&
-                        board.get(j).getCoords().y > yHi) {
+                } else if (board.get(j).getPosition().x == xHi &&
+                        board.get(j).getPosition().y < yLo &&
+                        board.get(j).getPosition().y > yHi) {
                     if (board.get(j - 1).isOwned() ||
                             board.get(j + 9).isOwned() ||
                             board.get(j + 10).isOwned() ||
                             board.get(j - 10).isOwned() ||
                             board.get(j - 11).isOwned()
                     ) return false;
-                } else if (board.get(j).getCoords().y == yLo &&
-                        board.get(j).getCoords().x > xLo &&
-                        board.get(j).getCoords().x < xHi) {
+                } else if (board.get(j).getPosition().y == yLo &&
+                        board.get(j).getPosition().x > xLo &&
+                        board.get(j).getPosition().x < xHi) {
                     if (board.get(j + 1).isOwned() ||
                             board.get(j - 1).isOwned() ||
                             board.get(j + 9).isOwned() ||
                             board.get(j + 10).isOwned() ||
                             board.get(j + 11).isOwned()
                     ) return false;
-                } else if (board.get(j).getCoords().y == yHi &&
-                        board.get(j).getCoords().x > xLo &&
-                        board.get(j).getCoords().x < xHi) {
+                } else if (board.get(j).getPosition().y == yHi &&
+                        board.get(j).getPosition().x > xLo &&
+                        board.get(j).getPosition().x < xHi) {
                     if (board.get(j + 1).isOwned() ||
                             board.get(j - 1).isOwned() ||
                             board.get(j - 9).isOwned() ||
@@ -432,10 +697,10 @@ class GameController {
         for (Tile t : tiles) {
             float diameter = 0.25f; //Board tile diameter
             if (
-                    mouseX > t.getCoords().x - diameter &&
-                            mouseX < (t.getCoords().x + diameter) &&
-                            mouseY > (t.getCoords().y - diameter) &&
-                            mouseY < (t.getCoords().y + diameter)
+                    mouseX > t.getPosition().x - diameter &&
+                            mouseX < (t.getPosition().x + diameter) &&
+                            mouseY > (t.getPosition().y - diameter) &&
+                            mouseY < (t.getPosition().y + diameter)
             ) {
                 //System.out.println("Tile name: " + t.getName() + " x: " + t.getCoords().x + " y: " + t.getCoords().y + "\nMouse x: " + mouseX + " y: " + mouseY);
                 return true;
@@ -448,10 +713,10 @@ class GameController {
         for (Tile t : tiles) {
             float diameter = 0.25f; //Board tile diameter
             if (
-                    mouseX > (t.getCoords().x - diameter) &&
-                            mouseX < (t.getCoords().x + diameter) &&
-                            mouseY > (t.getCoords().y - diameter) &&
-                            mouseY < (t.getCoords().y + diameter)
+                    mouseX > (t.getPosition().x - diameter) &&
+                            mouseX < (t.getPosition().x + diameter) &&
+                            mouseY > (t.getPosition().y - diameter) &&
+                            mouseY < (t.getPosition().y + diameter)
             ) {
                 return t;
             }
@@ -485,6 +750,8 @@ class GameController {
         lastTime = now;
         if (delta >= 1.0) {
             update();
+            // Render after update
+            render();
             updates++;
             delta--;
         }
@@ -520,7 +787,7 @@ class GameController {
             if(t.isOwned()) System.out.println(t.getName() + " Owned: " +
                     t.isOwned() + " Owned by ship: " +
                     t.getOwnedByShip() + " Coords: " +
-                    t.getCoords().toString());
+                    t.getPosition().toString());
         }
     }
 }
