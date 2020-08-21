@@ -14,3 +14,5 @@ Here are some screenshots:
 ![Screenshot03](src/main/java/com/bartskys/statki/res/Screenshot03.png)
 
 ![Screenshot04](src/main/java/com/bartskys/statki/res/Screenshot04.png)
+
+![Screenshot05](src/main/java/com/bartskys/statki/res/Battleships.gif)
