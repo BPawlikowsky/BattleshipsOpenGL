@@ -47,10 +47,10 @@ public class Shader {
             glUniform1i(getUniform(name), value);
       }
 
-//      public void setUniform1f(String name, float value) {
-//            if (!enabled) enable();
-//            glUniform1f(getUniform(name), value);
-//      }
+      public void setUniform1f(String name, float value) {
+            if (!enabled) enable();
+            glUniform1f(getUniform(name), value);
+      }
 //
 //      public void setUniform2f(String name, float x, float y) {
 //            if (!enabled) enable();

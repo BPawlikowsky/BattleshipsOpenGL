@@ -33,6 +33,7 @@ public class ViewRenderer {
       private static final Input input = new Input();
 
       private static Shader TILE;
+      private static Shader FADE;
       @Getter
       private static final Matrix4f pro_matrix = new Matrix4f().ortho2D(
               -10.0f,
@@ -54,8 +55,8 @@ public class ViewRenderer {
             glfwDefaultWindowHints();
             glfwWindowHint(GLFW_VISIBLE, GLFW_TRUE);
             glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
-            glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-            glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+            glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+            glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
             glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
             glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GLFW_TRUE);
 
@@ -99,6 +100,7 @@ public class ViewRenderer {
             glClearColor(0f, 0f,0f, 1f);
 
             TILE = new Shader("shaders/shader.vert","shaders/shader.frag");
+            FADE = new Shader("shaders/shader.vert","shaders/fade.frag");
 
             initGameObjects();
       }
@@ -123,7 +125,6 @@ public class ViewRenderer {
       }
 
       public static void flagSetup() {
-            glEnable(GL_DEPTH_TEST);
             glEnable(GL_BLEND);
             glActiveTexture(GL_TEXTURE1);
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -150,7 +151,7 @@ public class ViewRenderer {
             TILE.enable();
             tile.getEmptyTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
-            TILE.setUniformMat4f("ml_matrix", ml_matrix.translate(tile.getCoords().x, tile.getCoords().y, tile.getCoords().z));
+            TILE.setUniformMat4f("ml_matrix", ml_matrix.translate(tile.getPosition().x, tile.getPosition().y, tile.getPosition().z));
             tile.getMesh().render();
             tile.getMesh().unbind();
             tile.getEmptyTile().unbind();
@@ -161,7 +162,7 @@ public class ViewRenderer {
             TILE.enable();
             tile.getShotAtTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
-            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(tile.getCoords().x, tile.getCoords().y, tile.getCoords().z));
+            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(tile.getPosition().x, tile.getPosition().y, tile.getPosition().z));
             tile.getMesh().render();
             tile.getMesh().unbind();
             tile.getShotAtTile().unbind();
@@ -172,7 +173,7 @@ public class ViewRenderer {
             TILE.enable();
             tile.getHitTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
-            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(tile.getCoords().x, tile.getCoords().y, tile.getCoords().z));
+            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(tile.getPosition().x, tile.getPosition().y, tile.getPosition().z));
             tile.getMesh().render();
             tile.getMesh().unbind();
             tile.getHitTile().unbind();
@@ -184,7 +185,7 @@ public class ViewRenderer {
             tile.getShipTile().bind();
             Matrix4f ml_matrix = new Matrix4f().identity();
 
-            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(tile.getCoords().x, tile.getCoords().y, tile.getCoords().z));
+            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(tile.getPosition().x, tile.getPosition().y, tile.getPosition().z));
             tile.getMesh().render();
             tile.getMesh().unbind();
             tile.getShipTile().unbind();
@@ -196,8 +197,43 @@ public class ViewRenderer {
             box.getTexture().bind();
 
             Matrix4f ml_matrix = new Matrix4f().identity();
+            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(box.getPosition().x, box.getPosition().y, box.getPosition().z));
+            box.getMesh().render();
+            box.getMesh().unbind();
+            box.getTexture().unbind();
+            TILE.disable();
+      }
+      public static void renderBoxFade(RenderBox box, float time, float scale) {
+            FADE.enable();
+            box.getTexture().bind();
 
-            TILE.setUniformMat4f("ml_matrix",ml_matrix.translate(box.getCoords().x, box.getCoords().y, box.getCoords().z));
+            FADE.setUniformMat4f("pr_matrix", pro_matrix);
+            FADE.setUniform1i("tex", 1);
+            Matrix4f ml_matrix = new Matrix4f().identity();
+            FADE.setUniformMat4f("ml_matrix",
+                    ml_matrix.translate(
+                            box.getPosition().x,
+                            box.getPosition().y,
+                            0.0f
+                    ).scaleXY(scale,scale));
+            FADE.setUniform1f("time", time);
+
+            box.getMesh().render();
+            box.getMesh().unbind();
+            box.getTexture().unbind();
+            FADE.disable();
+      }
+      public static void renderBoxScale(RenderBox box, float scale) {
+            TILE.enable();
+            box.getTexture().bind();
+
+            Matrix4f ml_matrix = new Matrix4f().identity();
+            TILE.setUniformMat4f("ml_matrix",
+                    ml_matrix.translate(
+                            box.getPosition().x,
+                            box.getPosition().y,
+                           0.0f
+                    ).scaleXY(scale,scale));
             box.getMesh().render();
             box.getMesh().unbind();
             box.getTexture().unbind();

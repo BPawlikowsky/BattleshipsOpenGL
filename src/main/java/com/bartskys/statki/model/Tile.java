@@ -7,17 +7,15 @@ import lombok.Getter;
 import lombok.Setter;
 
 public class Tile {
-      
+      private final float SIZE = 0.243f;
       @Getter @Setter
-      private Vector3f coords;
+      private Vector3f position;
       @Getter @Setter
       private boolean shotAt;
       @Getter @Setter
       private boolean owned;
       @Getter @Setter
       private String ownedByShip;
-      private final float SIZE = 0.243f;
-
       @Getter
       private final String name;
       @Getter
@@ -28,13 +26,27 @@ public class Tile {
       private final Texture shotAtTile;
       @Getter
       private final Texture hitTile;
-      @Getter
-      private final VertexArray mesh;
+      @Getter @Setter
+      private VertexArray mesh;
       @Getter
       private final String player;
 
+      public Tile(Tile t) {
+            this.name = t.getName();
+            this.emptyTile = t.emptyTile;
+            this.shipTile = t.shipTile;
+            this.hitTile = t.hitTile;
+            this.shotAtTile = t.shotAtTile;
+            this.mesh = t.mesh;
+            this.owned = t.isOwned();
+            this.shotAt = t.isShotAt();
+            this.player = t.getPlayer();
+            this.position = t.getPosition();
+            this.ownedByShip = t.getOwnedByShip();
+      }
+
       public Tile() {
-            coords = new Vector3f();
+            position = new Vector3f();
             name = "Null";
             player = "";
             shotAt = false;
@@ -67,9 +79,9 @@ public class Tile {
             hitTile = new Texture("res/hit.png");
       }
 
-      public Tile(String name, Vector3f coords, String player) {
+      public Tile(String name, Vector3f position, String player) {
 
-            this.coords = coords;
+            this.position = position;
             this.name = name;
             this.player = player;
             shotAt = false;
