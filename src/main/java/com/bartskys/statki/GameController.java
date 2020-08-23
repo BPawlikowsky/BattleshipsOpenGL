@@ -342,6 +342,7 @@ class GameController {
 
     boolean checkAdjacent(Tile tile, ArrayList<Tile> board) {
 
+<<<<<<< Updated upstream
         float xLo = board.get(0).getCoords().x;
         float yLo = board.get(0).getCoords().y;
         float xHi = board.get(9).getCoords().x;
@@ -354,6 +355,20 @@ class GameController {
                         board.get(j).getCoords().x < xHi &&
                         board.get(j).getCoords().y < yLo &&
                         board.get(j).getCoords().y > yHi
+=======
+        float xLo = board.get(0).getPosition().x;
+        float yLo = board.get(0).getPosition().y;
+        float xHi = board.get(9).getPosition().x;
+        float yHi = board.get(99).getPosition().y;
+
+        for (int j = 0; j < board.size(); j++) {
+            if (tile.equals(board.get(j))) {
+
+                if (board.get(j).getPosition().x > xLo &&
+                        board.get(j).getPosition().x < xHi &&
+                        board.get(j).getPosition().y < yLo &&
+                        board.get(j).getPosition().y > yHi
+>>>>>>> Stashed changes
                 ) {
                     if (board.get(j + 1).isOwned() ||
                             board.get(j - 1).isOwned() ||
@@ -424,7 +439,9 @@ class GameController {
 
     void addShip(Player player, ShipEnum shipType, int shipNumber, ArrayList<Tile> t, boolean dir) {
         player.getShips().add(new Ship(t, dir, shipType + String.valueOf(shipNumber)));
-        System.out.println(player.getName() + " added ship " + shipType + " of number " + shipNumber +
+        System.out.println(
+                player.getName() + " added ship " +
+                        shipType + " of number " + shipNumber +
                 " in dir: " + ((dir) ? "horizontal":"vertical"));
     }
 
@@ -437,7 +454,6 @@ class GameController {
                             mouseY > (t.getCoords().y - diameter) &&
                             mouseY < (t.getCoords().y + diameter)
             ) {
-                //System.out.println("Tile name: " + t.getName() + " x: " + t.getCoords().x + " y: " + t.getCoords().y + "\nMouse x: " + mouseX + " y: " + mouseY);
                 return true;
             }
         }
@@ -460,22 +476,22 @@ class GameController {
     }
 
     private ArrayList<Tile> tilesFromTile(ArrayList<Tile> tiles, Tile tile, int number) {
-        ArrayList<Tile> ts = new ArrayList<>();
+        ArrayList<Tile> tileList = new ArrayList<>();
         for (int i = 0; i < tiles.size(); i++) {
             if (tiles.get(i).equals(tile))
                 for (int j = 0; j < number; j++) {
-                    if(direction && i + (j * 10) >= tiles.size()) return new ArrayList<>();
-                    if(!direction && i + j >= tiles.size()) return new ArrayList<>();
-                    if(direction && !checkAdjacent(tiles.get(i + (j * 10)), tiles)) return new ArrayList<>();
-                    if(!direction && !checkAdjacent(tiles.get(i + j), tiles)) return new ArrayList<>();
+                    if(direction && i + (j * 10) >= tiles.size()) return tileList;
+                    if(!direction && i + j >= tiles.size()) return tileList;
+                    if(direction && !checkAdjacent(tiles.get(i + (j * 10)), tiles)) return tileList;
+                    if(!direction && !checkAdjacent(tiles.get(i + j), tiles)) return tileList;
                     if(direction) {
-                            ts.add(tiles.get(i + (j * 10)));
+                            tileList.add(tiles.get(i + (j * 10)));
                     } else if(tiles.get(i + j).getName().charAt(1) == tiles.get(i).getName().charAt(1))
-                                ts.add(tiles.get(i + j));
+                                tileList.add(tiles.get(i + j));
                     else return new ArrayList<>();
                 }
         }
-        return ts;
+        return tileList;
     }
 
     private void frameUpdate() {
@@ -501,7 +517,7 @@ class GameController {
         ArrayList<Tile> tiles = new ArrayList<>();
 
         for (int y = 9; y >= 0; y--) {
-            for (int x = 0; x < 10; x++) {
+            for (int x = 0; x <= 9; x++) {
                 tiles.add(new Tile(
                         String.valueOf(x) + (9 - y),
                         new Vector3f(
@@ -513,6 +529,7 @@ class GameController {
         }
         return tiles;
     }
+<<<<<<< Updated upstream
 
     void showBoard(Player player) {
         for (Tile t :
@@ -523,4 +540,6 @@ class GameController {
                     t.getCoords().toString());
         }
     }
+=======
+>>>>>>> Stashed changes
 }

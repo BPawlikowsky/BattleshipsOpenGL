@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.barstsks</groupId>
+    <groupId>com.barstskys.statki</groupId>
     <artifactId>statki</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>jar</packaging>
     <name>StatkiGame</name>
 
     <properties>
@@ -17,16 +17,9 @@
         <lwjgl.version>3.2.3</lwjgl.version>
         <joml.version>1.9.20</joml.version>
         <lwjgl.natives>natives-windows</lwjgl.natives>
+        <natives.version>0.0.6</natives.version>
+        <mainClass>com.bartskys.statki.Main</mainClass>
     </properties>
-
-    <repositories>
-        <repository>
-            <id>sonatype-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            <releases><enabled>false</enabled></releases>
-            <snapshots><enabled>true</enabled></snapshots>
-        </repository>
-    </repositories>
 
     <dependencyManagement>
         <dependencies>
@@ -146,11 +139,9 @@
             <version>1.18.10</version>
             <scope>provided</scope>
         </dependency>
-
     </dependencies>
 
     <build>
-
         <plugins>
             <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
             <plugin>
@@ -188,28 +179,13 @@
                 <version>3.0.0</version>
             </plugin>
             <plugin>
-
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.0.2</version>
-                <configuration>
-                    <includes>
-                        <include>org.lwjgl</include>
-                    </includes>
-                    <excludes>
-                        <exclude>.gitignore</exclude>
-                    </excludes>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.bartskys.statki.Main</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
             </plugin>
+
 
 
         </plugins>
 
     </build>
-
-    
 </project>

@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Created-By: 1.8.1_26 (Oracle Corporation)
 Main-Class: com.bartskys.statki.Main
+Class-Path: lwjgl-3.2.3-natives-windows.jar lwjgl-glfw-3.2.natives-windows.jar
 
